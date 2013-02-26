@@ -1,0 +1,73 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/reseller/
+    body: 
+      string: ""
+    headers: 
+      Authorization: 
+      - ApiKey viktar.basharymau@gmail.com:5f64d0c68cd7ce0beac3994e393953daf51b8262
+      Content-Type: 
+      - application/json
+      Accept-Encoding: 
+      - gzip, deflate
+      Accept: 
+      - application/json
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Content-Type: 
+      - application/json; charset=utf-8
+      Cache-Control: 
+      - no-cache
+      Date: 
+      - Tue, 26 Feb 2013 18:08:39 GMT
+      Server: 
+      - nginx/1.2.1
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Content-Encoding: 
+      - gzip
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: !binary |
+        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
+
+    http_version: 
+  recorded_at: Tue, 26 Feb 2013 18:08:39 GMT
+recorded_with: VCR 2.4.0
