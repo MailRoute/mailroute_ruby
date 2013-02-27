@@ -13,6 +13,18 @@ describe Mailroute::Reseller, :vcr => true do
       resellers.should have(20).items
       resellers.all?{|r| r.is_a? Mailroute::Reseller }.should be_true
     end
+
+    it 'should accept :limit keyword' do
+      resellers = Mailroute::Reseller.all(:limit => 10)
+      resellers.should have(10).items
+    end
+
+    it 'should accept :offset keyword' do
+      resellers__1_to_10 = Mailroute::Reseller.all(:limit => 10, :offset =>  0)
+      resellers_11_to_20 = Mailroute::Reseller.all(:limit => 10, :offset => 10)
+
+      (resellers__1_to_10 & resellers_11_to_20).should be_empty
+    end
   end
 
   describe '#find' do

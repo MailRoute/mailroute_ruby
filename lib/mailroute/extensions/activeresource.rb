@@ -38,6 +38,10 @@ module Mailroute
         def self.collection_name
           ActiveSupport::Inflector.singularize(super)
         end
+
+        def self.all(options = {})
+          super(:params => options)
+        end
       end
     end
   end
