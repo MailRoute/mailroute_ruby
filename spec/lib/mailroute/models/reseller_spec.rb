@@ -40,10 +40,14 @@ describe Mailroute::Reseller, :vcr => true do
     end
   end
 
-  context 'it should retrieve branding info' do
-    subject(:reseller) { Mailroute::Reseller.find(107) }
+  context 'it should retrieve branding info', :vcr => { :cassette_name => 'Valid Reseller with Branding Info'} do
+    subject(:reseller) { Mailroute::Reseller.find(205) }
 
     its(:branding_info) { should be_a Mailroute::BrandingInfo }
+
+    it 'should have branding info which refers to the subject' do
+      reseller.branding_info.reseller.should == reseller
+    end
   end
 end
 

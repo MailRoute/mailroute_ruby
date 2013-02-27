@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/reseller/205/
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 27 Feb 2013 17:50:33 GMT
+      Transfer-Encoding:
+      - chunked
+      Cache-Control:
+      - no-cache
+      Server:
+      - nginx/1.2.1
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      string: "{\"absolute_url\": \"/reseller/205/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1611/\", \"created_at\": \"Sun, 24 Feb 2013 06:22:32 -0800\", \"id\": 205, \"name\": \"bdf68a3fde12ba23314762aa305b5ec1\", \"resource_uri\": \"/api/v1/reseller/205/\", \"updated_at\": \"Sun, 24 Feb 2013 06:22:32 -0800\"}"
+    http_version:
+  recorded_at: Wed, 27 Feb 2013 17:50:33 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/brandinginfo/1611/
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 27 Feb 2013 17:50:34 GMT
+      Transfer-Encoding:
+      - chunked
+      Cache-Control:
+      - no-cache
+      Server:
+      - nginx/1.2.1
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      string: "{\"color\": null, \"created_at\": \"Sun, 24 Feb 2013 06:22:32 -0800\", \"customer\": null, \"domain\": null, \"email_from\": null, \"enabled\": false, \"favicon\": null, \"highlight_color\": null, \"id\": 1611, \"logo\": null, \"reseller\": \"/api/v1/reseller/205/\", \"resource_uri\": \"/api/v1/brandinginfo/1611/\", \"service_name\": null, \"ssl_cert_passphrase\": null, \"ssl_cert_passphrase_set\": false, \"subdomain\": null, \"updated_at\": \"Sun, 24 Feb 2013 06:22:32 -0800\"}"
+    http_version:
+  recorded_at: Wed, 27 Feb 2013 17:50:37 GMT
+recorded_with: VCR 2.4.0
