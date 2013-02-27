@@ -1,3 +1,4 @@
+require 'logger'
 
 module Mailroute
   class Reseller < ActiveResource::Base
@@ -16,5 +17,5 @@ module Mailroute
   end
 end
 
-#ActiveResource::Base.logger = Logger.new(STDOUT)
+ActiveResource::Base.logger = Logger.new(STDOUT)
 

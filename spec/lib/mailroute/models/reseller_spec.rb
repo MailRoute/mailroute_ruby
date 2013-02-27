@@ -32,7 +32,6 @@ describe Mailroute::Reseller, :vcr => true do
 			its(:absolute_url)            { should == '/reseller/175/' }
 			its(:allow_branding)          { should == false }
 			its(:allow_customer_branding) { should == false }
-			its(:branding_info)           { should == '/api/v1/brandinginfo/1581/' }
 			its(:id)                      { should == 175 }
 			its(:name)                    { should == 'b7001333b77359eff8cdf90726eee4fd' }
 			its(:resource_uri)            { should == '/api/v1/reseller/175/' }
@@ -41,10 +40,10 @@ describe Mailroute::Reseller, :vcr => true do
 		end
 	end
 
-	context 'it should retrieve branding info!' do
-		subject(:reseller) { Mailroute::Reseller.find(175) }
+	context 'it should retrieve branding info' do
+		subject(:reseller) { Mailroute::Reseller.find(107) }
 
-		its(:branding_info) { should be_a Mailroute::BrandingInfo }
+		its(:branding_info) { p reseller.branding_info; should be_a Mailroute::BrandingInfo }
 	end
 end
 
