@@ -42,3 +42,4 @@ Or install it yourself as:
 ## TODO
 
 1. clean up vcr cassettes
+2. refactor extensions/activeresource.rb - it's a mess
