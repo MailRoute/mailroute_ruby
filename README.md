@@ -18,7 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    Mailroute.configure(
+      :username => '<username here>',
+      :apikey => '0d1a...a33'
+    )
+
+    # Make sure that Mailroute configured properly
+    Mailroute.check_connection #=> true
+
+    Mailroute::Reseller.all #=> [...]
+
+    Mailroute::Reseller.find(249) #=> Reseller<...>
 
 ## Contributing
 

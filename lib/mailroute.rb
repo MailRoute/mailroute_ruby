@@ -1,8 +1,8 @@
 require 'rest-client'
+require 'active_resource'
+require 'json/pure'
 require 'mailroute/version'
 require 'mailroute/configuration'
 require 'mailroute/check_connection'
-
-module Mailroute
-  # Your code goes here...
-end
+require 'mailroute/extensions/activeresource'
+require 'mailroute/models/reseller'
