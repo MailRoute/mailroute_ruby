@@ -43,3 +43,4 @@ Or install it yourself as:
 
 1. clean up vcr cassettes
 2. refactor extensions/activeresource.rb - it's a mess
+3. implement Reseller.count
