@@ -1,0 +1,82 @@
+PATH
+  remote: .
+  specs:
+    mailroute (0.0.1)
+      activeresource
+      json_pure
+      rest-client
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (3.2.12)
+      activesupport (= 3.2.12)
+      builder (~> 3.0.0)
+    activeresource (3.2.12)
+      activemodel (= 3.2.12)
+      activesupport (= 3.2.12)
+    activesupport (3.2.12)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
+    addressable (2.3.3)
+    awesome_print (1.1.0)
+    builder (3.0.4)
+    coderay (1.0.9)
+    crack (0.3.2)
+    diff-lcs (1.2.1)
+    ffi (1.4.0)
+    guard (1.6.2)
+      listen (>= 0.6.0)
+      lumberjack (>= 1.0.2)
+      pry (>= 0.9.10)
+      terminal-table (>= 1.4.3)
+      thor (>= 0.14.6)
+    guard-rspec (2.4.1)
+      guard (>= 1.1)
+      rspec (~> 2.11)
+    i18n (0.6.2)
+    json_pure (1.7.7)
+    listen (0.7.3)
+    lumberjack (1.0.2)
+    method_source (0.8.1)
+    mime-types (1.21)
+    multi_json (1.6.1)
+    pry (0.9.12)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    rake (10.0.3)
+    rb-fsevent (0.9.3)
+    rb-inotify (0.9.0)
+      ffi (>= 0.5.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rspec (2.13.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    rspec-core (2.13.0)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.0)
+    slop (3.4.3)
+    terminal-table (1.4.5)
+    thor (0.17.0)
+    vcr (2.4.0)
+    webmock (1.9.3)
+      addressable (>= 2.2.7)
+      crack (>= 0.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print
+  bundler
+  guard-rspec
+  mailroute!
+  rake
+  rb-fsevent
+  rb-inotify
+  vcr
+  webmock
