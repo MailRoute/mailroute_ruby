@@ -33,7 +33,7 @@ module Mailroute
     def self.included(base)
       base.class_eval do
         self.site = 'https://admin-dev.mailroute.net/api/v1/'
-        self.headers['Authorization'] = 'ApiKey viktar.basharymau@gmail.com:5f64d0c68cd7ce0beac3994e393953daf51b8262'
+        self.headers['Authorization'] = 'ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262'
 
         def self.collection_name
           ActiveSupport::Inflector.singularize(super)

@@ -1,71 +1,71 @@
---- 
+---
 recorded_with: VCR 2.4.0
-http_interactions: 
-- request: 
+http_interactions:
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/reseller/107/
-    body: 
+    body:
       string: ""
-    headers: 
-      Authorization: 
-      - ApiKey viktar.basharymau@gmail.com:5f64d0c68cd7ce0beac3994e393953daf51b8262
-      Accept: 
+    headers:
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept:
       - application/json
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Vary: 
+    headers:
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Server: 
+      Server:
       - nginx/1.2.1
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Date: 
+      Date:
       - Wed, 27 Feb 2013 15:16:51 GMT
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Connection: 
+      Connection:
       - keep-alive
-    body: 
+    body:
       string: "{\"absolute_url\": \"/reseller/107/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1513/\", \"created_at\": \"Sat, 23 Feb 2013 12:58:28 -0800\", \"id\": 107, \"name\": \"b99ba07ed6dab53a6b04fc99aee20edd\", \"resource_uri\": \"/api/v1/reseller/107/\", \"updated_at\": \"Wed, 27 Feb 2013 07:06:21 -0800\"}"
-    http_version: 
+    http_version:
   recorded_at: Wed, 27 Feb 2013 15:16:51 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/brandinginfo/1513/
-    body: 
+    body:
       string: ""
-    headers: 
-      Authorization: 
-      - ApiKey viktar.basharymau@gmail.com:5f64d0c68cd7ce0beac3994e393953daf51b8262
-      Accept: 
+    headers:
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept:
       - application/json
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Vary: 
+    headers:
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Server: 
+      Server:
       - nginx/1.2.1
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Date: 
+      Date:
       - Wed, 27 Feb 2013 15:16:52 GMT
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Connection: 
+      Connection:
       - keep-alive
-    body: 
+    body:
       string: "{\"color\": null, \"created_at\": \"Sat, 23 Feb 2013 12:58:28 -0800\", \"customer\": null, \"domain\": null, \"email_from\": null, \"enabled\": false, \"favicon\": null, \"highlight_color\": null, \"id\": 1513, \"logo\": null, \"reseller\": \"/api/v1/reseller/107/\", \"resource_uri\": \"/api/v1/brandinginfo/1513/\", \"service_name\": null, \"ssl_cert_passphrase\": null, \"ssl_cert_passphrase_set\": false, \"subdomain\": null, \"updated_at\": \"Sat, 23 Feb 2013 12:58:28 -0800\"}"
-    http_version: 
+    http_version:
   recorded_at: Wed, 27 Feb 2013 15:16:52 GMT

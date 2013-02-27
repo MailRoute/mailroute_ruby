@@ -1,14 +1,25 @@
 require 'spec_helper'
 
-describe Mailroute do
+def valid_credentials
+  {
+    :username => 'blablablablabla@example.com',
+    :apikey   => '5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262'
+  }
+end
 
+def invalid_credentials
+  {
+    :username => 'alien',
+    :apikey   => 'blabla'
+  }
+end
+
+describe Mailroute do
   describe '#check_connection' do
     context 'when configured with correct credentials', :vcr => true do
 
       before do
-        Mailroute.configure(
-          :username => 'viktar.basharymau@gmail.com',
-          :apikey => '5f64d0c68cd7ce0beac3994e393953daf51b8262')
+        Mailroute.configure(valid_credentials)
       end
 
       it 'should return true' do
@@ -19,9 +30,7 @@ describe Mailroute do
     context 'when configured with incorrect credentials', :vcr => true do
 
       before do
-        Mailroute.configure(
-          :username => 'alien',
-          :apikey => 'blabla')
+        Mailroute.configure(invalid_credentials)
       end
 
       it 'should raise Unauthorized error' do

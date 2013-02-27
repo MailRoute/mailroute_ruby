@@ -1,35 +1,35 @@
---- 
+---
 recorded_with: VCR 2.4.0
-http_interactions: 
-- request: 
+http_interactions:
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/reseller/434/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Authorization: 
-      - ApiKey viktar.basharymau@gmail.com:5f64d0c68cd7ce0beac3994e393953daf51b8262
-  response: 
-    status: 
+      Authorization:
+      - ApiKey viktar.basharymau@gmail.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+  response:
+    status:
       code: 404
       message: NOT FOUND
-    headers: 
-      Connection: 
+    headers:
+      Connection:
       - keep-alive
-      Content-Type: 
+      Content-Type:
       - text/html; charset=utf-8
-      Date: 
+      Date:
       - Wed, 27 Feb 2013 14:22:56 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Server: 
+      Server:
       - nginx/1.2.1
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-    body: 
+    body:
       string: ""
-    http_version: 
+    http_version:
   recorded_at: Wed, 27 Feb 2013 14:22:57 GMT

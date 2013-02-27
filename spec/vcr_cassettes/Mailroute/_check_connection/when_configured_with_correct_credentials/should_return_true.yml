@@ -1,42 +1,42 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/reseller/
-    body: 
+    body:
       string: ""
-    headers: 
-      Authorization: 
-      - ApiKey viktar.basharymau@gmail.com:5f64d0c68cd7ce0beac3994e393953daf51b8262
-      Content-Type: 
+    headers:
+      Authorization:
+      - ApiKey viktar.basharymau@gmail.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Content-Type:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - gzip, deflate
-      Accept: 
+      Accept:
       - application/json
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Content-Type: 
+    headers:
+      Content-Type:
       - application/json; charset=utf-8
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Date: 
+      Date:
       - Tue, 26 Feb 2013 18:08:39 GMT
-      Server: 
+      Server:
       - nginx/1.2.1
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Content-Encoding: 
+      Content-Encoding:
       - gzip
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: !binary |
         H4sIAAAAAAAAA72YW2/jVBDHv4qVB57K9sy5H0sIlbKLipYFqX1DqDo37wYS
         u0rsLlD1uzNO7K7tGGyk1FKlOomdM/PLf65Pq20s7SpNnlab9XZd4hUlF8kq
@@ -68,6 +68,6 @@ http_interactions:
         gCtJrWVE4MbbwyycrevTVadr0IQQgSxVdUSTlMbGm+5eAscbnAmHYY12drNk
         tEJySbzRmVNWIksjqeIu4MIb2c7i2bo+Fdh9g55/e/4Hc1agIRYaAAA=
 
-    http_version: 
+    http_version:
   recorded_at: Tue, 26 Feb 2013 18:08:39 GMT
 recorded_with: VCR 2.4.0
