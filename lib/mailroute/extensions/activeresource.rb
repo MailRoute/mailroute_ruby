@@ -42,6 +42,10 @@ module Mailroute
         def self.all(options = {})
           super(:params => options)
         end
+
+        def self.search(options)
+          all(options)
+        end
       end
     end
   end

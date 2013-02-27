@@ -27,6 +27,14 @@ describe Mailroute::Reseller, :vcr => true do
     end
   end
 
+  describe '#search' do
+    it 'should return a list of resellers which match the search query' do
+      resellers = Mailroute::Reseller.search(:name__startswith => 'd')
+      resellers.should_not be_empty
+      resellers.all?{|r| r.name =~ /^d/ }.should be_true
+    end
+  end
+
   describe '#find' do
     it 'should raise error if reseller not found' do
       expect {
