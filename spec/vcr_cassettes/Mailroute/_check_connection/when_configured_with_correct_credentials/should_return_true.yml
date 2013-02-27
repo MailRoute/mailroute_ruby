@@ -7,7 +7,7 @@ http_interactions:
       string: ""
     headers:
       Authorization:
-      - ApiKey viktar.basharymau@gmail.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
       Content-Type:
       - application/json
       Accept-Encoding:
