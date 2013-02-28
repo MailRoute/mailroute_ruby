@@ -12,6 +12,20 @@ module Mailroute
       end
     end
 
+    def self.headers
+      if defined?(@headers)
+        @headers
+      elsif superclass.respond_to? :headers
+        @headers ||= superclass.headers.tap do |h|
+          h.extend LazyHash
+        end
+      else
+        @headers ||= Hash.new.tap do |h|
+          h.extend LazyHash
+        end
+      end
+    end
+
     self.site { Mailroute.url }
     self.headers['Authorization'] = lambda { "ApiKey #{Mailroute.username}:#{Mailroute.apikey}" }
 
