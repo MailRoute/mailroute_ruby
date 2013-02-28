@@ -2,10 +2,15 @@ require 'spec_helper'
 require 'awesome_print'
 
 def configure_mailroute
+  Mailroute.configure(
+    :username => 'blablablablabla@example.com',
+    :apikey   => '5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262',
+    :url      => 'https://admin-dev.mailroute.net/api/v1/'
+  )
 end
 
 describe Mailroute::Reseller, :vcr => true do
-  configure_mailroute
+  before { configure_mailroute }
 
   describe '#list' do
     it 'should return a list of resellers' do
@@ -71,6 +76,3 @@ describe Mailroute::Reseller, :vcr => true do
     end
   end
 end
-
-
-

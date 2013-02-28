@@ -1,9 +1,7 @@
 require 'logger'
 
 module Mailroute
-  class Reseller < ActiveResource::Base
-    include ActiveResource::Extend::WithoutExtension
-    include BasicConfiguration
+  class Reseller < Base
 
     def branding_info
       @branding_info ||= BrandingInfo.find(extract_id(super)).tap do |bi|

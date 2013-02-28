@@ -1,8 +1,5 @@
 module Mailroute
-  class BrandingInfo < ActiveResource::Base
-    include ActiveResource::Extend::WithoutExtension
-    include BasicConfiguration
-
+  class BrandingInfo < Base
     self.collection_name = 'brandinginfo'
   end
 end
