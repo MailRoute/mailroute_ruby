@@ -35,16 +35,18 @@ module Mailroute
         self.site = 'https://admin-dev.mailroute.net/api/v1/'
         self.headers['Authorization'] = 'ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262'
 
+				delegate :limit, :offset, :to => :list
+
         def self.collection_name
           ActiveSupport::Inflector.singularize(super)
         end
 
-        def self.all(options = {})
-          super(:params => options)
+        def self.list(options = {})
+          Relation.new(self)
         end
 
         def self.search(options)
-          all(options)
+          all(:params => options)
         end
       end
     end
