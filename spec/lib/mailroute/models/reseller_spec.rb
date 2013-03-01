@@ -43,6 +43,14 @@ describe Mailroute::Reseller, :vcr => true do
     end
   end
 
+  describe '#search' do
+    it 'should return a list of resellers which match the search query' do
+      resellers = Mailroute::Reseller.search('Data')
+      resellers.should_not be_empty
+      resellers.all?{|r| r.name =~ /Data/i }.should be_true
+    end
+  end
+
   describe '#order_by' do
     context 'ascending order' do
       it 'should return ordered result' do

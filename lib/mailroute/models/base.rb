@@ -26,7 +26,7 @@ module Mailroute
     self.headers['Authorization'] = Lazy { "ApiKey #{Mailroute.username}:#{Mailroute.apikey}" }
 
     class << self
-      delegate :limit, :offset, :filter, :order_by, :to => :list
+      delegate :limit, :offset, :filter, :order_by, :search, :to => :list
     end
 
     def self.collection_name

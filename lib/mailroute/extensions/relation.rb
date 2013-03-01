@@ -31,6 +31,10 @@ class Mailroute::Relation
     new_relation(:params => { :order => attribute })
   end
 
+  def search(term)
+    new_relation(:params => { :q => term })
+  end
+
   def ==(other)
     case other
     when Relation
