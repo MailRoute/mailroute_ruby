@@ -18,20 +18,22 @@ describe Mailroute::Reseller, :vcr => true do
       resellers.should have(20).items
       resellers.all?{|r| r.is_a? Mailroute::Reseller }.should be_true
     end
+  end
 
-    it 'should accept :offset keyword' do
+  describe '#limit' do
+    it 'should limit the number of resellers returned' do #, :vcr => { :record => :all } do
+      Mailroute::Reseller.list.limit(30).should have(30).items
+    end
+  end
+
+  describe '#offset' do
+    it 'should return different pages' do
       resellers__1_to_10 = Mailroute::Reseller.list.limit(10).offset(0)
       resellers_11_to_20 = Mailroute::Reseller.list.offset(10).limit(10)
 
       (resellers__1_to_10 & resellers_11_to_20).should be_empty
     end
   end
-
-	describe '#limit' do
-		it 'should limit the number of resellers returned' do #, :vcr => { :record => :all } do
-			Mailroute::Reseller.list.limit(30).should have(30).items
-		end
-	end
 
   describe '#search' do
     it 'should return a list of resellers which match the search query' do
