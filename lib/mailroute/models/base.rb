@@ -25,7 +25,9 @@ module Mailroute
     self.site { Mailroute.url }
     self.headers['Authorization'] = Lazy { "ApiKey #{Mailroute.username}:#{Mailroute.apikey}" }
 
-    delegate :limit, :offset, :to => :list
+    class << self
+      delegate :limit, :offset, :filter, :order_by, :to => :list
+    end
 
     def self.collection_name
       ActiveSupport::Inflector.singularize(super)
@@ -33,10 +35,6 @@ module Mailroute
 
     def self.list(options = {})
       Relation.new(self)
-    end
-
-    def self.search(options)
-      all(:params => options)
     end
   end
 end
