@@ -2,6 +2,7 @@ require 'active_support/core_ext'
 
 class Mailroute::Relation
   delegate :inspect, :each, :count, :&, :to_ary, :all?, :empty?, :to => :to_a
+  include Enumerable
 
   attr_reader :search_options
 
@@ -24,6 +25,10 @@ class Mailroute::Relation
 
   def filter(options)
     new_relation(:params => options)
+  end
+
+  def order_by(attribute)
+    new_relation(:params => { :order => attribute })
   end
 
   def ==(other)
