@@ -46,3 +46,4 @@ Or install it yourself as:
 3. implement Reseller.count
 4. travisci label
 5. check number of API calls in tests
+6. better error handling when reseller already exists

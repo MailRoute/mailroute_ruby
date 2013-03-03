@@ -36,5 +36,9 @@ module Mailroute
     def self.list(options = {})
       Relation.new(self)
     end
+
+    def to_json(options = {})
+      super(options.merge(:root => false))
+    end
   end
 end

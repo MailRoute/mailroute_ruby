@@ -69,6 +69,7 @@ describe Mailroute::Reseller, :vcr => true do
     # end
   end
 
+  # TODO #find => #get
   describe '#find' do
     it 'should raise error if reseller not found' do
       expect {
@@ -101,6 +102,21 @@ describe Mailroute::Reseller, :vcr => true do
 
     it 'should have branding info which refers to the subject' do
       reseller.branding_info.reseller.should == reseller
+    end
+  end
+
+  describe '#create' do
+    it 'should create a new reseller' do #, :vcr => { :record => :all } do
+      new_reseller = Mailroute::Reseller.create(:name =>  'Test Reseller 3')
+      new_reseller.id.should_not be_nil
+
+      Mailroute::Reseller.find(new_reseller.id).name.should == 'Test Reseller 3'
+    end
+  end
+
+  describe '#to_json' do
+    it 'should not include root to json' do
+      Mailroute::Reseller.new(:name => 'a new reseller').to_json.should == {:name => 'a new reseller'}.to_json
     end
   end
 end
