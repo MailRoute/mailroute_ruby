@@ -13,10 +13,26 @@ module Mailroute
       def add_has_one(model, options)
         @associations[model] = HasOne.new(@klass, model, options)
       end
+
+      def add_has_many(model, options)
+        @associations[model] = HasMany.new(@klass, model, options)
+      end
     end
 
     # TODO: move this stuff out
     class HasOne < Struct.new(:klass, :model, :options)
+      # TODO: caching
+      def inverse
+        ActiveSupport::Inflector.underscore(klass.to_s.split('::').last)
+      end
+
+      def foreign_class
+        Mailroute.const_get(ActiveSupport::Inflector.classify(model))
+      end
+    end
+
+    # TODO: move this stuff out
+    class HasMany < Struct.new(:klass, :model, :options)
       # TODO: caching
       def inverse
         ActiveSupport::Inflector.underscore(klass.to_s.split('::').last)
@@ -99,6 +115,17 @@ module Mailroute
         @_associations[model] ||= foreign_class.find(extract_id(super())).tap do |obj|
           obj.send("#{relation.inverse}=",  self)
         end if super()
+      end
+    end
+
+    def self.has_many(model, options = {})
+      relation = meta.add_has_many(model, options)
+
+      self.send(:define_method, model.to_s) do
+        @_associations ||= {}
+        foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
+
+        @_associations[model] ||= foreign_class.filter(relation.inverse.to_sym => id).to_a
       end
     end
 
