@@ -2,6 +2,33 @@ module Mailroute
   class Base < ActiveResource::Base
     include ActiveResource::Extensions::UrlsWithoutJsonExtension
 
+    class MetaInformation
+      attr_reader :associations
+
+      def initialize(klass)
+        @associations = {}
+        @klass = klass
+      end
+
+      def add_has_one(model, options)
+        @associations[model] = HasOne.new(@klass, model, options)
+      end
+    end
+
+    class HasOne < Struct.new(:klass, :model, :options)
+      def inverse
+        ActiveSupport::Inflector.underscore(klass.to_s.split('::').last)
+      end
+
+      def foreign_class
+        Mailroute.const_get(ActiveSupport::Inflector.classify(model))
+      end
+    end
+
+    def self.meta
+      @meta ||= MetaInformation.new(self)
+    end
+
     def self.site(&block)
       if block_given?
         self.instance_variable_set(:@lazy_site, block)
@@ -57,6 +84,26 @@ module Mailroute
           connection.delete(element_path(r, {}), headers)
         end
       end
+    end
+
+    def self.has_one(model, options = {})
+#     p self.methods.grep(/method/)
+      relation = meta.add_has_one(model, options)
+
+      self.send(:define_method, model.to_s) do
+        @_associations ||= {}
+        foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
+
+        @_associations[model] ||= foreign_class.find(extract_id(super())).tap do |obj|
+          obj.send("#{relation.inverse}=",  self)
+        end if super()
+      end
+    end
+
+    private
+
+    def extract_id(uri)
+      uri.match(/(\/|^)(\d+)\/?$/)[2]
     end
   end
 end
