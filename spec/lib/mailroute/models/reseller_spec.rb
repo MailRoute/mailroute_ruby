@@ -134,4 +134,17 @@ describe Mailroute::Reseller, :vcr => true do
       Mailroute::Reseller.filter(:name__startswith => 'TERMINATOR ').should have(3).items
     end
   end
+
+  describe '#save' do
+    it 'should save the changes' do
+      reseller = Mailroute::Reseller.find(1382)
+
+      reseller.allow_branding.should be_false
+      reseller.allow_branding = true
+
+      reseller.save
+
+      Mailroute::Reseller.find(1382).allow_branding.should be_true
+    end
+  end
 end
