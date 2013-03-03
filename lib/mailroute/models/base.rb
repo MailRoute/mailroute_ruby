@@ -46,5 +46,7 @@ module Mailroute
         create(attributes)
       end
     end
+
+    alias_method :delete, :destroy
   end
 end

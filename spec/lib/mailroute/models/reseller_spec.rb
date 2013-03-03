@@ -147,4 +147,15 @@ describe Mailroute::Reseller, :vcr => true do
       Mailroute::Reseller.find(1382).allow_branding.should be_true
     end
   end
+
+  describe '#delete' do
+    it 'should delete the reseller' do
+      reseller = Mailroute::Reseller.find(1382)
+      reseller.delete
+
+      expect {
+        Mailroute::Reseller.find(1382)
+      }.to raise_error ActiveResource::ResourceNotFound
+    end
+  end
 end
