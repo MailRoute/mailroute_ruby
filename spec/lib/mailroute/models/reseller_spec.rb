@@ -119,4 +119,19 @@ describe Mailroute::Reseller, :vcr => true do
       Mailroute::Reseller.new(:name => 'a new reseller').to_json.should == {:name => 'a new reseller'}.to_json
     end
   end
+
+  describe '.bulk_create' do
+    it 'should create several resellers' do
+      resellers = Mailroute::Reseller.bulk_create(
+        { :name => 'TERMINATOR 1' },
+        { :name => 'TERMINATOR 2' },
+        { :name => 'TERMINATOR 3' }
+      )
+
+      resellers.count.should == 3
+      resellers.all?(&:id).should be_true
+
+      Mailroute::Reseller.filter(:name__startswith => 'TERMINATOR ').should have(3).items
+    end
+  end
 end

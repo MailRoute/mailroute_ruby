@@ -1,0 +1,188 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/reseller/
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"TERMINATOR 1"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Sun, 03 Mar 2013 14:17:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      Location:
+      - https://admin-dev.mailroute.net/api/v1/reseller/1508/
+    body:
+      encoding: US-ASCII
+      string: ! '{"absolute_url": "/reseller/1508/", "allow_branding": false, "allow_customer_branding":
+        false, "branding_info": "/api/v1/brandinginfo/3531/", "created_at": "Sun,
+        3 Mar 2013 06:17:11 -0800", "id": 1508, "name": "TERMINATOR 1", "resource_uri":
+        "/api/v1/reseller/1508/", "updated_at": "Sun, 3 Mar 2013 06:17:11 -0800"}'
+    http_version:
+  recorded_at: Sun, 03 Mar 2013 14:17:12 GMT
+- request:
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/reseller/
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"TERMINATOR 2"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Sun, 03 Mar 2013 14:17:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      Location:
+      - https://admin-dev.mailroute.net/api/v1/reseller/1509/
+    body:
+      encoding: US-ASCII
+      string: ! '{"absolute_url": "/reseller/1509/", "allow_branding": false, "allow_customer_branding":
+        false, "branding_info": "/api/v1/brandinginfo/3532/", "created_at": "Sun,
+        3 Mar 2013 06:17:13 -0800", "id": 1509, "name": "TERMINATOR 2", "resource_uri":
+        "/api/v1/reseller/1509/", "updated_at": "Sun, 3 Mar 2013 06:17:13 -0800"}'
+    http_version:
+  recorded_at: Sun, 03 Mar 2013 14:17:13 GMT
+- request:
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/reseller/
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"TERMINATOR 3"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Sun, 03 Mar 2013 14:17:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      Location:
+      - https://admin-dev.mailroute.net/api/v1/reseller/1510/
+    body:
+      encoding: US-ASCII
+      string: ! '{"absolute_url": "/reseller/1510/", "allow_branding": false, "allow_customer_branding":
+        false, "branding_info": "/api/v1/brandinginfo/3533/", "created_at": "Sun,
+        3 Mar 2013 06:17:17 -0800", "id": 1510, "name": "TERMINATOR 3", "resource_uri":
+        "/api/v1/reseller/1510/", "updated_at": "Sun, 3 Mar 2013 06:17:17 -0800"}'
+    http_version:
+  recorded_at: Sun, 03 Mar 2013 14:17:17 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/reseller/?name__startswith=TERMINATOR%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbngvMS4yLjE=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        U3VuLCAwMyBNYXIgMjAxMyAxNDoxNzoxOCBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LCBDb29raWU=
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "Q29udGVudC1FbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA72TwU4DIRCGX4VwrgGW1LZ78+DBQzWpvRmzobuzBsNCw0I1
+        afruMqurJtuknHqbYf5h5v8CR9pBULQkR2p0p0OKCj4j1MInxjYakzLXtj1g
+        jqW9h4N2sf8rBxeUqWoXLWrkCTt271AH1Lwcqdr1zsQAVfQmnVDmoQdjwDMx
+        50tGk14Z4z6qnVe20fYtiVplevgt1LEPrgN/TjE2Vdq2brhe7TU7CDYW8JzJ
+        uRTDpNqDCtBUCnelz9HOiCRr5ZNvIQm/LcWiFILc8CXnqNdN0uGeSEV1gF3b
+        +8364fFu+7QhAjXJj4u+RoP6/wZTn3Hf5E9PIC/AW10NXpEPT07hrc7DK3Lh
+        ffvMgjdOvwhP8KvBk/nwFhN4YviP05cnM+H9+MyCN04/vZ6+AC9mFpAaBAAA
+    http_version:
+  recorded_at: Sun, 03 Mar 2013 14:17:19 GMT
+recorded_with: VCR 2.4.0

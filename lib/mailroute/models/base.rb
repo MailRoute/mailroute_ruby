@@ -40,5 +40,11 @@ module Mailroute
     def to_json(options = {})
       super(options.merge(:root => false))
     end
+
+    def self.bulk_create(*attribute_array)
+      attribute_array.map do |attributes|
+        create(attributes)
+      end
+    end
   end
 end

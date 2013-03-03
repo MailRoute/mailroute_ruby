@@ -91,7 +91,7 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - ApiKey viktar.basharymau@gmail.com:fssadf324sfsdfUDsyahuo34ud
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
