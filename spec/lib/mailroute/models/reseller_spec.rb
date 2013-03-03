@@ -3,9 +3,9 @@ require 'awesome_print'
 
 def configure_mailroute
   Mailroute.configure(
-    :username => 'blablablablabla@example.com',
-    :apikey   => '5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262',
-    :url      => 'https://admin-dev.mailroute.net/api/v1/'
+    :username => ENV['MAILROUTE_USERNAME'] || 'blablablablabla@example.com',
+    :apikey   => ENV['MAILROUTE_API_KEY'] || '5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262',
+    :url      => ENV['MAILROUTE_URL'] || 'https://admin-dev.mailroute.net/api/v1/'
   )
 end
 
