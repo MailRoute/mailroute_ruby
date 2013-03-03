@@ -158,4 +158,24 @@ describe Mailroute::Reseller, :vcr => true do
       }.to raise_error ActiveResource::ResourceNotFound
     end
   end
+
+  describe '.delete' do
+    it 'should bulk delete a list of resellers' do
+      [1443, 1276, 1277].each do |id|
+        Mailroute::Reseller.find(id).should be
+      end
+
+      Mailroute::Reseller.delete(
+        '1443',
+        1276,
+        Mailroute::Reseller.find(1277)
+      )
+
+      [1443, 1276, 1277].each do |id|
+        expect {
+          Mailroute::Reseller.find(id)
+        }.to raise_error ActiveResource::ResourceNotFound
+      end
+    end
+  end
 end

@@ -48,5 +48,15 @@ module Mailroute
     end
 
     alias_method :delete, :destroy
+
+    def self.delete(*resellers_array)
+      resellers_array.map do |r|
+        if r.is_a? Mailroute::Base
+          r.destroy
+        else
+          connection.delete(element_path(r, {}), headers)
+        end
+      end
+    end
   end
 end
