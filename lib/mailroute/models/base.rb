@@ -15,7 +15,9 @@ module Mailroute
       end
     end
 
+    # TODO: move this stuff out
     class HasOne < Struct.new(:klass, :model, :options)
+      # TODO: caching
       def inverse
         ActiveSupport::Inflector.underscore(klass.to_s.split('::').last)
       end
@@ -76,8 +78,8 @@ module Mailroute
 
     alias_method :delete, :destroy
 
-    def self.delete(*resellers_array)
-      resellers_array.map do |r|
+    def self.delete(*array)
+      array.map do |r|
         if r.is_a? Mailroute::Base
           r.destroy
         else
