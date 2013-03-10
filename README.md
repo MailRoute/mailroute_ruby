@@ -42,10 +42,10 @@ Or install it yourself as:
 ## TODO
 
 1. clean up vcr cassettes
-2. refactor extensions/activeresource.rb - it's a mess
+<del>2. refactor extensions/activeresource.rb - it's a mess</del>
 3. implement Reseller.count
-4. travisci label
+<del>4. travisci label</del>
 5. check number of API calls in tests
 6. better error handling when reseller already exists
-7. to_many: ["email_account", "localpart_aliases", {"blank"=>false, "default"=>"No default provided.", "help_text"=>"Many related resources. Can be either a list of URIs or list of individually nested resource data.", "nullable"=>true, "readonly"=>true, "related_type"=>"to_many", "type"=>"related", "unique"=>false}]
+<del>7. to_many: ["email_account", "localpart_aliases", {"blank"=>false, "default"=>"No default provided.", "help_text"=>"Many related resources. Can be either a list of URIs or list of individually nested resource data.", "nullable"=>true, "readonly"=>true, "related_type"=>"to_many", "type"=>"related", "unique"=>false}]</del>
 
