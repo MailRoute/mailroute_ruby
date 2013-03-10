@@ -61,20 +61,19 @@ describe Mailroute::Reseller, :vcr => true do
     # end
   end
 
-  # TODO #find => #get
   describe '#find' do
     it 'should raise error if reseller not found' do
       expect {
-        Mailroute::Reseller.find(100500)
+        Mailroute::Reseller.get(100500)
       }.to raise_error ActiveResource::ResourceNotFound
     end
 
     it 'should return the reseller if it exists', :vcr => { :cassette_name => 'Valid Reseller ' } do
-      Mailroute::Reseller.find(175).should be_a Mailroute::Reseller
+      Mailroute::Reseller.get(175).should be_a Mailroute::Reseller
     end
 
     context 'it should get all available attributes', :vcr => { :cassette_name => 'Valid Reseller ' } do
-      subject(:reseller) { Mailroute::Reseller.find(175) }
+      subject(:reseller) { Mailroute::Reseller.get(175) }
 
       its(:absolute_url)            { should == '/reseller/175/' }
       its(:allow_branding)          { should == false }
@@ -88,7 +87,7 @@ describe Mailroute::Reseller, :vcr => true do
   end
 
   context 'it should retrieve branding info', :vcr => { :cassette_name => 'Valid Reseller with Branding Info'} do
-    subject(:reseller) { Mailroute::Reseller.find(205) }
+    subject(:reseller) { Mailroute::Reseller.get(205) }
 
     its(:branding_info) { should be_a Mailroute::BrandingInfo }
 
@@ -102,7 +101,7 @@ describe Mailroute::Reseller, :vcr => true do
       new_reseller = Mailroute::Reseller.create(:name =>  'Test Reseller 3')
       new_reseller.id.should_not be_nil
 
-      Mailroute::Reseller.find(new_reseller.id).name.should == 'Test Reseller 3'
+      Mailroute::Reseller.get(new_reseller.id).name.should == 'Test Reseller 3'
     end
   end
 
@@ -129,24 +128,24 @@ describe Mailroute::Reseller, :vcr => true do
 
   describe '#save' do
     it 'should save the changes' do
-      reseller = Mailroute::Reseller.find(1382)
+      reseller = Mailroute::Reseller.get(1382)
 
       reseller.allow_branding.should be_false
       reseller.allow_branding = true
 
       reseller.save
 
-      Mailroute::Reseller.find(1382).allow_branding.should be_true
+      Mailroute::Reseller.get(1382).allow_branding.should be_true
     end
   end
 
   describe '#delete' do
     it 'should delete the reseller' do
-      reseller = Mailroute::Reseller.find(1382)
+      reseller = Mailroute::Reseller.get(1382)
       reseller.delete
 
       expect {
-        Mailroute::Reseller.find(1382)
+        Mailroute::Reseller.get(1382)
       }.to raise_error ActiveResource::ResourceNotFound
     end
   end
@@ -154,18 +153,18 @@ describe Mailroute::Reseller, :vcr => true do
   describe '.delete' do
     it 'should bulk delete a list of resellers' do
       [1443, 1276, 1277].each do |id|
-        Mailroute::Reseller.find(id).should be
+        Mailroute::Reseller.get(id).should be
       end
 
       Mailroute::Reseller.delete(
         '1443',
         1276,
-        Mailroute::Reseller.find(1277)
+        Mailroute::Reseller.get(1277)
       )
 
       [1443, 1276, 1277].each do |id|
         expect {
-          Mailroute::Reseller.find(id)
+          Mailroute::Reseller.get(id)
         }.to raise_error ActiveResource::ResourceNotFound
       end
     end

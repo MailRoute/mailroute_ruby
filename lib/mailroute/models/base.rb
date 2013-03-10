@@ -94,6 +94,10 @@ module Mailroute
 
     alias_method :delete, :destroy
 
+    def self.get(*args)
+      self.find(*args)
+    end
+
     def self.delete(*array)
       array.map do |r|
         if r.is_a? Mailroute::Base
@@ -112,7 +116,7 @@ module Mailroute
         @_associations ||= {}
         foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
 
-        @_associations[model] ||= foreign_class.find(extract_id(super())).tap do |obj|
+        @_associations[model] ||= foreign_class.get(extract_id(super())).tap do |obj|
           obj.send("#{relation.inverse}=",  self)
         end if super()
       end

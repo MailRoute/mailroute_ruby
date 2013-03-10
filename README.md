@@ -28,7 +28,7 @@ Or install it yourself as:
 
     Mailroute::Reseller.all #=> [...]
 
-    Mailroute::Reseller.find(249) #=> Reseller<...>
+    Mailroute::Reseller.get(249) #=> Reseller<...>
 
 ## Contributing
 
