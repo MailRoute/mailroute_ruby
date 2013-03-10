@@ -11,4 +11,17 @@ describe Mailroute::Customer, :vcr => true do
       customers.all?{|c| c.name =~ /e/i}.should be_true
     end
   end
+
+  context '#create with reseller' do
+    let(:reseller) { Mailroute::Reseller.get(4) }
+    subject(:customer) { Mailroute::Customer.create(:name => 'New Customer', :reseller => reseller) }
+
+    it 'should have id' do
+      customer.id.should_not be_nil
+    end
+
+    it 'should be created with reseller' do
+      customer.reseller.should == reseller
+    end
+  end
 end

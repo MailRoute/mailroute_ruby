@@ -117,6 +117,18 @@ module Mailroute
       end
     end
 
+    def load(attributes, remove_root = false)
+      new_attributes = {}
+      attributes.each do |k, v|
+        new_attributes[k] = if v.is_a? Mailroute::Base
+                              v.resource_uri
+                            else
+                              v
+                            end
+      end
+      super(new_attributes, remove_root)
+    end
+
     def self.has_many(model, options = {})
       relation = meta.add_has_many(model, options)
 
