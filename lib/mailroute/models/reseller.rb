@@ -2,9 +2,12 @@ require 'logger'
 
 module Mailroute
   class Reseller < Base
+    self.collection_name = 'reseller'
+
     has_one :branding_info
     has_many :customers
     has_many :contacts, through: 'contact_reseller', class: Mailroute::ContactReseller
+    has_many :admins
   end
 end
 

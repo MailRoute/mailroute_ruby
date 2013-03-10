@@ -74,10 +74,6 @@ module Mailroute
       delegate :limit, :offset, :filter, :order_by, :search, :to => :list
     end
 
-    def self.collection_name
-      ActiveSupport::Inflector.singularize(super)
-    end
-
     def self.list(options = {})
       Relation.new(self)
     end
