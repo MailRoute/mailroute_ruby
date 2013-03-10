@@ -178,4 +178,14 @@ describe Mailroute::Reseller, :vcr => true do
       reseller.customers.all?{|c| c.is_a? Mailroute::Customer }.should be_true
     end
   end
+
+  describe '#contacts' do
+    it 'should return a list of its contacts' do
+      reseller = Mailroute::Reseller.new(:id => 4)
+
+      reseller.contacts.should have_at_least(1).item
+      reseller.contacts.all?{|c| c.is_a? Mailroute::ContactReseller }.should be_true
+    end
+  end
+
 end
