@@ -197,4 +197,33 @@ describe Mailroute::Reseller, :vcr => true do
       reseller.admins.should all_be Mailroute::Admin
     end
   end
+
+  describe '#create_contact' do
+    let(:reseller) { Mailroute::Reseller.get(4) }
+    subject(:contact) {
+      reseller.create_contact(
+        :address => '6110 Dale Street NW',
+        :city => 'Ney York',
+        :email => 'john_doe@example.com'
+      )
+    }
+
+    it { should be_a Mailroute::ContactReseller }
+
+    it 'should save a new contact' do
+      Mailroute::ContactReseller.get(contact.id).should be
+    end
+
+    it 'should have a link to the reseller' do
+      contact.reseller.should == reseller
+    end
+
+    its(:address) { should == '6110 Dale Street NW' }
+    its(:city)    { should == 'Ney York' }
+    its(:email)   { should == 'john_doe@example.com' }
+
+    it 'should save the attributes' do
+      Mailroute::ContactReseller.get(contact.id).email.should == 'john_doe@example.com'
+    end
+  end
 end

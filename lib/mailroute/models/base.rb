@@ -105,7 +105,6 @@ module Mailroute
     end
 
     def self.has_one(model, options = {})
-#     p self.methods.grep(/method/)
       relation = meta.add_has_one(model, options)
 
       self.send(:define_method, model.to_s) do
@@ -126,6 +125,14 @@ module Mailroute
         foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
 
         @_associations[model] ||= foreign_class.filter(relation.inverse.to_sym => id).to_a
+      end
+
+      self.send(:define_method, "create_#{ActiveSupport::Inflector.singularize(model)}") do |options|
+        @_associations ||= {}
+        foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
+
+        @_associations[model] = nil
+        relation.foreign_class.create(options.merge(relation.inverse.to_s => attributes[:resource_uri]))
       end
     end
 

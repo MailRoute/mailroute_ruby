@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/reseller/4/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey viktar.basharymau@gmail.com:fssadf324sfsdfUDsyahuo34ud
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbngvMS4yLjY=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        U3VuLCAxMCBNYXIgMjAxMyAxNzoyMTo0NCBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LCBDb29raWU=
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "Q29udGVudC1FbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA22PQQvCMAyF/0roedJuDpXdvQjqQcHjyLaohdpKus6D+N9t
+        h4qIt0fyJe+9u8DGOxN6qgMbUYGQTJ6MIZalFBkINMbd6obRdtqeInFE4+mz
+        aIPv3YX4H/E+qrU9uvE3XrUccvlepLksF6NPy4Q9dTX2idyfQwZzWAULhcoL
+        UIuqKKvpDCZqrlTidRe5MgqLF0onmyVsz9rBgRrYEQ+6JZ/A2McFblNB/R3i
+        p2e4dl/+u2AzyBWskVOAadRVkccMrwCPJzJm7+05AQAA
+    http_version: 
+  recorded_at: Sun, 10 Mar 2013 17:21:45 GMT
+- request:
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/contact_reseller/
+    body:
+      encoding: US-ASCII
+      string: ! '{"address":"6110 Dale Street NW","city":"Ney York","email":"john_doe@example.com","reseller":"/api/v1/reseller/4/"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - ApiKey viktar.basharymau@gmail.com:fssadf324sfsdfUDsyahuo34ud
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Sun, 10 Mar 2013 17:21:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      Location:
+      - https://admin-dev.mailroute.net/api/v1/contact_reseller/1979/
+    body:
+      encoding: US-ASCII
+      string: ! '{"absolute_url": "/contacts/reseller/1979/", "address": "6110 Dale
+        Street NW", "address2": null, "city": "Ney York", "country": "", "created_at":
+        "Sun, 10 Mar 2013 10:21:45 -0700", "email": "john_doe@example.com", "first_name":
+        "", "id": 1979, "is_billing": false, "is_emergency": false, "is_technical":
+        false, "last_name": "", "phone": null, "reseller": "/api/v1/reseller/4/",
+        "resource_uri": "/api/v1/contact_reseller/1979/", "state": "", "updated_at":
+        "Sun, 10 Mar 2013 10:21:45 -0700", "zipcode": null}'
+    http_version: 
+  recorded_at: Sun, 10 Mar 2013 17:21:46 GMT
+recorded_with: VCR 2.4.0
