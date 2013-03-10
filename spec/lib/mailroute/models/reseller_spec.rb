@@ -8,7 +8,7 @@ describe Mailroute::Reseller, :vcr => true do
     it 'should return a list of resellers' do
       resellers = Mailroute::Reseller.list
       resellers.should have(20).items
-      resellers.all?{|r| r.is_a? Mailroute::Reseller }.should be_true
+      resellers.should all_be Mailroute::Reseller
     end
   end
 
@@ -175,7 +175,7 @@ describe Mailroute::Reseller, :vcr => true do
       reseller = Mailroute::Reseller.new(:id => 4)
 
       reseller.customers.should have_at_least(10).items
-      reseller.customers.all?{|c| c.is_a? Mailroute::Customer }.should be_true
+      reseller.customers.should all_be Mailroute::Customer
     end
   end
 
@@ -184,7 +184,7 @@ describe Mailroute::Reseller, :vcr => true do
       reseller = Mailroute::Reseller.new(:id => 4)
 
       reseller.contacts.should have_at_least(1).item
-      reseller.contacts.all?{|c| c.is_a? Mailroute::ContactReseller }.should be_true
+      reseller.contacts.should all_be Mailroute::ContactReseller
     end
   end
 
@@ -194,7 +194,7 @@ describe Mailroute::Reseller, :vcr => true do
       reseller = Mailroute::Reseller.new(:id => 4)
 
       reseller.admins.should have_at_least(20).items
-      reseller.admins.all?{|c| c.is_a? Mailroute::Admin }.should be_true
+      reseller.admins.should all_be Mailroute::Admin
     end
   end
 end

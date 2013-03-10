@@ -5,6 +5,7 @@ require 'awesome_print'
 require 'mailroute'
 
 require 'support/mailroute_configuration_helper'
+require 'support/custom_matchers'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/vcr_cassettes'

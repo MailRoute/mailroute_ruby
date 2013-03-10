@@ -6,7 +6,7 @@ module Mailroute
 
     has_one :branding_info
     has_many :customers
-    has_many :contacts, through: 'contact_reseller', class: Mailroute::ContactReseller
+    has_many :contacts, class: Mailroute::ContactReseller
     has_many :admins
   end
 end
