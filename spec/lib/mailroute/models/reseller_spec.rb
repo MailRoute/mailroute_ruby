@@ -226,4 +226,31 @@ describe Mailroute::Reseller, :vcr => true do
       Mailroute::ContactReseller.get(contact.id).email.should == 'john_doe@example.com'
     end
   end
+
+  describe '#create_customer' do
+    let(:reseller) { Mailroute::Reseller.get(4) }
+    subject(:customer) {
+      reseller.create_customer(
+        :allow_branding => true,
+        :name => 'John Smith'
+      )
+    }
+
+    it { should be_a Mailroute::Customer }
+
+    it 'should save a new contact' do
+      Mailroute::Customer.get(customer.id).should be
+    end
+
+    it 'should have a link to the reseller' do
+      customer.reseller.should == reseller
+    end
+
+    its(:allow_branding) { should == true }
+    its(:name)           { should == 'John Smith' }
+
+    it 'should save the attributes' do
+      Mailroute::Customer.get(customer.id).allow_branding.should == true
+    end
+  end
 end
