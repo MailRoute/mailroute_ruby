@@ -17,6 +17,10 @@ module Mailroute
       def add_has_many(model, options)
         @associations[model] = HasMany.new(@klass, model, options)
       end
+
+      def add_has_admins(options)
+        add_has_many(:admins, options)
+      end
     end
 
     # TODO: move this stuff out
@@ -51,9 +55,18 @@ module Mailroute
       if block_given?
         self.instance_variable_set(:@lazy_site, block)
       else
-        block = self.instance_variable_get(:@lazy_site) || superclass.instance_variable_get(:@lazy_site)
+        block = deep_instance_variable_get(self, :@lazy_site)
         self.site = block.call
         super
+      end
+    end
+
+    def self.deep_instance_variable_get(klass, ivar)
+      val = klass.instance_variable_get(ivar)
+      if val || klass == Mailroute::Base
+        val
+      else
+        deep_instance_variable_get(klass.superclass, ivar)
       end
     end
 
@@ -145,6 +158,17 @@ module Mailroute
 
         @_associations[model] = nil
         relation.foreign_class.create(options.merge(relation.inverse.to_s => attributes[:resource_uri]))
+      end
+    end
+
+    def self.has_admins(options = {})
+      relation = meta.add_has_admins(options)
+
+      self.send(:define_method, :admins) do
+        @_associations ||= {}
+        foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
+
+        @_associations[:admins] ||= foreign_class.all(:params => {:scope => { :name => relation.inverse.to_s, :id => id}}).to_a
       end
     end
 

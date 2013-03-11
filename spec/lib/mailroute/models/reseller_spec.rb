@@ -190,10 +190,9 @@ describe Mailroute::Reseller, :vcr => true do
 
   describe '#admins' do
     it 'should return a list of its admins' do
-      pending 'GET https://admin-dev.mailroute.net/api/v1/admins/?reseller=4 responds with 400 Bad Request'
-      reseller = Mailroute::Reseller.new(:id => 4)
+      reseller = Mailroute::Reseller.new(:id => 2640)
 
-      reseller.admins.should have_at_least(20).items
+      reseller.admins.should have_at_least(1).item
       reseller.admins.should all_be Mailroute::Admin
     end
   end

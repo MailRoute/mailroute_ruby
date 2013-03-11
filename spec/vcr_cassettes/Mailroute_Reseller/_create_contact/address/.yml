@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - ApiKey viktar.basharymau@gmail.com:fssadf324sfsdfUDsyahuo34ud
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -55,7 +55,7 @@ http_interactions:
         aIPv3YX4H/E+qrU9uvE3XrUccvlepLksF6NPy4Q9dTX2idyfQwZzWAULhcoL
         UIuqKKvpDCZqrlTidRe5MgqLF0onmyVsz9rBgRrYEQ+6JZ/A2McFblNB/R3i
         p2e4dl/+u2AzyBWskVOAadRVkccMrwCPJzJm7+05AQAA
-    http_version: 
+    http_version:
   recorded_at: Sun, 10 Mar 2013 17:21:45 GMT
 - request:
     method: post
@@ -67,7 +67,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - ApiKey viktar.basharymau@gmail.com:fssadf324sfsdfUDsyahuo34ud
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
       Accept:
       - ! '*/*'
       User-Agent:
@@ -100,6 +100,6 @@ http_interactions:
         false, "last_name": "", "phone": null, "reseller": "/api/v1/reseller/4/",
         "resource_uri": "/api/v1/contact_reseller/1979/", "state": "", "updated_at":
         "Sun, 10 Mar 2013 10:21:45 -0700", "zipcode": null}'
-    http_version: 
+    http_version:
   recorded_at: Sun, 10 Mar 2013 17:21:46 GMT
 recorded_with: VCR 2.4.0
