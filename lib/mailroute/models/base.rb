@@ -176,10 +176,21 @@ module Mailroute
         foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
 
         @_associations[:admin] = nil
-        admin = relation.foreign_class.new(:email => email, :send_welcome => send_welcome, :blabla => 123123123)
+        admin = relation.foreign_class.new(:email => email, :send_welcome => send_welcome)
         admin.prefix_options[:scope] = { :name => relation.inverse.to_s, :id => id }
         admin.save!
         admin
+      end
+
+      self.send(:define_method, :delete_admin) do |email|
+        @_associations ||= {}
+        foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
+
+        @_associations[:admin] = nil
+        admins = relation.foreign_class.all(:params => {:email => email, :scope => { :name => relation.inverse.to_s, :id => id}}).to_a
+        ap admins.map(&:attributes)
+
+        raise 'not implemented yet'
       end
     end
 
