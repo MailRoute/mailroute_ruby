@@ -170,6 +170,17 @@ module Mailroute
 
         @_associations[:admins] ||= foreign_class.all(:params => {:scope => { :name => relation.inverse.to_s, :id => id}}).to_a
       end
+
+      self.send(:define_method, :create_admin) do |email, send_welcome = false|
+        @_associations ||= {}
+        foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
+
+        @_associations[:admin] = nil
+        admin = relation.foreign_class.new(:email => email, :send_welcome => send_welcome, :blabla => 123123123)
+        admin.prefix_options[:scope] = { :name => relation.inverse.to_s, :id => id }
+        admin.save!
+        admin
+      end
     end
 
     private

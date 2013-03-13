@@ -226,6 +226,22 @@ describe Mailroute::Reseller, :vcr => true do
     end
   end
 
+  describe '#create_admin' do
+    let(:reseller) { Mailroute::Reseller.get(4) }
+
+    subject(:admin) { reseller.create_admin('admin@example.com', true) }
+
+    it { should be_a Mailroute::Admin }
+
+    it 'should have an id' do
+      admin.id.should be
+    end
+
+    it "should be in the list of the reseller's admins" do
+      reseller.admins.should include admin
+    end
+  end
+
   describe '#create_customer' do
     let(:reseller) { Mailroute::Reseller.get(4) }
     subject(:customer) {

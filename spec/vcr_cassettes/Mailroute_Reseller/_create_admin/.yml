@@ -1,0 +1,1797 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/admins/reseller//
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"NE Ohio Web Services","send_welcome":false}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: NOT FOUND
+    headers:
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Wed, 13 Mar 2013 17:05:50 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Cookie
+    body:
+      encoding: US-ASCII
+      string: ! "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta http-equiv=\"content-type\"
+        content=\"text/html; charset=utf-8\">\n  <title>Page not found at /api/v1/admins/reseller//</title>\n
+        \ <meta name=\"robots\" content=\"NONE,NOARCHIVE\">\n  <style type=\"text/css\">\n
+        \   html * { padding:0; margin:0; }\n    body * { padding:10px 20px; }\n    body
+        * * { padding:0; }\n    body { font:small sans-serif; background:#eee; }\n
+        \   body>div { border-bottom:1px solid #ddd; }\n    h1 { font-weight:normal;
+        margin-bottom:.4em; }\n    h1 span { font-size:60%; color:#666; font-weight:normal;
+        }\n    table { border:none; border-collapse: collapse; width:100%; }\n    td,
+        th { vertical-align:top; padding:2px 3px; }\n    th { width:12em; text-align:right;
+        color:#666; padding-right:.5em; }\n    #info { background:#f6f6f6; }\n    #info
+        ol { margin: 0.5em 4em; }\n    #info ol li { font-family: monospace; }\n    #summary
+        { background: #ffc; }\n    #explanation { background:#eee; border-bottom:
+        0px none; }\n  </style>\n</head>\n<body>\n  <div id=\"summary\">\n    <h1>Page
+        not found <span>(404)</span></h1>\n    <table class=\"meta\">\n      <tr>\n
+        \       <th>Request Method:</th>\n        <td>POST</td>\n      </tr>\n      <tr>\n
+        \       <th>Request URL:</th>\n      <td>https://admin-dev.mailroute.net/api/v1/admins/reseller//</td>\n
+        \     </tr>\n    </table>\n  </div>\n  <div id=\"info\">\n    \n      <p>\n
+        \     Using the URLconf defined in <code>urls</code>,\n      Django tried
+        these URL patterns, in this order:\n      </p>\n      <ol>\n        \n          <li>\n
+        \           \n                ^\n                \n            \n                ^api/\n
+        \               \n            \n                ^(?P&lt;api_name&gt;v1)/$\n
+        \               [name='api_v1_top_level']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;admins)/(?P&lt;obj_type&gt;\\w[\\w/-]*)/(?P&lt;obj_id&gt;\\w[\\w/-]*)/admin/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;admins)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;admins)/(?P&lt;obj_type&gt;\\w[\\w/-]*)/(?P&lt;obj_id&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;admins)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_customer)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_customer)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_customer)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_customer)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_domain)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_domain)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_domain)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_domain)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_email_account)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_email_account)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_email_account)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_email_account)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_reseller)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_reseller)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_reseller)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_reseller)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;customer&gt;.+)/reseller/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;customer&gt;.+)/contacts/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;customer&gt;.+)/domains/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;customer&gt;.+)/branding_info/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;id&gt;.+)/admins/$\n
+        \               [name='api_get_admins']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;id&gt;.+)/move/$\n
+        \               [name='api_move_customer']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/email_accounts/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/outbound_servers/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/contacts/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/mail_servers/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/domain_aliases/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;id&gt;.+)/move/$\n
+        \               [name='api_move_domain']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;id&gt;.+)/wblist/$\n
+        \               [name='api_get_wblist']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;id&gt;.+)/quarantine/$\n
+        \               [name='api_get_quarantine']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_alias)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_alias)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_alias)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_alias)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_with_alias)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_with_alias)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_with_alias)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_with_alias)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;email_account&gt;.+)/localpart_aliases/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;email_account&gt;.+)/contact/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/mass_delete/$\n
+        \               [name='api_delete_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/mass_add/$\n
+        \               [name='api_add_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/mass_add_aliases/$\n
+        \               [name='api_add_aliases']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/users_to_alias/$\n
+        \               [name='api_users_to_alias']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/mass_resend_welcome/$\n
+        \               [name='api_mass_resend_welcome']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/regenerate_api_key/$\n
+        \               [name='api_regenerate_api_key']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/wblist/$\n
+        \               [name='api_get_wblist']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/quarantine/$\n
+        \               [name='api_get_quarantine']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;localpart_alias)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;localpart_alias)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;localpart_alias)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;localpart_alias)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;mail_server)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;mail_server)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;mail_server)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;mail_server)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_account_task)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_account_task)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_account_task)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_account_task)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_domain_task)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_domain_task)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_domain_task)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_domain_task)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;outbound_server)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;outbound_server)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;outbound_server)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;outbound_server)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/default_policy/$\n
+        \               [name='api_default_policy']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_user)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_user)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_user)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_user)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;reseller&gt;.+)/customers/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;reseller&gt;.+)/branding_info/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;reseller&gt;.+)/contacts/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;id&gt;.+)/admins/$\n
+        \               [name='api_get_admins']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/mass_delete/$\n
+        \               [name='api_delete_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/mass_add/$\n
+        \               [name='api_add_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^$\n                [name='index_page']\n            \n
+        \         </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^changelog/$\n                [name='changelog']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^resellers/$\n                [name='reseller_index']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^reseller/(?P&lt;id&gt;\\d+)/$\n
+        \               [name='reseller_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^customers/$\n                [name='customer_index']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^customer/(?P&lt;id&gt;\\d+)/$\n
+        \               [name='customer_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^domains/$\n                [name='domain_index']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^domain/(?P&lt;id&gt;\\d+)/$\n
+        \               [name='domain_detail']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^mail_server/(?P&lt;id&gt;\\d+)/$\n                [name='mail_server_detail']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^users/$\n                [name='email_account_index']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^user/(?P&lt;id&gt;\\d+)/$\n
+        \               [name='email_account_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^user/import/$\n                [name='email_account_import']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^user/export/$\n                [name='email_account_export']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^user/add/$\n                [name='email_account_mass_add']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^contacts/reseller/(?P&lt;id&gt;\\d+)/$\n
+        \               [name='contact_reseller_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^contacts/customer/(?P&lt;id&gt;\\d+)/$\n                [name='contact_customer_detail']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^contacts/domain/(?P&lt;id&gt;\\d+)/$\n
+        \               [name='contact_domain_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^contacts/email_account/(?P&lt;id&gt;\\d+)/$\n
+        \               [name='contact_emailaccount_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/$\n
+        \               [name='api_v1_top_level']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;admins)/(?P&lt;obj_type&gt;\\w[\\w/-]*)/(?P&lt;obj_id&gt;\\w[\\w/-]*)/admin/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;admins)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;admins)/(?P&lt;obj_type&gt;\\w[\\w/-]*)/(?P&lt;obj_id&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;admins)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_customer)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_customer)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_customer)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_customer)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_domain)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_domain)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_domain)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_domain)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_email_account)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_email_account)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_email_account)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_email_account)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_reseller)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_reseller)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_reseller)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_reseller)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;customer&gt;.+)/reseller/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;customer&gt;.+)/contacts/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;customer&gt;.+)/domains/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;customer&gt;.+)/branding_info/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;id&gt;.+)/admins/$\n
+        \               [name='api_get_admins']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;id&gt;.+)/move/$\n
+        \               [name='api_move_customer']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/email_accounts/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/outbound_servers/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/contacts/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/mail_servers/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/domain_aliases/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;id&gt;.+)/move/$\n
+        \               [name='api_move_domain']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;id&gt;.+)/wblist/$\n
+        \               [name='api_get_wblist']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;id&gt;.+)/quarantine/$\n
+        \               [name='api_get_quarantine']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_alias)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_alias)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_alias)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_alias)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_with_alias)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_with_alias)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_with_alias)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_with_alias)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;email_account&gt;.+)/localpart_aliases/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;email_account&gt;.+)/contact/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/mass_delete/$\n
+        \               [name='api_delete_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/mass_add/$\n
+        \               [name='api_add_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/mass_add_aliases/$\n
+        \               [name='api_add_aliases']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/users_to_alias/$\n
+        \               [name='api_users_to_alias']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/mass_resend_welcome/$\n
+        \               [name='api_mass_resend_welcome']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/regenerate_api_key/$\n
+        \               [name='api_regenerate_api_key']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/wblist/$\n
+        \               [name='api_get_wblist']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/quarantine/$\n
+        \               [name='api_get_quarantine']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;localpart_alias)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;localpart_alias)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;localpart_alias)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;localpart_alias)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;mail_server)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;mail_server)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;mail_server)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;mail_server)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_account_task)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_account_task)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_account_task)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_account_task)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_domain_task)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_domain_task)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_domain_task)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_domain_task)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;outbound_server)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;outbound_server)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;outbound_server)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;outbound_server)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/default_policy/$\n
+        \               [name='api_default_policy']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_user)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_user)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_user)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_user)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/mass_delete/$\n
+        \               [name='api_delete_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/mass_recover/$\n
+        \               [name='api_recover_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/mass_(?P&lt;list_type&gt;whitelist|blacklist)_sender/(?P&lt;type&gt;\\w[\\w/-]*)/(?P&lt;entity&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_wblist_sender_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/(?P&lt;pk&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_dispatch_detail_custom']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/(?P&lt;mail_id&gt;\\w[\\w/-]*)/(?P&lt;partition_tag&gt;\\w[\\w/-]*)/(?P&lt;list_type&gt;whitelist|blacklist)_sender/(?P&lt;type&gt;\\w[\\w/-]*)/(?P&lt;entity&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_wblist_sender']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/(?P&lt;mail_id&gt;\\w[\\w/-]*)/(?P&lt;partition_tag&gt;\\w[\\w/-]*)/recover/$\n
+        \               [name='api_recover']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/(?P&lt;mail_id&gt;\\w[\\w/-]*)/(?P&lt;partition_tag&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/mass_delete/$\n
+        \               [name='api_delete_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/mass_recover/$\n
+        \               [name='api_recover_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/mass_(?P&lt;list_type&gt;whitelist|blacklist)_sender/(?P&lt;type&gt;\\w[\\w/-]*)/(?P&lt;entity&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_wblist_sender_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/(?P&lt;pk&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_dispatch_detail_custom']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/(?P&lt;mail_id&gt;\\w[\\w/-]*)/(?P&lt;partition_tag&gt;\\w[\\w/-]*)/(?P&lt;list_type&gt;whitelist|blacklist)_sender/(?P&lt;type&gt;\\w[\\w/-]*)/(?P&lt;entity&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_wblist_sender']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/(?P&lt;mail_id&gt;\\w[\\w/-]*)/(?P&lt;partition_tag&gt;\\w[\\w/-]*)/recover/$\n
+        \               [name='api_recover']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/(?P&lt;mail_id&gt;\\w[\\w/-]*)/(?P&lt;partition_tag&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;reseller&gt;.+)/customers/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;reseller&gt;.+)/branding_info/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;reseller&gt;.+)/contacts/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;id&gt;.+)/admins/$\n
+        \               [name='api_get_admins']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/mass_delete/$\n
+        \               [name='api_delete_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/mass_add/$\n
+        \               [name='api_add_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^quarantine/$\n                [name='quarantine']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^quarantine/(?P&lt;rid&gt;\\d+)/(?P&lt;hash&gt;[0-9A-Za-z]*)/$\n
+        \               [name='quarantine_readonly']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^quarantine/(?P&lt;rid&gt;\\d+)/(?P&lt;hash&gt;[0-9A-Za-z]*)/(?P&lt;msg_id&gt;[0-9A-Za-z\\-_]*)/(?P&lt;part_tag&gt;[0-9A-Za-z]*)/(?P&lt;rseqnum&gt;[0-9A-Za-z]*)/$\n
+        \               [name='quarantine_readonly_msg']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^quarantine/(?P&lt;rid&gt;\\d+)/(?P&lt;hash&gt;[0-9A-Za-z]*)/(?P&lt;msg_id&gt;[0-9A-Za-z\\-_]*)/(?P&lt;part_tag&gt;[0-9A-Za-z]*)/(?P&lt;rseqnum&gt;[0-9A-Za-z]*)/whitelist/$\n
+        \               [name='quarantine_readonly_msg_whitelist']\n            \n
+        \         </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^quarantine/(?P&lt;rid&gt;\\d+)/(?P&lt;hash&gt;[0-9A-Za-z]*)/(?P&lt;msg_id&gt;[0-9A-Za-z\\-_]*)/(?P&lt;part_tag&gt;[0-9A-Za-z]*)/(?P&lt;rseqnum&gt;[0-9A-Za-z]*)/recover/$\n
+        \               [name='quarantine_readonly_msg_recover']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/$\n
+        \               [name='api_v1_top_level']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;admins)/(?P&lt;obj_type&gt;\\w[\\w/-]*)/(?P&lt;obj_id&gt;\\w[\\w/-]*)/admin/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;admins)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;admins)/(?P&lt;obj_type&gt;\\w[\\w/-]*)/(?P&lt;obj_id&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;admins)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;brandinginfo)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;brandinginfo)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;brandinginfo)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;brandinginfo)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_customer)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_customer)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_customer)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_customer)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_domain)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_domain)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_domain)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_domain)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_email_account)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_email_account)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_email_account)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_email_account)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_reseller)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_reseller)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_reseller)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;contact_reseller)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;customer&gt;.+)/reseller/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;customer&gt;.+)/contacts/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;customer&gt;.+)/domains/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;customer&gt;.+)/branding_info/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;id&gt;.+)/admins/$\n
+        \               [name='api_get_admins']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;id&gt;.+)/move/$\n
+        \               [name='api_move_customer']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;customer)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/email_accounts/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/outbound_servers/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/contacts/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/mail_servers/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;domain&gt;.+)/domain_aliases/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;id&gt;.+)/move/$\n
+        \               [name='api_move_domain']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;id&gt;.+)/wblist/$\n
+        \               [name='api_get_wblist']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;id&gt;.+)/quarantine/$\n
+        \               [name='api_get_quarantine']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_alias)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_alias)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_alias)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_alias)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_with_alias)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_with_alias)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_with_alias)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;domain_with_alias)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;email_account&gt;.+)/localpart_aliases/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;email_account&gt;.+)/contact/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/mass_delete/$\n
+        \               [name='api_delete_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/mass_add/$\n
+        \               [name='api_add_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/mass_add_aliases/$\n
+        \               [name='api_add_aliases']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/users_to_alias/$\n
+        \               [name='api_users_to_alias']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/mass_resend_welcome/$\n
+        \               [name='api_mass_resend_welcome']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/regenerate_api_key/$\n
+        \               [name='api_regenerate_api_key']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/wblist/$\n
+        \               [name='api_get_wblist']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;id&gt;.+)/quarantine/$\n
+        \               [name='api_get_quarantine']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;email_account)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;localpart_alias)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;localpart_alias)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;localpart_alias)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;localpart_alias)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;mail_server)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;mail_server)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;mail_server)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;mail_server)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_account_task)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_account_task)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_account_task)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_account_task)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_domain_task)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_domain_task)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_domain_task)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;notification_domain_task)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;outbound_server)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;outbound_server)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;outbound_server)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;outbound_server)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/default_policy/$\n
+        \               [name='api_default_policy']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_domain)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_user)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_user)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_user)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;policy_user)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/mass_delete/$\n
+        \               [name='api_delete_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/mass_recover/$\n
+        \               [name='api_recover_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/mass_(?P&lt;list_type&gt;whitelist|blacklist)_sender/(?P&lt;type&gt;\\w[\\w/-]*)/(?P&lt;entity&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_wblist_sender_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/(?P&lt;pk&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_dispatch_detail_custom']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/(?P&lt;mail_id&gt;\\w[\\w/-]*)/(?P&lt;partition_tag&gt;\\w[\\w/-]*)/(?P&lt;list_type&gt;whitelist|blacklist)_sender/(?P&lt;type&gt;\\w[\\w/-]*)/(?P&lt;entity&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_wblist_sender']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/(?P&lt;mail_id&gt;\\w[\\w/-]*)/(?P&lt;partition_tag&gt;\\w[\\w/-]*)/recover/$\n
+        \               [name='api_recover']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/(?P&lt;mail_id&gt;\\w[\\w/-]*)/(?P&lt;partition_tag&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_message)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/mass_delete/$\n
+        \               [name='api_delete_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/mass_recover/$\n
+        \               [name='api_recover_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/mass_(?P&lt;list_type&gt;whitelist|blacklist)_sender/(?P&lt;type&gt;\\w[\\w/-]*)/(?P&lt;entity&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_wblist_sender_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/(?P&lt;pk&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_dispatch_detail_custom']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/(?P&lt;mail_id&gt;\\w[\\w/-]*)/(?P&lt;partition_tag&gt;\\w[\\w/-]*)/(?P&lt;list_type&gt;whitelist|blacklist)_sender/(?P&lt;type&gt;\\w[\\w/-]*)/(?P&lt;entity&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_wblist_sender']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/(?P&lt;mail_id&gt;\\w[\\w/-]*)/(?P&lt;partition_tag&gt;\\w[\\w/-]*)/recover/$\n
+        \               [name='api_recover']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/(?P&lt;mail_id&gt;\\w[\\w/-]*)/(?P&lt;partition_tag&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;quarantine_readonly_message)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;reseller&gt;.+)/customers/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;reseller&gt;.+)/branding_info/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;reseller&gt;.+)/contacts/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;id&gt;.+)/admins/$\n
+        \               [name='api_get_admins']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;reseller)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/mass_delete/$\n
+        \               [name='api_delete_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/mass_add/$\n
+        \               [name='api_add_collection']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/$\n
+        \               [name='api_dispatch_list']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/schema/$\n
+        \               [name='api_get_schema']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^\n                \n            \n
+        \               ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/set/(?P&lt;pk_list&gt;\\w[\\w/;-]*)/$\n
+        \               [name='api_get_multiple']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^api/\n                \n            \n                ^(?P&lt;api_name&gt;v1)/\n
+        \               \n            \n                ^(?P&lt;resource_name&gt;wblist)/(?P&lt;pk&gt;\\w[\\w/-]*)/$\n
+        \               [name='api_dispatch_detail']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^css/branding.css$\n                [name='branding_css']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^\n
+        \               \n            \n                ^branding/(?P&lt;branding_id&gt;\\d+)/upload_logo$\n
+        \               [name='branding_logo_upload']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^branding/(?P&lt;branding_id&gt;\\d+)/upload_favicon$\n
+        \               [name='branding_favicon_upload']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^branding/(?P&lt;branding_id&gt;\\d+)/upload_ssl_cert$\n
+        \               [name='branding_ssl_cert_upload']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^branding/(?P&lt;branding_id&gt;\\d+)/upload_ssl_private_key$\n
+        \               [name='branding_private_key_upload']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^\n                \n
+        \           \n                ^branding/(?P&lt;branding_id&gt;\\d+)/generate_csr$\n
+        \               [name='branding_generate_csr']\n            \n          </li>\n
+        \       \n          <li>\n            \n                ^jsi18n/$\n                \n
+        \           \n          </li>\n        \n          <li>\n            \n                ^admin/\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^notification/\n                \n            \n
+        \         </li>\n        \n          <li>\n            \n                ^accounts/\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^jsi18n/(?P&lt;packages&gt;\\S+?)/$\n                \n
+        \           \n          </li>\n        \n          <li>\n            \n                ^static\\/(?P&lt;path&gt;.*)$\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^media/(?P&lt;path&gt;.*)$\n                \n
+        \           \n          </li>\n        \n      </ol>\n      <p>The current
+        URL, <code>api/v1/admins/reseller//</code>, didn't match any of these.</p>\n
+        \   \n  </div>\n\n  <div id=\"explanation\">\n    <p>\n      You're seeing
+        this error because you have <code>DEBUG = True</code> in\n      your Django
+        settings file. Change that to <code>False</code>, and Django\n      will display
+        a standard 404 page.\n    </p>\n  </div>\n</body>\n</html>\n"
+    http_version:
+  recorded_at: Wed, 13 Mar 2013 17:05:52 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/reseller/4/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbngvMS4yLjY=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        V2VkLCAxMyBNYXIgMjAxMyAxNzo0NzoyMiBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LCBDb29raWU=
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "Q29udGVudC1FbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA22PQWvDMAyF/4rwucOOk63D914K3Q4r7BiURF0Mjh3kuD2U
+        /vfZZR2l9CKE9EnvvbPALgaXFmoTO2FASKZIzhHLRooVCHQunNqO0Q/W/2Ti
+        gC7S/6JPcQkT8TPidtRafwjX3zhbeazkbVHm8lVfdXomXGhocSnkfkwrWMM2
+        edCq0qDejW5M/QYvaq1U4e2QuSY3HicqJx8b+BxtgG/q4Iv4aHuKBcx5QuK+
+        BLT3Jh5ypnm41085YtbdIRcDdS5GV6Zq/gxcfgFHNWklOQEAAA==
+    http_version:
+  recorded_at: Wed, 13 Mar 2013 17:47:22 GMT
+- request:
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/admins/reseller/4/
+    body:
+      encoding: US-ASCII
+      string: ! '{"email":"admin@example.com","send_welcome":false}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Wed, 13 Mar 2013 17:47:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      Location:
+      - https://admin-dev.mailroute.net/api/v1/admins/reseller/4/admin/43692/
+    body:
+      encoding: US-ASCII
+      string: ! '{"customer": null, "date_joined": "Wed, 13 Mar 2013 10:47:23 -0700",
+        "email": "admin@example.com", "id": 43692, "is_active": true, "last_login":
+        "Wed, 13 Mar 2013 10:47:23 -0700", "reseller": null, "resource_uri": "/api/v1/admins/reseller/4/admin/43692/",
+        "send_welcome": null, "username": "admin@example.com"}'
+    http_version:
+  recorded_at: Wed, 13 Mar 2013 17:47:23 GMT
+recorded_with: VCR 2.4.0
