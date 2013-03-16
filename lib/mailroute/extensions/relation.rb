@@ -28,7 +28,7 @@ class Mailroute::Relation
   end
 
   def order_by(attribute)
-    new_relation(:params => { :order => attribute })
+    new_relation(:params => { :order_by => attribute })
   end
 
   def search(term)

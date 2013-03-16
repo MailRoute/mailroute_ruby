@@ -46,19 +46,19 @@ describe Mailroute::Reseller, :vcr => true do
   describe '#order_by' do
     context 'ascending order' do
       it 'should return ordered result' do
-        pending 'need to figure out how to query API for ordered results'
         resellers = Mailroute::Reseller.order_by('name')
         resellers.should_not be_empty
-        resellers.each_cons(2).all? {|x, y| x.name <= y.name }.should be_true
+        resellers.each_cons(2).all? {|x, y| x.name.upcase <= y.name.upcase }.should be_true
       end
     end
-    # context 'ascending order' do
-    #   it 'should return ordered result' do
-    #     resellers = Mailroute::Reseller.order_by('-name')
-    #     resellers.should_not be_empty
-    #     resellers.each_cons(2).all? {|x, y| y.name <= x.name }.should be_true
-    #   end
-    # end
+
+    context 'descending order' do
+      it 'should return ordered result' do
+        resellers = Mailroute::Reseller.order_by('-name')
+        resellers.should_not be_empty
+        resellers.each_cons(2).all? {|x, y| y.name.upcase <= x.name.upcase }.should be_true
+      end
+    end
   end
 
   describe '#find' do

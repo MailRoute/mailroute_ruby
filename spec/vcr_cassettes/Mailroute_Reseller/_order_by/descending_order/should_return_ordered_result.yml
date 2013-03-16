@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/reseller/?order_by=-name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbngvMS4yLjY=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        U2F0LCAxNiBNYXIgMjAxMyAxNDoxNzoxNSBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LCBDb29raWU=
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "Q29udGVudC1FbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA72Z72+bOBjH/xUrL/YqbTA4QCxNp2qn6ja13bSk20mnU+QQ
+        t/XN4MiGrFG1//0eg7tzuKSjEuFNRYDEfD88P76P+zTKeclGFD2NpMhFCUdh
+        MEajgj/a49GEbcRkiyeaGy4l15Pf6tvehsEbpddcL1e7t2cFy/kbdXdnuL0w
+        gq83H+AH7G9tNN8KVRn4WFRSwplSlUwuM1UVdpGU/LBfWf3Ds9Le9NfTiK2M
+        klXJl5WW9WP8XB+HE7sAk1J9X640K9aiuIdb7pg0/OeFrDKlyu3j/f+O51NL
+        UdwpX+PzBXt+kkb1OpnmrOTrJatpLB6qMUrQh6oASjhEQUrDlE4xOguSoBYu
+        1nAfDuHIQrHf+XPDCrMz6Mpy42t7E4hRlc6sOuE/QFtktVn7i1egDxa9Ztqu
+        HsEfGmKKiVsdIL4IjgwErnlBvwQXYRrFbXDEB3fJslJpNLeRIFRh0PsiO+/G
+        r9HaK78ID8SvWecX/GYUxzRKWvwi7PPL+MZyYxLd8PK70t9MJ3hOaL/wkoHg
+        BV2ydkbJlEbtrI0SD97XB7HZSI7+EFKidyrPq0JkrA7DbhAbwb1CjNNhICaz
+        AxCvVTFGwOx3nrnaN6VkRgNLMfVqX5z6FPnqzEDVM+eZyjtxcxp75UaaoDh5
+        y0ia9/Ny5uKABhB/YStzSd10Xcv4IopvCi1MJToxc/p6ZRYPVO2SJk/2mV1q
+        Ydvsf6GGLTNsu8VeqPnV7naOPru22i1DncJeqSUDmZMkPpah4AY+sNqdRCiA
+        DE0oCVrYEt+d3H68ubidL97fnL/7eN0p2pzGXrmFA3mTZHqA2wFTRwgNLDbf
+        1IW+N1konbNSi8dX2Tons1d06VBNoXlF+4n6la/HKEzQJV+5kANwYIhtdfMz
+        NfWbwoIX6JOEcaCLE3byekXmsuf0/eDoCBH6WRrQKaFh1M7S2GsIC549gA3u
+        hszJ6xUZHsi/ueLycguFCIsIjdJWgmLfv1li1rFJuUMX6y0rMr72JolP5Q5d
+        lR2HsRNYOTJUwTs6TIToorp3Tg5sHFiSth8mewUPeKIrGMvRa9A5mb2GYjQU
+        uo6jhA3F9hwb+ejmO1Py3KALmMR2Rhg053orMv6KedZp7pUjblz+yatgfGia
+        ONBzo5jidgjimVcE5w9iu+XanBe87NQ7nMJeqTm/enpqR2eJvd4RQtpS0jbG
+        iV8J5zzfcI2+iKzs2HOdxl65kcZ5nZ7b0XkCB17Fi+wOQNDePiFTP9wyVZbo
+        UirNoXl0Cjgnsldw4VDgDo0UB9LU7pzM2tZ4jxt7fN5v6gTNCewVWjzQxB8f
+        nCfsPi3xptcQdkkopG1revUnfsPuK6ZVCV22+1ZJI7JXcNOhmsKhaWJewRZT
+        6IFLwOTRYNoCN/WbAsz89f8lbmDrZNx9g9jpfCW7v3/8C1+XoBIvGQAA
+    http_version:
+  recorded_at: Sat, 16 Mar 2013 14:17:15 GMT
+recorded_with: VCR 2.4.0
