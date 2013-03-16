@@ -126,4 +126,12 @@ describe Mailroute::Customer, :vcr => true do
       customer.admins.should all_be Mailroute::Admin
     end
   end
+
+  describe '#branding_info' do
+    it 'should return its branding info' do
+      customer = Mailroute::Customer.get(1300)
+
+      customer.branding_info.should be_a Mailroute::BrandingInfo
+    end
+  end
 end
