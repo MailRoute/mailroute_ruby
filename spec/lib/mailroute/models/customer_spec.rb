@@ -101,11 +101,20 @@ describe Mailroute::Customer, :vcr => true do
 
   describe '#domains' do
     it 'should return a list of its domains' do
-      reseller = Mailroute::Customer.get(1985)
+      customer = Mailroute::Customer.get(1985)
 
-      reseller.domains.should have_at_least(1).item
-      reseller.domains.should all_be Mailroute::Domain
-      reseller.domains.map(&:id).should include 4157
+      customer.domains.should have_at_least(1).item
+      customer.domains.should all_be Mailroute::Domain
+      customer.domains.map(&:id).should include 4157
+    end
+  end
+
+  describe '#contacts' do
+    it 'should return a list of its contacts' do
+      customer = Mailroute::Customer.new(:id => 4)
+
+      customer.contacts.should have_at_least(1).item
+      customer.contacts.should all_be Mailroute::ContactCustomer
     end
   end
 end
