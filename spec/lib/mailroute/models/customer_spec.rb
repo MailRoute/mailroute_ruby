@@ -13,15 +13,43 @@ describe Mailroute::Customer, :vcr => true do
   end
 
   context '#create with reseller' do
-    let(:reseller) { Mailroute::Reseller.get(4) }
     subject(:customer) { Mailroute::Customer.create(:name => 'New Customer', :reseller => reseller) }
+    let(:some_reseller) { Mailroute::Reseller.get(4) }
 
-    it 'should have id' do
-      customer.id.should_not be_nil
+    context 'when reseller is a reseller object' do
+      let(:reseller) { some_reseller }
+
+      it 'should have id' do
+        customer.id.should_not be_nil
+      end
+
+      it 'should be created with reseller' do
+        customer.reseller.should == some_reseller
+      end
     end
 
-    it 'should be created with reseller' do
-      customer.reseller.should == reseller
+    context 'when reseller is referenced via id' do
+      let(:reseller) { some_reseller.id }
+
+      it 'should have id' do
+        customer.id.should_not be_nil
+      end
+
+      it 'should be created with reseller' do
+        customer.reseller.should == some_reseller
+      end
+    end
+
+    context 'when reseller is referenced via name' do
+      let(:reseller) { some_reseller.name }
+
+      it 'should have id' do
+        customer.id.should_not be_nil
+      end
+
+      it 'should be created with reseller' do
+        customer.reseller.should == some_reseller
+      end
     end
   end
 end

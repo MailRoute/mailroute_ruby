@@ -33,6 +33,10 @@ module Mailroute
       def foreign_class
         Mailroute.const_get(ActiveSupport::Inflector.classify(model))
       end
+
+      def pk
+        options[:pk]
+      end
     end
 
     # TODO: move this stuff out
@@ -157,7 +161,7 @@ module Mailroute
         foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
 
         @_associations[model] = nil
-        relation.foreign_class.create(options.merge(relation.inverse.to_s => attributes[:resource_uri]))
+        relation.foreign_class.create(options.merge(relation.inverse.to_s => id))
       end
     end
 
@@ -194,6 +198,38 @@ module Mailroute
           admin.destroy
         end
       end
+    end
+
+    def initialize(attributes = {}, persisted = false)
+      @_associations = {}.with_indifferent_access
+      new_attributes = attributes.dup
+      attributes.each do |k, v|
+        next unless self.class.meta.associations.has_key?(k.to_sym)
+        relation = self.class.meta.associations[k.to_sym]
+
+        case v
+        when Integer
+          new_attributes[k] = relation.foreign_class.element_path(v)
+        when Mailroute::Base
+          @_associations[k] = v
+          new_attributes[k] = v.element_path
+        when String
+          if relation.pk && !v =~ /^\/api\/v1/
+            all = relation.foreign_class.filter(relation.pk => v).limit(2).to_a
+            case all.size
+            when 0 then raise 'there is no such records'
+            when 2 then raise 'there are too many records'
+            end
+            fst = all.first
+            @_associations[k] = fst
+            new_attributes[k] = fst.element_path
+          else
+            new_attributes[k] = v
+          end
+        end
+      end
+
+      super(new_attributes, persisted)
     end
 
     private
