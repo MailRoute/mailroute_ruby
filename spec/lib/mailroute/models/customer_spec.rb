@@ -117,4 +117,13 @@ describe Mailroute::Customer, :vcr => true do
       customer.contacts.should all_be Mailroute::ContactCustomer
     end
   end
+
+  describe '#admins' do
+    it 'should return a list of its admins' do
+      customer = Mailroute::Customer.new(:id => 4)
+
+      customer.admins.should have_at_least(1).item
+      customer.admins.should all_be Mailroute::Admin
+    end
+  end
 end
