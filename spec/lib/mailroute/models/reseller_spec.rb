@@ -245,17 +245,26 @@ describe Mailroute::Reseller, :vcr => true do
   describe '#delete_admin' do
     let(:reseller) { Mailroute::Reseller.get(4) }
 
-    before do
-      pending "API returns 400 BAD REQUEST. Response body = The 'email' field does not allow filtering"
-      reseller.delete_admin('admin@example.com')
+    context 'when deleting an existing admin' do
+      before do
+        reseller.delete_admin('admin@example.com')
+      end
+
+      it "should not be in the list of the reseller's admins" do
+        reseller.admins.map(&:email).should_not include 'admin@example.com'
+      end
+
+      it "should not delete all admins" do
+        reseller.admins.should_not be_empty
+      end
     end
 
-    it "should not be in the list of the reseller's admins" do
-      reseller.admins.map(&:email).should include 'admin@example.com'
-    end
-
-    it "should not delete all admins" do
-      reseller.admins.should_not be_empty
+    context 'when trying to delete admin which do not exist' do
+      it 'should not fail' do
+        expect {
+          reseller.delete_admin('i-am-not-an-admin@example.com')
+        }.not_to raise_error
+      end
     end
   end
 
