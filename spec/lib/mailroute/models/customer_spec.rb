@@ -89,4 +89,13 @@ describe Mailroute::Customer, :vcr => true do
       end
     end
   end
+
+  describe '#reseller' do
+    it "should return the customer's reseller" do
+      customer = Mailroute::Customer.get(2341)
+      reseller = customer.reseller
+      reseller.should be_a Mailroute::Reseller
+      reseller.id.should == 4
+    end
+  end
 end
