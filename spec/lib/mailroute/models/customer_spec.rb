@@ -98,4 +98,14 @@ describe Mailroute::Customer, :vcr => true do
       reseller.id.should == 4
     end
   end
+
+  describe '#domains' do
+    it 'should return a list of its domains' do
+      reseller = Mailroute::Customer.get(1985)
+
+      reseller.domains.should have_at_least(1).item
+      reseller.domains.should all_be Mailroute::Domain
+      reseller.domains.map(&:id).should include 4157
+    end
+  end
 end
