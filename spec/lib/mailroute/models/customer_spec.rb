@@ -52,4 +52,11 @@ describe Mailroute::Customer, :vcr => true do
       end
     end
   end
+
+  context '#get' do
+    subject(:customer) { Mailroute::Customer.get(1300) }
+
+    its(:id) { should == 1300 }
+    its(:name) { should == '111testCustomer111cc' }
+  end
 end
