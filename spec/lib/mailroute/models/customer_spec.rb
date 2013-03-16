@@ -59,4 +59,34 @@ describe Mailroute::Customer, :vcr => true do
     its(:id) { should == 1300 }
     its(:name) { should == '111testCustomer111cc' }
   end
+
+  context '#filter' do
+    context 'by name' do
+      it 'should return cusomers with a given name' do
+        customers = Mailroute::Customer.filter(:name => '111testCustomer111cc')
+        customers.should all_be Mailroute::Customer
+        customers.should have(1).item
+        customers.first.id.should == 1300
+      end
+    end
+
+    context 'by name__startswith' do
+      it 'should return cusomers with names starting with given prefix' do
+        customers = Mailroute::Customer.filter(:name__startswith => 'A')
+        customers.should_not be_empty
+        customers.should all_be Mailroute::Customer
+        customers.all? { |c| c.name =~ /^A/i }.should be_true
+      end
+    end
+
+    context 'by reseller' do
+      it 'should return all customers of the given reseller' do
+        customers = Mailroute::Customer.filter(:reseller => 4)
+        customers.should_not be_empty
+        customers.should have_at_least(5).items
+        customers.should all_be Mailroute::Customer
+        customers.all? { |c| c.attributes[:reseller] =~ /\/4\// }.should be_true
+      end
+    end
+  end
 end

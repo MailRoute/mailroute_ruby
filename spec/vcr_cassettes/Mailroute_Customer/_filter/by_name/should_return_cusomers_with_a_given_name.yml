@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/customer/?name=111testCustomer111cc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbngvMS4yLjY=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        U2F0LCAxNiBNYXIgMjAxMyAxNjoxODoxNCBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LCBDb29raWU=
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "Q29udGVudC1FbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA2VQTUvEMBD9KyXnlSTdqkuvgjfx4k0kpOlUImlSJskqLPvf
+        nSktLngJ8/Hm5b13ETMUK/rmIoKffaGqVYdGRPjhOtYQqEvTlIF7Xi0IZ59q
+        /luXVGwwLtXIGH3li+ELXGHM+0XYIadQC5iKgSZCuppLmgGlPiolBeFtCOnb
+        DGjj6OMngSYbMtBiHxkfp7Qe28XLs5b7gufy1K0sDsEWGI1lHeIZ/aFpH5pX
+        V8iUbhvV9frUd21zpx6V4gM/smASwXU2E9k1NQOa4DNz7CqinYEptdYFcnna
+        9FPrHPMgLAn55/V4T2JLDyFDCIC36veZvNercupTRccR+Vvc/6TqMt54fKsU
+        Ell7scgej/T0re51t3m8flx/AeabGunjAQAA
+    http_version:
+  recorded_at: Sat, 16 Mar 2013 16:18:14 GMT
+recorded_with: VCR 2.4.0
