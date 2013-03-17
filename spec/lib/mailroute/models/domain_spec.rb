@@ -26,4 +26,14 @@ describe Mailroute::Domain, :vcr => true do
       end
     end
   end
+
+  describe '#domain_aliases' do
+    let(:domain) { Mailroute::Domain.get(3388) }
+    subject(:aliases) { domain.domain_aliases }
+
+    it 'should return a list of its domain aliases' do
+      aliases.should have_at_least(1).item
+      aliases.should all_be Mailroute::DomainAlias
+    end
+  end
 end
