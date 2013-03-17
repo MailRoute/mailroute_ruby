@@ -185,4 +185,20 @@ describe Mailroute::Customer, :vcr => true do
       Mailroute::ContactCustomer.get(contact.id).address.should == "Barcelona"
     end
   end
+
+  describe '#create_admin' do
+    let(:customer) { Mailroute::Customer.get(1300) }
+
+    subject(:admin) { customer.create_admin('admin@example.com', true) }
+
+    it { should be_a Mailroute::Admin }
+
+    it 'should have an id' do
+      admin.id.should be
+    end
+
+    it "should be in the list of the customer's admins" do
+      customer.admins.should include admin
+    end
+  end
 end
