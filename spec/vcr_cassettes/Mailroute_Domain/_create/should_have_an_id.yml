@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/customer/1300/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey viktar.basharymau@gmail.com:3bc2d0736cc061f420b147141f229d04465bbe8d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbngvMS4yLjY=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        U3VuLCAxNyBNYXIgMjAxMyAxNToxNDowNSBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LCBDb29raWU=
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "Q29udGVudC1FbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA2VQQWrEMAz8isg5i+1sullyLfRW9tAHGK+jFIPXDrLdHkr/
+        XstsIFDwwRrNjEb66cw9RV8y6kK+m6ETtqQcH0hCnaUUXQ+d8T5+6zuZsLjw
+        WUmr8QlrY4e0C2tsYrM58aXE3mBcXMfmYglNxkWbzMw3cj0MF7jZDINUA8hx
+        Vtd5HOAkJylZ4JZK5BD8T3ot3uuSkLR3iT32FME8kC2VUhlTfn3mr6W17EO4
+        ReLJTWxjCawO1a41E3qPdEy/Y+JFteS1joUsn8gdef8vVbblsONHCT2oCd4N
+        8Y5nkNM81nd57vj7B6JFBF9+AQAA
+    http_version: 
+  recorded_at: Sun, 17 Mar 2013 15:14:06 GMT
+- request:
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/domain/
+    body:
+      encoding: US-ASCII
+      string: ! '{"active":false,"customer":"/api/v1/customer/1300/","deliveryport":240,"hold_email":false,"name":"uberappx.example.com","outbound_enabled":false,"userlist_complete":true}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - ApiKey viktar.basharymau@gmail.com:3bc2d0736cc061f420b147141f229d04465bbe8d
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Sun, 17 Mar 2013 15:14:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      Location:
+      - https://admin-dev.mailroute.net/api/v1/domain/4553/
+    body:
+      encoding: US-ASCII
+      string: ! '{"absolute_url": "/domain/4553/", "active": false, "created_at":
+        "Sun, 17 Mar 2013 08:14:07 -0700", "customer": "/api/v1/customer/1300/", "deliveryport":
+        240, "hold_email": false, "id": 4553, "name": "uberappx.example.com", "notification_task":
+        "/api/v1/notification_domain_task/57795/", "outbound_enabled": false, "policy":
+        "/api/v1/policy_domain/57862/", "resource_uri": "/api/v1/domain/4553/", "updated_at":
+        "Sun, 17 Mar 2013 08:14:07 -0700", "userlist_complete": true}'
+    http_version: 
+  recorded_at: Sun, 17 Mar 2013 15:14:07 GMT
+recorded_with: VCR 2.4.0
