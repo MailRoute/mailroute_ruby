@@ -54,7 +54,7 @@ describe Mailroute::Domain, :vcr => true do
     end
   end
 
-  describe 'has many email accounts', vcr: { record: :all } do
+  describe 'has many email accounts' do
     it 'should list and create email accounts' do
       domain = Mailroute::Domain.get(4554)
 
