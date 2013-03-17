@@ -74,4 +74,25 @@ describe Mailroute::Domain, :vcr => true do
     end
   end
 
+  describe 'has many mail servers' do
+    it 'should list, create and delete mail servers' do
+      domain = Mailroute::Domain.get(4554)
+
+      domain.mail_servers.should be_empty
+
+      server1 = domain.create_mail_server(:server => 'x.example.com', :sasl_login => 'ha-ha', :priority => 1)
+      server1.should be_a Mailroute::MailServer
+
+      server2 = domain.create_mail_server(:server => 'y.example.com', :priority => 3)
+      server2.should be_a Mailroute::MailServer
+
+      domain.mail_servers.should have(2).items
+      domain.mail_servers.map(&:priority).should == [1, 3]
+      domain.mail_servers.map(&:sasl_login).should == ['ha-ha', nil]
+
+      server1.delete
+      domain.reload.mail_servers.should == [server2]
+    end
+  end
+
 end

@@ -4,5 +4,6 @@ module Mailroute
     has_one :customer
     has_many :domain_aliases
     has_many :email_accounts
+    has_many :mail_servers
   end
 end
