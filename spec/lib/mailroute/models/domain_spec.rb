@@ -36,4 +36,21 @@ describe Mailroute::Domain, :vcr => true do
       aliases.should all_be Mailroute::DomainAlias
     end
   end
+
+  describe 'has many aliases' do
+    it 'should list, create and delete domain aliases' do
+      domain = Mailroute::Domain.get(4554)
+
+      domain.domain_aliases.should be_empty
+
+      alias1 = domain.create_domain_alias(:name => 'x.example.com')
+      alias1.should be_a Mailroute::DomainAlias
+
+      alias2 = domain.create_domain_alias(:name => 'y.example.com')
+      alias2.should be_a Mailroute::DomainAlias
+
+      domain.domain_aliases.should have(2).items
+      domain.domain_aliases.map(&:name).should == ['x.example.com', 'y.example.com']
+    end
+  end
 end
