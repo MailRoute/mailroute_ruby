@@ -161,4 +161,28 @@ describe Mailroute::Customer, :vcr => true do
       Mailroute::Domain.get(domain.id).deliveryport.should == 250
     end
   end
+
+  describe '#create_contact' do
+    let(:customer) { Mailroute::Customer.get(1300) }
+    subject(:contact) {
+      customer.create_contact(
+        :address => 'Barcelona',
+        :email => 'contact@example.com'
+      )
+    }
+
+    it { should be_a Mailroute::ContactCustomer }
+
+    it 'should save a new contact' do
+      Mailroute::ContactCustomer.get(contact.id).should be
+    end
+
+    it 'should have a link to the customer' do
+      contact.customer.should == customer
+    end
+
+    it 'should save the attributes' do
+      Mailroute::ContactCustomer.get(contact.id).address.should == "Barcelona"
+    end
+  end
 end
