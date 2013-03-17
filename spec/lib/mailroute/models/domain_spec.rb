@@ -53,4 +53,25 @@ describe Mailroute::Domain, :vcr => true do
       domain.domain_aliases.map(&:name).should == ['x.example.com', 'y.example.com']
     end
   end
+
+  describe 'has many email accounts', vcr: { record: :all } do
+    it 'should list and create email accounts' do
+      domain = Mailroute::Domain.get(4554)
+
+      domain.email_accounts.should be_empty
+
+      account1 = domain.create_email_account(:localpart => '101', :create_opt => 'generate_pwd')
+      account1.should be_a Mailroute::EmailAccount
+
+      account2 = domain.create_email_account(:localpart => '102', :create_opt => 'generate_pwd')
+      account2.should be_a Mailroute::EmailAccount
+
+      domain.email_accounts.should have(2).items
+      domain.email_accounts.map(&:localpart).should == ['101', '102']
+
+      account1.delete
+      domain.reload.email_accounts.should == [account2]
+    end
+  end
+
 end

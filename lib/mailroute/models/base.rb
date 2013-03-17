@@ -200,6 +200,11 @@ module Mailroute
       end
     end
 
+    def reload
+      @_associations = {}.with_indifferent_access
+      super
+    end
+
     def initialize(attributes = {}, persisted = false)
       @_associations = {}.with_indifferent_access
       new_attributes = attributes.dup

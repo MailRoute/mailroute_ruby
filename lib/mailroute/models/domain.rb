@@ -3,5 +3,6 @@ module Mailroute
     self.collection_name = 'domain'
     has_one :customer
     has_many :domain_aliases
+    has_many :email_accounts
   end
 end
