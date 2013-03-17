@@ -134,4 +134,31 @@ describe Mailroute::Customer, :vcr => true do
       customer.branding_info.should be_a Mailroute::BrandingInfo
     end
   end
+
+  describe '#create_domain' do
+    let(:customer) { Mailroute::Customer.get(1300) }
+    subject(:domain) {
+      customer.create_domain(
+        :deliveryport => 250,
+        :hold_email => true,
+        :name => 'test.example.com',
+        :outbound_enabled => false,
+        :userlist_complete => false
+      )
+    }
+
+    it { should be_a Mailroute::Domain }
+
+    it 'should save a new domain' do
+      Mailroute::Domain.get(domain.id).should be
+    end
+
+    it 'should have a link to the customer' do
+      domain.customer.should == customer
+    end
+
+    it 'should save the attributes' do
+      Mailroute::Domain.get(domain.id).deliveryport.should == 250
+    end
+  end
 end
