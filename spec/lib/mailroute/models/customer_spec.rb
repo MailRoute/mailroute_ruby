@@ -201,4 +201,30 @@ describe Mailroute::Customer, :vcr => true do
       customer.admins.should include admin
     end
   end
+
+  describe '#delete_admin' do
+    let(:customer) { Mailroute::Customer.get(1300) }
+
+    context 'when deleting an existing admin' do
+      before do
+        customer.delete_admin('admin@example.com')
+      end
+
+      it "should not be in the list of the customer's admins" do
+        customer.admins.map(&:email).should_not include 'admin@example.com'
+      end
+
+      it "should not delete all admins" do
+        customer.admins.should_not be_empty
+      end
+    end
+
+    context 'when trying to delete admin which do not exist' do
+      it 'should not fail' do
+        expect {
+          customer.delete_admin('i-am-not-an-admin@example.com')
+        }.not_to raise_error
+      end
+    end
+  end
 end
