@@ -49,6 +49,10 @@ module Mailroute
       def foreign_class
         options[:class] || Mailroute.const_get(ActiveSupport::Inflector.classify(model))
       end
+
+      def pk
+        options[:pk]
+      end
     end
 
     def self.meta
@@ -161,7 +165,11 @@ module Mailroute
         foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
 
         @_associations[model] = nil
-        relation.foreign_class.create(options.merge(relation.inverse.to_s => id))
+        if relation.pk && options.is_a?(String) && options !~ /^\/api\/v1/
+          relation.foreign_class.create(relation.inverse.to_s => id, relation.pk => options)
+        else
+          relation.foreign_class.create(options.merge(relation.inverse.to_s => id))
+        end
       end
     end
 
@@ -219,7 +227,7 @@ module Mailroute
           @_associations[k] = v
           new_attributes[k] = v.element_path
         when String
-          if relation.pk && !v =~ /^\/api\/v1/
+          if relation.pk && v !~ /^\/api\/v1/
             all = relation.foreign_class.filter(relation.pk => v).limit(2).to_a
             case all.size
             when 0 then raise 'there is no such records'

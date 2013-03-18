@@ -104,7 +104,7 @@ describe Mailroute::Domain, :vcr => true do
       server1 = domain.create_outbound_server(:server => '1.0.2.3')
       server1.should be_a Mailroute::OutboundServer
 
-      server2 = domain.create_outbound_server(:server => '10.11.12.13')
+      server2 = domain.create_outbound_server('10.11.12.13')
       server2.should be_a Mailroute::OutboundServer
 
       domain.outbound_servers.should have(2).items
