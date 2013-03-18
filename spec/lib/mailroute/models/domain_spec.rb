@@ -135,4 +135,23 @@ describe Mailroute::Domain, :vcr => true do
     end
   end
 
+  describe 'black white list' do
+    it 'should blacklist and whitelist emails' do
+      domain = Mailroute::Domain.get(4554)
+
+      domain.wblist.should be_empty
+      domain.blacklist.should be_empty
+      domain.whitelist.should be_empty
+
+      domain.add_to_blacklist('spam@example.com')
+      domain.add_to_blacklist('ham@example.com')
+      domain.add_to_whitelist('nospam@example.com')
+
+      domain.wblist.should have(3).items
+      domain.wblist.should all_be Mailroute::WBList
+
+      domain.blacklist.should == ['spam@example.com', 'ham@example.com']
+      domain.whitelist.should == ['nospam@example.com']
+    end
+  end
 end
