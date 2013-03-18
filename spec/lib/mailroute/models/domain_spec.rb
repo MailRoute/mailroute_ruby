@@ -95,4 +95,24 @@ describe Mailroute::Domain, :vcr => true do
     end
   end
 
+  describe 'has many outbound servers' do
+    it 'should list, create and delete outbound servers' do
+      domain = Mailroute::Domain.get(4554)
+
+      domain.outbound_servers.should be_empty
+
+      server1 = domain.create_outbound_server(:server => '1.0.2.3')
+      server1.should be_a Mailroute::OutboundServer
+
+      server2 = domain.create_outbound_server(:server => '10.11.12.13')
+      server2.should be_a Mailroute::OutboundServer
+
+      domain.outbound_servers.should have(2).items
+      domain.outbound_servers.map(&:server).should == ['1.0.2.3', '10.11.12.13']
+
+      server1.delete
+      domain.reload.outbound_servers.should == [server2]
+    end
+  end
+
 end
