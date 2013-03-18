@@ -6,5 +6,6 @@ module Mailroute
     has_many :email_accounts
     has_many :mail_servers
     has_many :outbound_servers
+    has_many :contacts, :class => ContactDomain
   end
 end

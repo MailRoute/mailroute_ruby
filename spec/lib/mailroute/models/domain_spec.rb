@@ -115,4 +115,24 @@ describe Mailroute::Domain, :vcr => true do
     end
   end
 
+  describe 'has many contacts' do
+    it 'should list, create and delete contacts' do
+      domain = Mailroute::Domain.get(4554)
+
+      domain.contacts.should be_empty
+
+      contact1 = domain.create_contact(:address => 'The Moon', :email => 'themoon@example.com')
+      contact1.should be_a Mailroute::ContactDomain
+
+      contact2 = domain.create_contact(:address => 'The Earth', :email => 'theearth@example.com')
+      contact2.should be_a Mailroute::ContactDomain
+
+      domain.contacts.should have(2).items
+      domain.contacts.map(&:address).should == ['The Moon', 'The Earth']
+
+      contact1.delete
+      domain.reload.contacts.should == [contact2]
+    end
+  end
+
 end
