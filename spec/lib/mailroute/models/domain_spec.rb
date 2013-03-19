@@ -154,4 +154,19 @@ describe Mailroute::Domain, :vcr => true do
       domain.whitelist.should == ['nospam@example.com']
     end
   end
+
+  describe 'has a policy', vcr: { record: :all } do
+    it 'should have policy' do
+      pending 'not implemented yet'
+      domain = Mailroute::Domain.get(4554)
+
+      domain.policy.should be_a Mailroute::PolicyDomain
+
+      domain.policy.spam_kill_level.should == 7.0
+      domain.policy = Mailroute::PolicyDomain.get(2)
+      domain.save!
+
+      domain.reload.policy.spam_kill_level.should == 10.0
+    end
+  end
 end

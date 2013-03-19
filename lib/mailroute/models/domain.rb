@@ -8,6 +8,7 @@ module Mailroute
     has_many :outbound_servers, :pk => :server
     has_many :contacts, :class => ContactDomain
     has_many :wblist, :class => WBList
+    has_one :policy, :class => PolicyDomain
 
     def blacklist
       WBList.filter(:domain => id, :wb => 'b').map(&:email)

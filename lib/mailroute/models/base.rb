@@ -31,7 +31,7 @@ module Mailroute
       end
 
       def foreign_class
-        Mailroute.const_get(ActiveSupport::Inflector.classify(model))
+        options[:class] || Mailroute.const_get(ActiveSupport::Inflector.classify(model))
       end
 
       def pk
