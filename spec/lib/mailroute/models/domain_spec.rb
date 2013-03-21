@@ -155,18 +155,14 @@ describe Mailroute::Domain, :vcr => true do
     end
   end
 
-  describe 'has a policy', vcr: { record: :all } do
+  describe 'has a policy' do
     it 'should have policy' do
-      pending 'not implemented yet'
-      domain = Mailroute::Domain.get(4554)
+      domain = Mailroute::Domain.get(4555)
 
       domain.policy.should be_a Mailroute::PolicyDomain
 
       domain.policy.spam_kill_level.should == 7.0
-      domain.policy = Mailroute::PolicyDomain.get(2)
-      domain.save!
-
-      domain.reload.policy.spam_kill_level.should == 10.0
+      domain.attributes['policy'].should == domain.policy.resource_uri
     end
   end
 end

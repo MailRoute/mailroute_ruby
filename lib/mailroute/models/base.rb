@@ -136,6 +136,17 @@ module Mailroute
           obj.send("#{relation.inverse}=",  self)
         end if super()
       end
+
+      self.send(:define_method, "#{model}=") do |v|
+        if v.is_a? Mailroute::Base
+          @_associations ||= {}
+
+          @_associations[model] = v
+          super(v.resource_uri)
+        else
+          super(v)
+        end
+      end
     end
 
     def load(attributes, remove_root = false)
