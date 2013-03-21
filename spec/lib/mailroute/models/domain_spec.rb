@@ -181,4 +181,17 @@ describe Mailroute::Domain, :vcr => true do
     end
   end
 
+  describe 'move_to_customer' do
+    it 'should move domain to another customer' do
+      domain = Mailroute::Domain.get(4555)
+
+      domain.customer.id == 1300
+
+      domain.move_to_customer(Mailroute::Customer.get(2341))
+
+      domain.customer.id.should == 2341
+      domain.reload
+      domain.customer.id.should == 2341
+    end
+  end
 end

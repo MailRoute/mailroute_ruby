@@ -26,5 +26,10 @@ module Mailroute
     def add_to_whitelist(address)
       create_wblist(:wb => 'w', :email => address)
     end
+
+    def move_to_customer(another_customer)
+      self.customer = another_customer
+      self.save!
+    end
   end
 end
