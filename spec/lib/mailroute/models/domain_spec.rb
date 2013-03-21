@@ -165,4 +165,20 @@ describe Mailroute::Domain, :vcr => true do
       domain.attributes['policy'].should == domain.policy.resource_uri
     end
   end
+
+  describe 'has a notification task' do
+    it 'should have notification task' do
+      domain = Mailroute::Domain.get(4555)
+
+      domain.notification_task.should be_a Mailroute::NotificationDomainTask
+
+      domain.notification_task.mon.should == true
+      domain.attributes['notification_task'].should == domain.notification_task.resource_uri
+      domain.notification_task.mon = false
+      domain.notification_task.save!
+
+      domain.reload.notification_task.mon.should == false
+    end
+  end
+
 end
