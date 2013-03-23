@@ -50,4 +50,8 @@ Or install it yourself as:
 <del>7. to_many: ["email_account", "localpart_aliases", {"blank"=>false, "default"=>"No default provided.", "help_text"=>"Many related resources. Can be either a list of URIs or list of individually nested resource data.", "nullable"=>true, "readonly"=>true, "related_type"=>"to_many", "type"=>"related", "unique"=>false}]</del>
 8. better validation exceptions
 9. refactor base.rb
+10. domain.bulk_create_email_accounts 501
+11. mailroute.Policy.get_default_policy()
+12. domain.get_quarantine()
+13. double-check get by name
 
