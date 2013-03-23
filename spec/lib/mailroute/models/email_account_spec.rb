@@ -26,7 +26,7 @@ describe Mailroute::EmailAccount, :vcr => true do
       end
     end
 
-    context 'by localpart and domain name', vcr: {record: :all} do
+    context 'by localpart and domain name' do
       it 'should return an account' do
         account = Mailroute::EmailAccount.get('2bill', 'mailroute.net')
         account.id.should == 25396
