@@ -72,6 +72,22 @@ describe Mailroute::Domain, :vcr => true do
       account1.delete
       domain.reload.email_accounts.should == [account2]
     end
+
+    it 'should be possible to bulk create email accounts' do
+      pending 'POST https://admin-dev.mailroute.net/api/v1/domain/4554/email_accounts/mass_add/ responds with 501 NOT IMPLEMENTED'
+      domain = Mailroute::Domain.get(4554)
+      domain.email_accounts.each(&:destroy)
+      domain.reload
+
+      domain.email_accounts.should be_empty
+
+      domain.bulk_create_email_account(['admin', 'john', 'support'])
+
+      domain.email_accounts.should have(3).items
+      domain.email_accounts.map(&:localpart).should == ['admin', 'john', 'support']
+
+      domain.email_accounts.each(&:destroy)
+    end
   end
 
   describe 'has many mail servers' do

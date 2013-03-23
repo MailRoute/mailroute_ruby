@@ -31,5 +31,11 @@ module Mailroute
       self.customer = another_customer
       self.save!
     end
+
+    def bulk_create_email_account(localparts)
+      connection.post(element_path + 'email_accounts/mass_add/', localparts.to_json, self.class.headers).tap do |response|
+        ap response
+      end
+    end
   end
 end
