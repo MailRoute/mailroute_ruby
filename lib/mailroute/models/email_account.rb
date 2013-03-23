@@ -3,6 +3,7 @@ module Mailroute
     self.collection_name = 'email_account'
     has_one :domain
     has_one :policy, :class => PolicyUser
+    has_one :notification_task, :class => NotificationAccountTask
 
     class << self
       alias_method :get_by_id, :get

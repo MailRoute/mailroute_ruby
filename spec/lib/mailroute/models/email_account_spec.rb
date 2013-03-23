@@ -73,4 +73,11 @@ describe Mailroute::EmailAccount, :vcr => true do
       account.policy.id.should == 57887
     end
   end
+
+  describe 'has notification task' do
+    it 'should have notification task' do
+      account = Mailroute::EmailAccount.get(53282)
+      account.notification_task.id.should == 57820
+    end
+  end
 end
