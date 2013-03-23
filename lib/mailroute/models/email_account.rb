@@ -5,6 +5,23 @@ module Mailroute
     has_one :policy, :class => PolicyUser
     has_one :notification_task, :class => NotificationAccountTask
     has_one :contact, :class => ContactAccount
+    has_many :wblist, :class => WBList
+
+    def blacklist
+      WBList.filter(:email_account => id, :wb => 'b').map(&:email)
+    end
+
+    def whitelist
+      WBList.filter(:email_account => id, :wb => 'w').map(&:email)
+    end
+
+    def add_to_blacklist(address)
+      create_wblist(:wb => 'b', :email => address)
+    end
+
+    def add_to_whitelist(address)
+      create_wblist(:wb => 'w', :email => address)
+    end
 
     class << self
       alias_method :get_by_id, :get

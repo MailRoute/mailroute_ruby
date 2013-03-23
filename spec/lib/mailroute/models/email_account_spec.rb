@@ -87,4 +87,25 @@ describe Mailroute::EmailAccount, :vcr => true do
       account.contact.id.should == 1654
     end
   end
+
+  describe 'black white list' do
+    it 'should blacklist and whitelist emails' do
+      pending 'POST returns 500 error'
+      account = Mailroute::EmailAccount.get(53282)
+
+      account.wblist.should be_empty
+      account.blacklist.should be_empty
+      account.whitelist.should be_empty
+
+      account.add_to_blacklist('spam@example.org')
+      account.add_to_blacklist('ham@example.org')
+      account.add_to_whitelist('nospam@example.org')
+
+      account.wblist.should have(3).items
+      account.wblist.should all_be Mailroute::WBList
+
+      account.blacklist.should == ['spam@example.org', 'ham@example.org']
+      account.whitelist.should == ['nospam@example.org']
+    end
+  end
 end
