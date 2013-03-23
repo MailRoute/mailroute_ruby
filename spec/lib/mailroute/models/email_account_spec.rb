@@ -80,4 +80,11 @@ describe Mailroute::EmailAccount, :vcr => true do
       account.notification_task.id.should == 57820
     end
   end
+
+  describe 'has contact' do
+    it 'should have contact' do
+      account = Mailroute::EmailAccount.get(53282)
+      account.contact.id.should == 1654
+    end
+  end
 end

@@ -4,6 +4,7 @@ module Mailroute
     has_one :domain
     has_one :policy, :class => PolicyUser
     has_one :notification_task, :class => NotificationAccountTask
+    has_one :contact, :class => ContactAccount
 
     class << self
       alias_method :get_by_id, :get
