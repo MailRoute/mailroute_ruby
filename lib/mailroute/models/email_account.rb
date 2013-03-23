@@ -2,6 +2,7 @@ module Mailroute
   class EmailAccount < Base
     self.collection_name = 'email_account'
     has_one :domain
+    has_one :policy, :class => PolicyUser
 
     class << self
       alias_method :get_by_id, :get

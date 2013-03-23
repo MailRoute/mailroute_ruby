@@ -66,4 +66,11 @@ describe Mailroute::EmailAccount, :vcr => true do
       account.domain.id.should == 4555
     end
   end
+
+  describe 'has policy' do
+    it 'should have policy' do
+      account = Mailroute::EmailAccount.get(53282)
+      account.policy.id.should == 57887
+    end
+  end
 end
