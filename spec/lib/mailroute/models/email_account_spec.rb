@@ -34,27 +34,29 @@ describe Mailroute::EmailAccount, :vcr => true do
     end
   end
 
-  # it 'should be possible to create, read, update and delete mail servers' do
-  #   domain = Mailroute::Domain.get(4555)
-  #   new_server = nil
+  it 'should be possible to create, read, update and delete email accounts' do
+    domain = Mailroute::Domain.get(4555)
+    new_account = nil
 
-  #   expect {
-  #     new_server = Mailroute::MailServer.create(
-  #       :server => 'xyz.example.com',
-  #       :domain => domain,
-  #       :priority => 8
-  #     )
-  #   }.to change { domain.reload.mail_servers.count }.by(1)
+    expect {
+      new_account = Mailroute::EmailAccount.create(
+        :name => 'xyz.example.com',
+        :domain => domain,
+        :localpart => 'sales',
+        :create_opt => 'generate_pwd',
+        :send_welcome => false
+      )
+    }.to change { domain.reload.email_accounts.count }.by(1)
 
-  #   new_server.reload.server.should == 'xyz.example.com'
+    new_account.reload.localpart.should == 'sales'
 
-  #   new_server.server = 'zyx.example.com'
-  #   new_server.save!
+    new_account.localpart = 'marketing'
+    new_account.save!
 
-  #   new_server.reload.server.should == 'zyx.example.com'
+    new_account.reload.localpart.should == 'marketing'
 
-  #   expect {
-  #     new_server.delete
-  #   }.to change { domain.reload.mail_servers.count }.by(-1)
-  # end
+    expect {
+      new_account.delete
+    }.to change { domain.reload.email_accounts.count }.by(-1)
+  end
 end
