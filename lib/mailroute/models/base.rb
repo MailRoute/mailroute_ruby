@@ -259,7 +259,7 @@ module Mailroute
     private
 
     def extract_id(uri)
-      uri.match(/(\/|^)(\d+)\/?$/)[2]
+      uri.match(/(\/|^)(\d+)\/?$/)[2].to_i
     end
   end
 end

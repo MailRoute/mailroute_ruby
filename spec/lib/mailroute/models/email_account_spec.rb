@@ -59,4 +59,11 @@ describe Mailroute::EmailAccount, :vcr => true do
       new_account.delete
     }.to change { domain.reload.email_accounts.count }.by(-1)
   end
+
+  describe 'has domain' do
+    it 'should have domain' do
+      account = Mailroute::EmailAccount.get(53282)
+      account.domain.id.should == 4555
+    end
+  end
 end
