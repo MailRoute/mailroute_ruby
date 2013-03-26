@@ -1,12 +1,7 @@
 module Mailroute
   class Base < ActiveResource::Base
     include ActiveResource::Extensions::UrlsWithoutJsonExtension
-
-
-
-
-
-
+    include DeepClassVariableGet
 
     def self.meta
       @meta ||= MetaInformation.new(self)
@@ -16,18 +11,9 @@ module Mailroute
       if block_given?
         self.instance_variable_set(:@lazy_site, block)
       else
-        block = deep_instance_variable_get(self, :@lazy_site)
+        block = deep_class_variable_get(:@lazy_site)
         self.site = block.call
         super
-      end
-    end
-
-    def self.deep_instance_variable_get(klass, ivar)
-      val = klass.instance_variable_get(ivar)
-      if val || klass == Mailroute::Base
-        val
-      else
-        deep_instance_variable_get(klass.superclass, ivar)
       end
     end
 
@@ -82,8 +68,7 @@ module Mailroute
       relation = meta.add_has_one(model, options)
 
       self.send(:define_method, model.to_s) do
-        @_associations ||= {}
-        foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
+        foreign_class = relation.foreign_class
 
         @_associations[model] ||= foreign_class.get(extract_id(super())).tap do |obj|
           obj.send("#{relation.inverse}=",  self)
@@ -92,9 +77,8 @@ module Mailroute
 
       self.send(:define_method, "#{model}=") do |v|
         if v.is_a? Mailroute::Base
-          @_associations ||= {}
-
           @_associations[model] = v
+
           super(v.resource_uri)
         else
           super(v)
@@ -118,15 +102,13 @@ module Mailroute
       relation = meta.add_has_many(model, options)
 
       self.send(:define_method, model.to_s) do
-        @_associations ||= {}
-        foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
+        foreign_class = relation.foreign_class
 
         @_associations[model] ||= foreign_class.filter(relation.inverse.to_sym => id).to_a
       end
 
       self.send(:define_method, "create_#{ActiveSupport::Inflector.singularize(model)}") do |options|
-        @_associations ||= {}
-        foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
+        foreign_class = relation.foreign_class
 
         @_associations[model] = nil
         if relation.pk && options.is_a?(String) && options !~ /^\/api\/v1/
@@ -141,15 +123,13 @@ module Mailroute
       relation = meta.add_has_admins(options)
 
       self.send(:define_method, :admins) do
-        @_associations ||= {}
-        foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
+        foreign_class = relation.foreign_class
 
         @_associations[:admins] ||= foreign_class.all(:params => {:scope => { :name => relation.inverse.to_s, :id => id}}).to_a
       end
 
       self.send(:define_method, :create_admin) do |email, send_welcome = false|
-        @_associations ||= {}
-        foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
+        foreign_class = relation.foreign_class
 
         @_associations[:admin] = nil
         admin = relation.foreign_class.new(:email => email, :send_welcome => send_welcome)
@@ -159,8 +139,7 @@ module Mailroute
       end
 
       self.send(:define_method, :delete_admin) do |email|
-        @_associations ||= {}
-        foreign_class = relation.foreign_class #Mailroute.const_get(ActiveSupport::Inflector.classify(model_name))
+        foreign_class = relation.foreign_class
 
         @_associations[:admin] = nil
         admin = relation.foreign_class.all(:params => {:email => email, :scope => { :name => relation.inverse.to_s, :id => id}}).first
