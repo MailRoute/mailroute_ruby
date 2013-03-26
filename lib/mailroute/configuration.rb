@@ -8,6 +8,9 @@ module Mailroute
       @username = options[:username]
       @apikey = options[:apikey]
       @url = options[:url]
+
+      Mailroute::Base.headers['Authorization'] = "ApiKey #@username:#@apikey"
+      Mailroute::Base.site = @url
     end
 
     def default_options

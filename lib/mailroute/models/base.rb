@@ -1,20 +1,9 @@
 module Mailroute
   class Base < ActiveResource::Base
     include ActiveResource::Extensions::UrlsWithoutJsonExtension
-    include DeepClassVariableGet
 
     def self.meta
       @meta ||= MetaInformation.new(self)
-    end
-
-    def self.site(&block)
-      if block_given?
-        self.instance_variable_set(:@lazy_site, block)
-      else
-        block = deep_class_variable_get(:@lazy_site)
-        self.site = block.call
-        super
-      end
     end
 
     def self.headers
@@ -26,9 +15,6 @@ module Mailroute
         @headers ||= {}
       end
     end
-
-    self.site { Mailroute.url }
-    self.headers['Authorization'] = Lazy { "ApiKey #{Mailroute.username}:#{Mailroute.apikey}" }
 
     class << self
       delegate :limit, :offset, :filter, :order_by, :search, :to => :list
