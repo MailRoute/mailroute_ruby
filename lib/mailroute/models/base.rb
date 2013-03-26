@@ -2,53 +2,52 @@ module Mailroute
   class Base < ActiveResource::Base
     include ActiveResource::Extensions::UrlsWithoutJsonExtension
 
-    def self.meta
-      @meta ||= MetaInformation.new(self)
-    end
-
-    def self.headers
-      if defined?(@headers)
-        @headers
-      elsif superclass.respond_to? :headers
-        @headers ||= superclass.headers
-      else
-        @headers ||= {}
-      end
-    end
-
     class << self
-      delegate :limit, :offset, :filter, :order_by, :search, :to => :list
-    end
+      def meta
+        @meta ||= MetaInformation.new(self)
+      end
 
-    def self.list(options = {})
-      Relation.new(self)
+      def headers
+        if defined?(@headers)
+          @headers
+        elsif superclass.respond_to? :headers
+          @headers ||= superclass.headers
+        else
+          @headers ||= {}
+        end
+      end
+
+      delegate :limit, :offset, :filter, :order_by, :search, :to => :list
+
+      def list(options = {})
+        Relation.new(self)
+      end
+
+      # TODO: double-check the purpose of this method
+      def bulk_create(*attribute_array)
+        attribute_array.map do |attributes|
+          create(attributes)
+        end
+      end
+
+      alias_method :get, :find
+
+      def delete(*array)
+        array.map do |r|
+          if r.is_a? Mailroute::Base
+            r.destroy
+          else
+            connection.delete(element_path(r, {}), headers)
+          end
+        end
+      end
     end
 
     def to_json(options = {})
       super(options.merge(:root => false))
     end
 
-    def self.bulk_create(*attribute_array)
-      attribute_array.map do |attributes|
-        create(attributes)
-      end
-    end
-
     alias_method :delete, :destroy
-
-    def self.get(*args)
-      self.find(*args)
-    end
-
-    def self.delete(*array)
-      array.map do |r|
-        if r.is_a? Mailroute::Base
-          r.destroy
-        else
-          connection.delete(element_path(r, {}), headers)
-        end
-      end
-    end
 
     def self.has_one(model, options = {})
       relation = meta.add_has_one(model, options)
