@@ -108,4 +108,14 @@ describe Mailroute::EmailAccount, :vcr => true do
       account.whitelist.should == ['nospam@example.org']
     end
   end
+
+  describe '#set_password' do
+    it 'should set the password' do
+      pending 'ask how to change password'
+      account = Mailroute::EmailAccount.get(53282)
+      expect {
+        account.set_password("new_password")
+      }.not_to raise_error
+    end
+  end
 end

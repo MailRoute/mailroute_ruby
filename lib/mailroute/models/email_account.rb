@@ -23,6 +23,13 @@ module Mailroute
       create_wblist(:wb => 'w', :email => address)
     end
 
+    def set_password(new_password)
+      self.change_pwd = self.password = new_password
+      save!
+      self.change_pwd = self.password = nil
+      self
+    end
+
     class << self
       alias_method :get_by_id, :get
       def get(*args)
