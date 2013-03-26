@@ -2,58 +2,11 @@ module Mailroute
   class Base < ActiveResource::Base
     include ActiveResource::Extensions::UrlsWithoutJsonExtension
 
-    class MetaInformation
-      attr_reader :associations
 
-      def initialize(klass)
-        @associations = {}
-        @klass = klass
-      end
 
-      def add_has_one(model, options)
-        @associations[model] = HasOne.new(@klass, model, options)
-      end
 
-      def add_has_many(model, options)
-        @associations[model] = HasMany.new(@klass, model, options)
-      end
 
-      def add_has_admins(options)
-        add_has_many(:admins, options)
-      end
-    end
 
-    # TODO: move this stuff out
-    class HasOne < Struct.new(:klass, :model, :options)
-      # TODO: caching
-      def inverse
-        ActiveSupport::Inflector.underscore(klass.to_s.split('::').last)
-      end
-
-      def foreign_class
-        options[:class] || Mailroute.const_get(ActiveSupport::Inflector.classify(model))
-      end
-
-      def pk
-        options[:pk]
-      end
-    end
-
-    # TODO: move this stuff out
-    class HasMany < Struct.new(:klass, :model, :options)
-      # TODO: caching
-      def inverse
-        ActiveSupport::Inflector.underscore(klass.to_s.split('::').last)
-      end
-
-      def foreign_class
-        options[:class] || Mailroute.const_get(ActiveSupport::Inflector.classify(model))
-      end
-
-      def pk
-        options[:pk]
-      end
-    end
 
     def self.meta
       @meta ||= MetaInformation.new(self)
