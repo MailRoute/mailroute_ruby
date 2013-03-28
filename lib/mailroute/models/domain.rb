@@ -6,7 +6,7 @@ module Mailroute
     has_many :email_accounts
     has_many :mail_servers
     has_many :outbound_servers, :pk => :server
-    has_many :contacts, :class => ContactDomain
+    has_many :contacts, :class => DomainContact
     has_many :wblist, :class => WBList
     has_one :policy, :class => PolicyDomain
     has_one :notification_task, :class => NotificationDomainTask

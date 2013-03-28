@@ -138,10 +138,10 @@ describe Mailroute::Domain, :vcr => true do
       domain.contacts.should be_empty
 
       contact1 = domain.create_contact(:address => 'The Moon', :email => 'themoon@example.com')
-      contact1.should be_a Mailroute::ContactDomain
+      contact1.should be_a Mailroute::DomainContact
 
       contact2 = domain.create_contact(:address => 'The Earth', :email => 'theearth@example.com')
-      contact2.should be_a Mailroute::ContactDomain
+      contact2.should be_a Mailroute::DomainContact
 
       domain.contacts.should have(2).items
       domain.contacts.map(&:address).should == ['The Moon', 'The Earth']
