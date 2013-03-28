@@ -1,4 +1,4 @@
-# Mailroute [![Build Status](https://secure.travis-ci.org/MailRoute/mailroute_ruby.png)](http://travis-ci.org/aldarund/mailroute_ruby)
+# Mailroute [![Build Status](https://secure.travis-ci.org/MailRoute/mailroute_ruby.png)](http://travis-ci.org/MailRoute/mailroute_ruby)
 
 TODO: Write a gem description
 
