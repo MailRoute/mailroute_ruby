@@ -114,7 +114,7 @@ describe Mailroute::Customer, :vcr => true do
       customer = Mailroute::Customer.new(:id => 4)
 
       customer.contacts.should have_at_least(1).item
-      customer.contacts.should all_be Mailroute::ContactCustomer
+      customer.contacts.should all_be Mailroute::CustomerContact
     end
   end
 
@@ -171,10 +171,10 @@ describe Mailroute::Customer, :vcr => true do
       )
     }
 
-    it { should be_a Mailroute::ContactCustomer }
+    it { should be_a Mailroute::CustomerContact }
 
     it 'should save a new contact' do
-      Mailroute::ContactCustomer.get(contact.id).should be
+      Mailroute::CustomerContact.get(contact.id).should be
     end
 
     it 'should have a link to the customer' do
@@ -182,7 +182,7 @@ describe Mailroute::Customer, :vcr => true do
     end
 
     it 'should save the attributes' do
-      Mailroute::ContactCustomer.get(contact.id).address.should == "Barcelona"
+      Mailroute::CustomerContact.get(contact.id).address.should == "Barcelona"
     end
   end
 
