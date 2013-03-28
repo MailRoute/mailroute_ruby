@@ -4,7 +4,7 @@ module Mailroute
     has_one :domain
     has_one :policy, :class => PolicyUser
     has_one :notification_task, :class => NotificationAccountTask
-    has_one :contact, :class => ContactAccount
+    has_one :contact, :class => EmailAccountContact
     has_many :wblist, :class => WBList
 
     def blacklist
