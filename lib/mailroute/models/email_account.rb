@@ -24,9 +24,8 @@ module Mailroute
     end
 
     def set_password(new_password)
-      self.change_pwd = self.password = new_password
+      self.password = new_password
       save!
-      self.change_pwd = self.password = nil
       self
     end
 

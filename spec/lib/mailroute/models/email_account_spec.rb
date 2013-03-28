@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Mailroute::EmailAccount, :vcr => true do
+  before { configure_mailroute }
+
   describe '.get' do
     context 'by id' do
       it 'should return an account' do
@@ -111,7 +113,7 @@ describe Mailroute::EmailAccount, :vcr => true do
 
   describe '#set_password' do
     it 'should set the password' do
-      pending 'ask how to change password'
+      pending 'API responds with "Passwords don`t match"'
       account = Mailroute::EmailAccount.get(53282)
       expect {
         account.set_password("new_password")
