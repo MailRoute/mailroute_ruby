@@ -184,7 +184,7 @@ describe Mailroute::Reseller, :vcr => true do
       reseller = Mailroute::Reseller.new(:id => 4)
 
       reseller.contacts.should have_at_least(1).item
-      reseller.contacts.should all_be Mailroute::ContactReseller
+      reseller.contacts.should all_be Mailroute::ResellerContact
     end
   end
 
@@ -207,10 +207,10 @@ describe Mailroute::Reseller, :vcr => true do
       )
     }
 
-    it { should be_a Mailroute::ContactReseller }
+    it { should be_a Mailroute::ResellerContact }
 
     it 'should save a new contact' do
-      Mailroute::ContactReseller.get(contact.id).should be
+      Mailroute::ResellerContact.get(contact.id).should be
     end
 
     it 'should have a link to the reseller' do
@@ -222,7 +222,7 @@ describe Mailroute::Reseller, :vcr => true do
     its(:email)   { should == 'john_doe@example.com' }
 
     it 'should save the attributes' do
-      Mailroute::ContactReseller.get(contact.id).email.should == 'john_doe@example.com'
+      Mailroute::ResellerContact.get(contact.id).email.should == 'john_doe@example.com'
     end
   end
 

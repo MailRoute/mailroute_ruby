@@ -1,5 +1,5 @@
 module Mailroute
-  class ContactReseller < Base
+  class ResellerContact < Base
     self.collection_name = 'contact_reseller'
     has_one :reseller
   end
