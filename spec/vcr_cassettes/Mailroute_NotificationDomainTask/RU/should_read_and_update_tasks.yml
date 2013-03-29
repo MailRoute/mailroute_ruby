@@ -1,0 +1,159 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/notification_domain_task/?domain=4157
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbngvMS4yLjY=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        RnJpLCAyOSBNYXIgMjAxMyAxOTo1MDowOSBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LCBDb29raWU=
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "Q29udGVudC1FbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA1WPTU7DQAyFr1LNGmlIRVPBnh03QCiaJI5qmIyjGbv8RLk7
+        dppSsfPzs/0+z24EDu5pN7uII7JW+/u7nUvwZXWSGFXRMBQwbdaU4Ywk5WYz
+        cYhNR5Jsplpso32Hjm3mdXY9jQGT1s6HCf258peOf6gOR+90/KKbVk900EiK
+        WBh63RhCLKADkEIb/3WGjOpzFrNPJFnVo5Zoa4d6X9cqRkzCYFAmyBi2jSkj
+        ZeRv7RzVy1D0hGWvZ/9AEzEO2AVGSs1GyaF8+DVhZS/Bvr6CFrGQq+KT3CIZ
+        R/ihZDjuWTJN4F8o9UqlV1isv8F9rp+aWN6WX+mZnF+jAQAA
+    http_version:
+  recorded_at: Fri, 29 Mar 2013 19:50:09 GMT
+- request:
+    method: put
+    uri: https://admin-dev.mailroute.net/api/v1/notification_domain_task/56266/
+    body:
+      encoding: US-ASCII
+      string: ! '{"domain":"/api/v1/domain/4157/","domain_bounce_unlisted":false,"enabled":false,"fri":true,"hour":8,"id":56266,"minute":1,"mon":true,"priority":7,"resource_uri":"/api/v1/notification_domain_task/56266/","sat":false,"sun":false,"thu":true,"timezone":"Europe/London","tue":true,"wed":true}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 202
+      message: ACCEPTED
+    headers:
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Fri, 29 Mar 2013 19:50:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+    body:
+      encoding: US-ASCII
+      string: ! '{"domain": "/api/v1/domain/4157/", "domain_bounce_unlisted": false,
+        "enabled": false, "fri": true, "hour": 8, "id": 56266, "minute": 1, "mon":
+        true, "priority": 7, "resource_uri": "/api/v1/notification_domain_task/56266/",
+        "sat": false, "sun": false, "thu": true, "timezone": "Europe/London", "tue":
+        true, "wed": true}'
+    http_version:
+  recorded_at: Fri, 29 Mar 2013 19:50:11 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/notification_domain_task/56266/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbngvMS4yLjY=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        RnJpLCAyOSBNYXIgMjAxMyAxOTo1MDoxMiBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LCBDb29raWU=
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "Q29udGVudC1FbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA1WPSw7CMAxEr4KyRoqKaEHs2XGHKtBUWLR2ldggQNwdu5Tf
+        LjNje17urqE+ALrNzPkwgD8X/uX4ZVGuvJvPpol6T4KHWAt2kDk2utGGLkcd
+        iBj23Z/TJtCck1h8JEmq1voEWyurRVWp6AGFoxqFCTKGaWNIQAn4qs5KsxSz
+        nrDu8ewHFImhhUNgIKxf1DWHfPJjw8ieA/+AZrGSNzYf5VvJ0McboeG4rSQa
+        ot8RNkqlV1jMn+Au409NPJ5TVWz6PgEAAA==
+    http_version:
+  recorded_at: Fri, 29 Mar 2013 19:50:12 GMT
+recorded_with: VCR 2.4.0
