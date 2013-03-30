@@ -1,5 +1,3 @@
-require 'logger'
-
 module Mailroute
   class Reseller < Base
     self.collection_name = 'reseller'
@@ -10,6 +8,3 @@ module Mailroute
     has_admins class: Mailroute::Admin
   end
 end
-
-#ActiveResource::Base.logger = Logger.new(STDOUT)
-
