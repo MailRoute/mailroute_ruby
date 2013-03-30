@@ -37,12 +37,12 @@ module Mailroute
         else
           localpart, domain = *args
           case domain
-          when Mailroute::Domain
+          when Domain
             get(localpart, domain.id)
           when String
             get(localpart, Domain.get(domain))
           when Integer
-            EmailAccount.filter(:domain => domain, :localpart => localpart).first
+            EmailAccount.filter(:domain => domain, :localpart => localpart).first or raise ActiveResource::ResourceNotFound
           else
             raise 'Unknown argument type'
           end
