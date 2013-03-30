@@ -41,6 +41,17 @@ module Mailroute
           end
         end
       end
+
+      alias_method :instantiate_collection_without_meta, :instantiate_collection
+      def instantiate_collection(collection, prefix_options = {})
+        array = instantiate_collection_without_meta(collection, prefix_options)
+        array.instance_variable_set(:@_meta, collection.instance_variable_get(:@_meta))
+        array
+      end
+
+      def total_count
+        limit(1).total_count
+      end
     end
 
     def to_json(options = {})

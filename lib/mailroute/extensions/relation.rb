@@ -46,6 +46,11 @@ class Mailroute::Relation
     end
   end
 
+  def total_count
+    meta = to_a.instance_variable_get(:@_meta)
+    meta && meta['total_count']
+  end
+
   private
 
   def new_relation(options_update)

@@ -227,4 +227,18 @@ describe Mailroute::Customer, :vcr => true do
       end
     end
   end
+
+  describe 'total_count' do
+    it 'should return total count of customers' do
+      Mailroute::Customer.total_count.should == 2059
+    end
+
+    it 'should return number of customer which matches search criteria' do
+      Mailroute::Customer.search('e').total_count.should == 1592
+    end
+
+    it 'should return number of customer which matches search criteria3' do
+      Mailroute::Customer.search('xdfasdfsdfg').total_count.should == 0
+    end
+  end
 end

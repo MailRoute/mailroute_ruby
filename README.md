@@ -43,7 +43,7 @@ Or install it yourself as:
 
 1. clean up vcr cassettes
 <del>2. refactor extensions/activeresource.rb - it's a mess</del>
-3. implement Reseller.count
+<del>3. implement Reseller.count</del>
 <del>4. travisci label</del>
 5. check number of API calls in tests
 6. better error handling when reseller already exists
