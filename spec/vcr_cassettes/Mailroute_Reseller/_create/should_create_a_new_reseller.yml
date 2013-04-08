@@ -1,102 +1,80 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: post
     uri: https://admin-dev.mailroute.net/api/v1/reseller/
-    body:
-      encoding: US-ASCII
-      string: ! '{"name":"Test Reseller 3"}'
-    headers:
-      Content-Type:
+    body: 
+      string: "{\"name\":\"Test Reseller 3\"}"
+    headers: 
+      Accept: 
+      - "*/*"
+      Accept-Encoding: 
+      - identity
+      Content-Type: 
       - application/json
-      Authorization:
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept:
-      - ! '*/*'
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 201
       message: CREATED
-    headers:
-      Server:
+    headers: 
+      Server: 
       - nginx/1.2.1
-      Date:
-      - Sun, 03 Mar 2013 14:01:57 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
+      Connection: 
       - keep-alive
-      Vary:
+      Vary: 
       - Accept, Cookie
-      Location:
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sun, 03 Mar 2013 14:01:57 GMT
+      Location: 
       - https://admin-dev.mailroute.net/api/v1/reseller/1507/
-    body:
-      encoding: US-ASCII
-      string: ! '{"absolute_url": "/reseller/1507/", "allow_branding": false, "allow_customer_branding":
-        false, "branding_info": "/api/v1/brandinginfo/3530/", "created_at": "Sun,
-        3 Mar 2013 06:01:57 -0800", "id": 1507, "name": "Test Reseller 3", "resource_uri":
-        "/api/v1/reseller/1507/", "updated_at": "Sun, 3 Mar 2013 06:01:57 -0800"}'
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"absolute_url\": \"/reseller/1507/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/3530/\", \"created_at\": \"Sun, 3 Mar 2013 06:01:57 -0800\", \"id\": 1507, \"name\": \"Test Reseller 3\", \"resource_uri\": \"/api/v1/reseller/1507/\", \"updated_at\": \"Sun, 3 Mar 2013 06:01:57 -0800\"}"
     http_version: 
   recorded_at: Sun, 03 Mar 2013 14:01:57 GMT
-- request:
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/reseller/1507/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjE=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAwMyBNYXIgMjAxMyAxNDowMTo1OCBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA42PzQrCMBCEX2XJuZLUUCt9By/qPWzbrQTSpORHD+K72xQr
-        gh68LTvf7M7cGbbBmRRJJW9YA4x7CmQMeV5WouasAIbGuJtqPdpe28sMDWgC
-        vYUuhehG8r+I1aS0HdxyHifNryVfhbznspJi+dR5wki9wpjZU7IFSDigh60o
-        JYhdI8qmqmEj9kJkXvczl3POs8WRsutMIcLxVQJkxuZKLvkud9SfIb6rpqn/
-        P8DjCVu6JC4+AQAA
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.1
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sun, 03 Mar 2013 14:01:58 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"absolute_url\": \"/reseller/1507/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/3530/\", \"created_at\": \"Sun, 3 Mar 2013 06:01:57 -0800\", \"id\": 1507, \"name\": \"Test Reseller 3\", \"resource_uri\": \"/api/v1/reseller/1507/\", \"updated_at\": \"Sun, 3 Mar 2013 06:01:57 -0800\"}"
     http_version: 
   recorded_at: Sun, 03 Mar 2013 14:01:58 GMT
-recorded_with: VCR 2.4.0

@@ -1,64 +1,41 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/contact_customer/?customer=4
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjY=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U2F0LCAxNiBNYXIgMjAxMyAxNzoyNjo0NSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA5VSTU8jMQz9K1FOoIXOB0OLegLtZXcR0krQE0IjT8Zlss0k
-        o8RBW6r+d+JQqcCNm9/zs/NsZydHJJBLsZNGj5pSVJdnQlr8z7GNxiTk1uuA
-        jDk1eXzRLoZjmhyBaZWLljXVniu6f6iINY87CV1wJhK20ZvEyEI5S5DShYqB
-        3Ii+mBcyVUHfewxcJVdWk6jEjenAbsVf8Bvx2/YCA30Q1qxkrDRtOf4JY4fe
-        4DaTbMhnfnWbCY9A2LfANuXDEM/EQvyJNo1c1aK8WtbN8uJSnJeLssz6g7vs
-        GSZdvFRHx012jCPoPNM4G4DUcD15Ry6qYabcLG5YstY+UGthRNbd6Q0yq/uE
-        5hyEttPGaPucCPIR3zlMW3lGq9j+Gkw40IRqsFoBv3kQG/jQ/heb4P7T4Gx+
-        8EfTiJPyVFT1Yi6asqqaPFvas4te8U30p/neT9N+uUygtDnW3UfvcStOVren
-        3CZO/bdW+qon5XruxF9r/7R/A0glc1WBAgAA
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sat, 16 Mar 2013 17:26:45 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"absolute_url\": \"/contacts/customer/6/\", \"address\": \"Unit 1 Albany Park Ind est\", \"address2\": \"\", \"city\": \"Camberley\", \"country\": \"UK\", \"created_at\": \"Thu, 7 Jun 2012 08:24:35 -0700\", \"customer\": \"/api/v1/customer/4/\", \"email\": \"m.hatch@protouch.co.uk\", \"first_name\": \"Mike\", \"id\": 6, \"is_billing\": true, \"is_emergency\": false, \"is_technical\": true, \"last_name\": \"Hatch\", \"phone\": \"+44 (0) 1276 401140\", \"resource_uri\": \"/api/v1/contact_customer/6/\", \"state\": \"Surrey (UK)\", \"updated_at\": \"Thu, 7 Jun 2012 08:24:35 -0700\", \"zipcode\": null}]}"
+    http_version: 
   recorded_at: Sat, 16 Mar 2013 17:26:45 GMT
-recorded_with: VCR 2.4.0

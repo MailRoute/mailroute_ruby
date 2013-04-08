@@ -7,7 +7,7 @@ describe Mailroute::DomainContact, :vcr => true do
 
   describe 'CRUD' do
     it 'should create, read, update and delete domain contacts' do
-      contact = Mailroute::DomainContact.create(email: 'haskell@example.com', domain: domain)
+      contact = Mailroute::DomainContact.create(:email => 'haskell@example.com', :domain => domain)
 
       contact.id.should be
 

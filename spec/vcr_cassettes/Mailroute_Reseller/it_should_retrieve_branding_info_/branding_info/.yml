@@ -1,37 +1,39 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/reseller/175/
-    body:
+    body: 
       string: ""
-    headers:
-      Accept:
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-  response:
-    status:
+  response: 
+    status: 
       code: 200
       message: OK
-    headers:
-      Transfer-Encoding:
-      - chunked
-      Vary:
+    headers: 
+      Server: 
+      - nginx/1.2.1
+      Vary: 
       - Accept, Cookie
       - Accept-Encoding
-      Server:
-      - nginx/1.2.1
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 27 Feb 2013 14:43:26 GMT
-      Connection:
+      Connection: 
       - keep-alive
-      Cache-Control:
+      Cache-Control: 
       - no-cache
-    body:
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Wed, 27 Feb 2013 14:43:26 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
       string: "{\"absolute_url\": \"/reseller/175/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1581/\", \"created_at\": \"Sun, 24 Feb 2013 06:03:48 -0800\", \"id\": 175, \"name\": \"b7001333b77359eff8cdf90726eee4fd\", \"resource_uri\": \"/api/v1/reseller/175/\", \"updated_at\": \"Sun, 24 Feb 2013 06:03:48 -0800\"}"
-    http_version:
+    http_version: 
   recorded_at: Wed, 27 Feb 2013 14:43:26 GMT
-recorded_with: VCR 2.4.0

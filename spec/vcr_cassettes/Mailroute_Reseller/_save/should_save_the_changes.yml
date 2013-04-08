@@ -1,160 +1,116 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/reseller/1382/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjE=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAwMyBNYXIgMjAxMyAxNDoyNjo1MiBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA42PTQrCMBCFrxKyruTX/t3BlQco02QqgdiUNNGFeHcbQRF0
-        4W6Y972Z924UxjX4nHDI0dOeUBZxRe8xMqFayWhFKHgfrsMYYbZuPm3QBH7F
-        t2DymsIZ4y/iZRrcPIXneVgcuwj2EsqeKdXo5ycTERLaAVJhj5AqIskBIpFc
-        KCL2vZS9bMmOt5wX3tmNKzm3eYYzFhcXwijUomk7a+pOcym7elRco9FaTXXx
-        bR1DjqaUdp+pvrvnxf6f6P4AOtRpLk8BAAA=
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.1
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sun, 03 Mar 2013 14:26:52 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"absolute_url\": \"/reseller/1382/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/3374/\", \"created_at\": \"Sat, 2 Mar 2013 15:22:28 -0800\", \"id\": 1382, \"name\": \"011c3e41789dc69402296b304ec443f6\", \"resource_uri\": \"/api/v1/reseller/1382/\", \"updated_at\": \"Sat, 2 Mar 2013 15:22:28 -0800\"}"
+    http_version: 
   recorded_at: Sun, 03 Mar 2013 14:26:52 GMT
-- request:
+- request: 
     method: put
     uri: https://admin-dev.mailroute.net/api/v1/reseller/1382/
-    body:
-      encoding: US-ASCII
-      string: ! '{"absolute_url":"/reseller/1382/","allow_branding":true,"allow_customer_branding":false,"branding_info":"/api/v1/brandinginfo/3374/","created_at":"Sat,
-        2 Mar 2013 15:22:28 -0800","id":1382,"name":"011c3e41789dc69402296b304ec443f6","resource_uri":"/api/v1/reseller/1382/","updated_at":"Sat,
-        2 Mar 2013 15:22:28 -0800"}'
-    headers:
-      Content-Type:
+    body: 
+      string: "{\"absolute_url\":\"/reseller/1382/\",\"allow_branding\":true,\"allow_customer_branding\":false,\"branding_info\":\"/api/v1/brandinginfo/3374/\",\"created_at\":\"Sat, 2 Mar 2013 15:22:28 -0800\",\"id\":1382,\"name\":\"011c3e41789dc69402296b304ec443f6\",\"resource_uri\":\"/api/v1/reseller/1382/\",\"updated_at\":\"Sat, 2 Mar 2013 15:22:28 -0800\"}"
+    headers: 
+      Accept: 
+      - "*/*"
+      Accept-Encoding: 
+      - identity
+      Content-Type: 
       - application/json
-      Authorization:
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept:
-      - ! '*/*'
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 202
       message: ACCEPTED
-    headers:
-      Server:
+    headers: 
+      Server: 
       - nginx/1.2.1
-      Date:
-      - Sun, 03 Mar 2013 14:26:53 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
+      Connection: 
       - keep-alive
-      Vary:
+      Vary: 
       - Accept, Cookie
-    body:
-      encoding: US-ASCII
-      string: ! '{"absolute_url": "/reseller/1382/", "allow_branding": true, "allow_customer_branding":
-        false, "branding_info": "/api/v1/brandinginfo/3374/", "created_at": "Sat,
-        2 Mar 2013 15:22:28 -0800", "id": 1382, "name": "011c3e41789dc69402296b304ec443f6",
-        "pk": "1382", "resource_uri": "/api/v1/reseller/1382/", "updated_at": "Sun,
-        3 Mar 2013 06:26:53 -0800"}'
-    http_version:
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sun, 03 Mar 2013 14:26:53 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"absolute_url\": \"/reseller/1382/\", \"allow_branding\": true, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/3374/\", \"created_at\": \"Sat, 2 Mar 2013 15:22:28 -0800\", \"id\": 1382, \"name\": \"011c3e41789dc69402296b304ec443f6\", \"pk\": \"1382\", \"resource_uri\": \"/api/v1/reseller/1382/\", \"updated_at\": \"Sun, 3 Mar 2013 06:26:53 -0800\"}"
+    http_version: 
   recorded_at: Sun, 03 Mar 2013 14:26:53 GMT
-- request:
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/reseller/1382/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjE=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAwMyBNYXIgMjAxMyAxNDoyNjo1NSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA2WPTW7DIBBGr4JYu+I3xOYOWfUA1hjGFRKBCEOziHr3mqhp
-        LXWHhvfNvO9BYdlybBXnViK1hLKCG8aIhQk1SkYHQiHGfJ+XAsmH9LFDtTT8
-        nbu21XzFcgRWiFsnXpk5pDU/t8MtsE/BXh99zpQ66+chVxAq+hlqZ9+hDkSS
-        CxQiuVBEnKyUVo7kjY+cdz74neua+zvBFXuKC+EUanEeJ+/MpLmUk1kU1+i0
-        Vqvpub1ibsX1zuFo9b96u/mjUUsDUX9G3Fhp7En9GH19A928325OAQAA
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.1
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sun, 03 Mar 2013 14:26:55 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"absolute_url\": \"/reseller/1382/\", \"allow_branding\": true, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/3374/\", \"created_at\": \"Sat, 2 Mar 2013 15:22:28 -0800\", \"id\": 1382, \"name\": \"011c3e41789dc69402296b304ec443f6\", \"resource_uri\": \"/api/v1/reseller/1382/\", \"updated_at\": \"Sun, 3 Mar 2013 06:26:53 -0800\"}"
+    http_version: 
   recorded_at: Sun, 03 Mar 2013 14:26:55 GMT
-recorded_with: VCR 2.4.0

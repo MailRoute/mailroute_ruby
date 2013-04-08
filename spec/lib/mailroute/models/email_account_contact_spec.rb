@@ -7,7 +7,7 @@ describe Mailroute::EmailAccountContact, :vcr => true do
 
   describe 'CRUD' do
     it 'should create, read, update and delete email account contacts' do
-      contact = Mailroute::EmailAccountContact.create(email: 'haskell@example.com', email_account: email_account)
+      contact = Mailroute::EmailAccountContact.create(:email => 'haskell@example.com', :email_account => email_account)
 
       contact.id.should be
 

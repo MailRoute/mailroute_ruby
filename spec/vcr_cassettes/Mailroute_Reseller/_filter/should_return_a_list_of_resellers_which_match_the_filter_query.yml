@@ -1,37 +1,39 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/reseller/?name__startswith=d
-    body:
+    body: 
       string: ""
-    headers:
-      Authorization:
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept:
+    headers: 
+      Accept: 
       - application/json
-  response:
-    status:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+  response: 
+    status: 
       code: 200
       message: OK
-    headers:
-      Connection:
+    headers: 
+      Server: 
+      - nginx/1.2.1
+      Connection: 
       - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Vary:
+      Vary: 
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control:
+      Cache-Control: 
       - no-cache
-      Server:
-      - nginx/1.2.1
-      Date:
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
       - Wed, 27 Feb 2013 19:40:32 GMT
-    body:
+      Transfer-Encoding: 
+      - chunked
+    body: 
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 10}, \"objects\": [{\"absolute_url\": \"/reseller/380/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1823/\", \"created_at\": \"Wed, 27 Feb 2013 03:45:54 -0800\", \"id\": 380, \"name\": \"d148b418d75707964e277064b74b5ffc\", \"resource_uri\": \"/api/v1/reseller/380/\", \"updated_at\": \"Wed, 27 Feb 2013 03:45:54 -0800\"}, {\"absolute_url\": \"/reseller/526/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2011/\", \"created_at\": \"Wed, 27 Feb 2013 07:43:35 -0800\", \"id\": 526, \"name\": \"d18e9aa71f504b11aefc19648eb6fade\", \"resource_uri\": \"/api/v1/reseller/526/\", \"updated_at\": \"Wed, 27 Feb 2013 07:43:35 -0800\"}, {\"absolute_url\": \"/reseller/391/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1836/\", \"created_at\": \"Wed, 27 Feb 2013 03:47:53 -0800\", \"id\": 391, \"name\": \"d2d35068fcff337dcb97071c0360abb2\", \"resource_uri\": \"/api/v1/reseller/391/\", \"updated_at\": \"Wed, 27 Feb 2013 03:47:53 -0800\"}, {\"absolute_url\": \"/reseller/147/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1553/\", \"created_at\": \"Sun, 24 Feb 2013 04:54:35 -0800\", \"id\": 147, \"name\": \"d4bf04fa303a22f4e787b57d2a294bc0\", \"resource_uri\": \"/api/v1/reseller/147/\", \"updated_at\": \"Sun, 24 Feb 2013 04:54:35 -0800\"}, {\"absolute_url\": \"/reseller/579/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2079/\", \"created_at\": \"Wed, 27 Feb 2013 08:31:12 -0800\", \"id\": 579, \"name\": \"d7ecdd30d0b838d1cee0317138ced5fc\", \"resource_uri\": \"/api/v1/reseller/579/\", \"updated_at\": \"Wed, 27 Feb 2013 08:31:12 -0800\"}, {\"absolute_url\": \"/reseller/369/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1809/\", \"created_at\": \"Wed, 27 Feb 2013 03:40:58 -0800\", \"id\": 369, \"name\": \"dbe04c7fc204d2a2e004bf3760dc5ad1\", \"resource_uri\": \"/api/v1/reseller/369/\", \"updated_at\": \"Wed, 27 Feb 2013 03:40:58 -0800\"}, {\"absolute_url\": \"/reseller/244/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1654/\", \"created_at\": \"Tue, 26 Feb 2013 04:15:57 -0800\", \"id\": 244, \"name\": \"dd876f625e573b0be5e34839c74f6983\", \"resource_uri\": \"/api/v1/reseller/244/\", \"updated_at\": \"Tue, 26 Feb 2013 04:15:57 -0800\"}, {\"absolute_url\": \"/reseller/558/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2051/\", \"created_at\": \"Wed, 27 Feb 2013 07:53:18 -0800\", \"id\": 558, \"name\": \"dd975acb101838233094bfa135c1ff8d\", \"resource_uri\": \"/api/v1/reseller/558/\", \"updated_at\": \"Wed, 27 Feb 2013 07:53:18 -0800\"}, {\"absolute_url\": \"/reseller/615/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2124/\", \"created_at\": \"Wed, 27 Feb 2013 09:19:24 -0800\", \"id\": 615, \"name\": \"deb5f3725d7a0cb3b89f5dcbc62b1a1e\", \"resource_uri\": \"/api/v1/reseller/615/\", \"updated_at\": \"Wed, 27 Feb 2013 09:19:24 -0800\"}, {\"absolute_url\": \"/reseller/345/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1777/\", \"created_at\": \"Tue, 26 Feb 2013 16:26:41 -0800\", \"id\": 345, \"name\": \"df64d8131e85d74e64e8b6bc91d9b999\", \"resource_uri\": \"/api/v1/reseller/345/\", \"updated_at\": \"Tue, 26 Feb 2013 16:26:41 -0800\"}]}"
-    http_version:
+    http_version: 
   recorded_at: Wed, 27 Feb 2013 19:40:33 GMT
-recorded_with: VCR 2.4.0

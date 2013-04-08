@@ -1,4 +1,5 @@
 --- 
+recorded_with: VCR 2.4.0
 http_interactions: 
 - request: 
     method: get
@@ -6,33 +7,32 @@ http_interactions:
     body: 
       string: ""
     headers: 
-      Authorization: 
-      - ApiKey alien:blabla
+      Accept: 
+      - application/json
       Content-Type: 
       - application/json
       Accept-Encoding: 
-      - gzip, deflate
-      Accept: 
-      - application/json
+      - identity
+      Authorization: 
+      - ApiKey alien:blabla
   response: 
     status: 
       code: 401
       message: UNAUTHORIZED
     headers: 
-      Content-Type: 
-      - text/html; charset=utf-8
-      Date: 
-      - Tue, 26 Feb 2013 18:08:40 GMT
       Server: 
       - nginx/1.2.1
       Connection: 
       - keep-alive
       Vary: 
       - Cookie
+      Content-Type: 
+      - text/html; charset=utf-8
+      Date: 
+      - Tue, 26 Feb 2013 18:08:40 GMT
       Transfer-Encoding: 
       - chunked
     body: 
       string: ""
     http_version: 
   recorded_at: Tue, 26 Feb 2013 18:08:40 GMT
-recorded_with: VCR 2.4.0

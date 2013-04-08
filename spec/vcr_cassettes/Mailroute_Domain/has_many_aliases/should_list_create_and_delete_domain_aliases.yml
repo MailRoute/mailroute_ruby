@@ -1,257 +1,195 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/domain/4554/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjY=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAxNyBNYXIgMjAxMyAxOTowNDo1NCBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA32QTW7DIBCFr4JYpwH8Eye+Q1c9gDWGiYqKAfETNap694JT
-        q24XXc6bpzffvA8Kc3QmJ5xyMHQklCm3gLas6/uO0QOhIJO+YVldwUQsggwI
-        CdUEqfpfsj0QMZBnCKThoiX8PIpu7AR54gPnNUHmmNyCYY0Hr9lNsE1jouV8
-        vaPQlDvh7l2owU3Hi/jqjJqwAFW2DUCrMlS+YrCwVDaaZwzg/RHfYfEGj9It
-        NdS6pK9aQtLOTgni257h1/Lx9uph/TBcTiuUy2l22RYGC7PBenij8M5oed/n
-        PZTpu8B+OJ/aNSRgdDnIWrHe+/82nb36r1jRjLwd28tPsTliMDqmqXxbnk61
-        iRQyfn4BQEDQANcBAAA=
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sun, 17 Mar 2013 19:04:54 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"absolute_url\": \"/domain/4554/\", \"active\": false, \"created_at\": \"Sun, 17 Mar 2013 08:14:41 -0700\", \"customer\": \"/api/v1/customer/1300/\", \"deliveryport\": 240, \"hold_email\": false, \"id\": 4554, \"name\": \"uberapp.example.com\", \"notification_task\": \"/api/v1/notification_domain_task/57796/\", \"outbound_enabled\": false, \"policy\": \"/api/v1/policy_domain/57863/\", \"resource_uri\": \"/api/v1/domain/4554/\", \"updated_at\": \"Sun, 17 Mar 2013 12:03:39 -0700\", \"userlist_complete\": true}"
+    http_version: 
   recorded_at: Sun, 17 Mar 2013 19:04:54 GMT
-- request:
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/domain_alias/?domain=4554
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjY=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAxNyBNYXIgMjAxMyAxOTowNDo1NSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA6tWyk0tSVSyUqhWysnMzSwBsowMdBSU8lIrQOy80pwcIC8/
-        La04FcQHSRUUpZZl5pcWI6RL8ksSc+KT80vzwGpqQTqSslKTS0BqomNrARCW
-        HSBlAAAA
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sun, 17 Mar 2013 19:04:55 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
+    http_version: 
   recorded_at: Sun, 17 Mar 2013 19:04:55 GMT
-- request:
+- request: 
     method: post
     uri: https://admin-dev.mailroute.net/api/v1/domain_alias/
-    body:
-      encoding: US-ASCII
-      string: ! '{"domain":"/api/v1/domain/4554/","name":"x.example.com"}'
-    headers:
-      Content-Type:
+    body: 
+      string: "{\"domain\":\"/api/v1/domain/4554/\",\"name\":\"x.example.com\"}"
+    headers: 
+      Accept: 
+      - "*/*"
+      Accept-Encoding: 
+      - identity
+      Content-Type: 
       - application/json
-      Authorization:
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept:
-      - ! '*/*'
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 201
       message: CREATED
-    headers:
-      Server:
+    headers: 
+      Server: 
       - nginx/1.2.6
-      Date:
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
       - Sun, 17 Mar 2013 19:04:57 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept, Cookie
-      Location:
+      Location: 
       - https://admin-dev.mailroute.net/api/v1/domain_alias/5093/
-    body:
-      encoding: US-ASCII
-      string: ! '{"active": true, "created_at": "Sun, 17 Mar 2013 12:04:57 -0700",
-        "domain": "/api/v1/domain/4554/", "id": 5093, "name": "x.example.com", "resource_uri":
-        "/api/v1/domain_alias/5093/", "updated_at": "Sun, 17 Mar 2013 12:04:57 -0700"}'
-    http_version:
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"active\": true, \"created_at\": \"Sun, 17 Mar 2013 12:04:57 -0700\", \"domain\": \"/api/v1/domain/4554/\", \"id\": 5093, \"name\": \"x.example.com\", \"resource_uri\": \"/api/v1/domain_alias/5093/\", \"updated_at\": \"Sun, 17 Mar 2013 12:04:57 -0700\"}"
+    http_version: 
   recorded_at: Sun, 17 Mar 2013 19:04:57 GMT
-- request:
+- request: 
     method: post
     uri: https://admin-dev.mailroute.net/api/v1/domain_alias/
-    body:
-      encoding: US-ASCII
-      string: ! '{"domain":"/api/v1/domain/4554/","name":"y.example.com"}'
-    headers:
-      Content-Type:
+    body: 
+      string: "{\"domain\":\"/api/v1/domain/4554/\",\"name\":\"y.example.com\"}"
+    headers: 
+      Accept: 
+      - "*/*"
+      Accept-Encoding: 
+      - identity
+      Content-Type: 
       - application/json
-      Authorization:
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept:
-      - ! '*/*'
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 201
       message: CREATED
-    headers:
-      Server:
+    headers: 
+      Server: 
       - nginx/1.2.6
-      Date:
-      - Sun, 17 Mar 2013 19:04:58 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
+      Connection: 
       - keep-alive
-      Vary:
+      Vary: 
       - Accept, Cookie
-      Location:
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sun, 17 Mar 2013 19:04:58 GMT
+      Location: 
       - https://admin-dev.mailroute.net/api/v1/domain_alias/5094/
-    body:
-      encoding: US-ASCII
-      string: ! '{"active": true, "created_at": "Sun, 17 Mar 2013 12:04:58 -0700",
-        "domain": "/api/v1/domain/4554/", "id": 5094, "name": "y.example.com", "resource_uri":
-        "/api/v1/domain_alias/5094/", "updated_at": "Sun, 17 Mar 2013 12:04:58 -0700"}'
-    http_version:
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"active\": true, \"created_at\": \"Sun, 17 Mar 2013 12:04:58 -0700\", \"domain\": \"/api/v1/domain/4554/\", \"id\": 5094, \"name\": \"y.example.com\", \"resource_uri\": \"/api/v1/domain_alias/5094/\", \"updated_at\": \"Sun, 17 Mar 2013 12:04:58 -0700\"}"
+    http_version: 
   recorded_at: Sun, 17 Mar 2013 19:04:58 GMT
-- request:
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/domain_alias/?domain=4554
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjY=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAxNyBNYXIgMjAxMyAxOTowNDo1OSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA51Qy07DMBD8FcvnUjttokD+oSeOCEWLs5UW+RE5dhQU5d/x
-        tkIgcYHcdj2PnfEqHSaQnVilJUepTCd9ENLjwrPP1pYtXK8T8s7QGHGmkKdv
-        OIUEtjch+5t+Y8XbO5rEnJdVgkk0Y5lTzFhAExESDj0wXT5nfxBVKy4Qy+3q
-        LKpTp+uuacWDbrWWRTAEB+SZrGAkNVfq/qLqpqkVM2goaKOfzpwdHB+TyxEX
-        cKPFowmOSRGnkKPBPkf6bdaDJZgUm9ws8zj8I2Upvbfo456i9Y+iH3uL3v/u
-        b0W/Um6v2yc6ogwANQIAAA==
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sun, 17 Mar 2013 19:04:59 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 2}, \"objects\": [{\"active\": true, \"created_at\": \"Sun, 17 Mar 2013 12:04:57 -0700\", \"domain\": \"/api/v1/domain/4554/\", \"id\": 5093, \"name\": \"x.example.com\", \"resource_uri\": \"/api/v1/domain_alias/5093/\", \"updated_at\": \"Sun, 17 Mar 2013 12:04:57 -0700\"}, {\"active\": true, \"created_at\": \"Sun, 17 Mar 2013 12:04:58 -0700\", \"domain\": \"/api/v1/domain/4554/\", \"id\": 5094, \"name\": \"y.example.com\", \"resource_uri\": \"/api/v1/domain_alias/5094/\", \"updated_at\": \"Sun, 17 Mar 2013 12:04:58 -0700\"}]}"
+    http_version: 
   recorded_at: Sun, 17 Mar 2013 19:05:00 GMT
-recorded_with: VCR 2.4.0

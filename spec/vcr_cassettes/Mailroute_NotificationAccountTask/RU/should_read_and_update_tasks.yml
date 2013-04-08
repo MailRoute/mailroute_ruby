@@ -1,159 +1,116 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/notification_account_task/?email_account=22
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjY=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U2F0LCAzMCBNYXIgMjAxMyAwOTo0ODozNSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA1VPy07EMAz8lVXOSKHhwnLnxh8gVGVbR2tI4yqxl0fVf8de
-        0a24eR4ejxc3AUf3dFhcxglZp3B/d3AFvmwukrMiSqmBYZPmChckabvMxDH3
-        A0kxT7faxukdBjbP6+Jgipj7OGwO5+OM/tL5f4IPwTtdhRJPGfoRUpRsgVwF
-        bvyoRIq5GZMq7vKZpCp6VB7NFI46TViEQdFDMERl988VqSJ/K9OpVqFpwAC9
-        XENvFQsxJhwiI5XthZ5j+/DheK3bonXcKjWxExvis+wHGSf4oWJt3LNUmsG/
-        UBm1k6awGP/36SfYAwbWt/UXjj1WKaIBAAA=
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sat, 30 Mar 2013 09:48:35 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"email_account\": \"/api/v1/email_account/22/\", \"enable_default\": true, \"enabled\": false, \"fri\": true, \"hour\": 8, \"id\": 29, \"minute\": 32, \"mon\": true, \"priority\": 1, \"resource_uri\": \"/api/v1/notification_account_task/29/\", \"sat\": false, \"sun\": false, \"thu\": true, \"timezone\": \"Europe/London\", \"tue\": true, \"wed\": true}]}"
+    http_version: 
   recorded_at: Sat, 30 Mar 2013 09:48:36 GMT
-- request:
+- request: 
     method: put
     uri: https://admin-dev.mailroute.net/api/v1/notification_account_task/29/
-    body:
-      encoding: US-ASCII
-      string: ! '{"email_account":"/api/v1/email_account/22/","enable_default":true,"enabled":false,"fri":true,"hour":8,"id":29,"minute":31,"mon":true,"priority":1,"resource_uri":"/api/v1/notification_account_task/29/","sat":false,"sun":false,"thu":true,"timezone":"Europe/London","tue":true,"wed":true}'
-    headers:
-      Content-Type:
+    body: 
+      string: "{\"email_account\":\"/api/v1/email_account/22/\",\"enable_default\":true,\"enabled\":false,\"fri\":true,\"hour\":8,\"id\":29,\"minute\":31,\"mon\":true,\"priority\":1,\"resource_uri\":\"/api/v1/notification_account_task/29/\",\"sat\":false,\"sun\":false,\"thu\":true,\"timezone\":\"Europe/London\",\"tue\":true,\"wed\":true}"
+    headers: 
+      Accept: 
+      - "*/*"
+      Accept-Encoding: 
+      - identity
+      Content-Type: 
       - application/json
-      Authorization:
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept:
-      - ! '*/*'
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 202
       message: ACCEPTED
-    headers:
-      Server:
+    headers: 
+      Server: 
       - nginx/1.2.6
-      Date:
-      - Sat, 30 Mar 2013 09:48:37 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
+      Connection: 
       - keep-alive
-      Vary:
+      Vary: 
       - Accept, Cookie
-    body:
-      encoding: US-ASCII
-      string: ! '{"email_account": "/api/v1/email_account/22/", "enable_default":
-        true, "enabled": false, "fri": true, "hour": 8, "id": 29, "minute": 31, "mon":
-        true, "priority": 1, "resource_uri": "/api/v1/notification_account_task/29/",
-        "sat": false, "sun": false, "thu": true, "timezone": "Europe/London", "tue":
-        true, "wed": true}'
-    http_version:
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sat, 30 Mar 2013 09:48:37 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"email_account\": \"/api/v1/email_account/22/\", \"enable_default\": true, \"enabled\": false, \"fri\": true, \"hour\": 8, \"id\": 29, \"minute\": 31, \"mon\": true, \"priority\": 1, \"resource_uri\": \"/api/v1/notification_account_task/29/\", \"sat\": false, \"sun\": false, \"thu\": true, \"timezone\": \"Europe/London\", \"tue\": true, \"wed\": true}"
+    http_version: 
   recorded_at: Sat, 30 Mar 2013 09:48:37 GMT
-- request:
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/notification_account_task/29/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjY=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U2F0LCAzMCBNYXIgMjAxMyAwOTo0ODozOCBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA1VPywrCQAz8FdmzsFgv1rs3/6HENsVguym7iaLiv5uItXjL
-        PJjMPAOOQEMDbcuaJOxXIcJE8bqJf0KsqhjWq4AJTgM2Hfagg9slK/74zoge
-        huJMn2mRz6zZ0M54clNV2zVSUkFD240jTot/ysSZ5G6MaxmLBbTY6Cf0VzGx
-        UE8tCHGaJzQC5RKr+lO3gHecKxX1FzOSsy4PhUZ8cPI24aCZJ4xHTp11shRR
-        579Lb+gDHLzeT8wqqj0BAAA=
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sat, 30 Mar 2013 09:48:38 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"email_account\": \"/api/v1/email_account/22/\", \"enable_default\": true, \"enabled\": false, \"fri\": true, \"hour\": 8, \"id\": 29, \"minute\": 31, \"mon\": true, \"priority\": 1, \"resource_uri\": \"/api/v1/notification_account_task/29/\", \"sat\": false, \"sun\": false, \"thu\": true, \"timezone\": \"Europe/London\", \"tue\": true, \"wed\": true}"
+    http_version: 
   recorded_at: Sat, 30 Mar 2013 09:48:38 GMT
-recorded_with: VCR 2.4.0

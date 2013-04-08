@@ -7,7 +7,7 @@ describe Mailroute::ResellerContact, :vcr => true do
 
   describe 'CRUD' do
     it 'should create, read, update and delete reseller contacts' do
-      contact = Mailroute::ResellerContact.create(email: 'haskell@example.com', reseller: reseller)
+      contact = Mailroute::ResellerContact.create(:email => 'haskell@example.com', :reseller => reseller)
 
       contact.id.should be
 

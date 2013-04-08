@@ -18,7 +18,7 @@ describe Mailroute::NotificationAccountTask, :vcr => true do
   end
 
   describe 'priorities' do
-    it 'should change the priority of a task', vcr: {record: :all} do
+    it 'should change the priority of a task' do
       pending "for some reason PUT request doesn't change the priority of a task"
       account_task = Mailroute::NotificationAccountTask.get(29)
 

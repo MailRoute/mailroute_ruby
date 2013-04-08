@@ -1,66 +1,41 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/customer/?limit=3&offset=20&q%5Bname%5D=e
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjE=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U3VuLCAwMyBNYXIgMjAxMyAxNjowOToyNSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA61UXW/TMBT9K1ak9WkotuPESaRqAsEeeGVvCEWOfbN5cuPi
-        xGVS1f+OnTajMLR2lDz565577jlH2SYrGEVSo21i9EqPYZVdo6SHp7hMUrHW
-        6Yak0g+jXYFLb75f5R96sYKr/OMSFlPNMlvYrhtgXNIsCcX7TSinOOzWDjba
-        +uEf4AiPcKMdhWmk9X2kRDgrdrFJ+whyjKhft4loB2v8CI13ZurzzJcUnKQR
-        RRhjfzStE73S/X141AkzQLiYjxrdd/aY5HwRz1NSMD7hSAdiBNWISZ87HyBo
-        gW6hDdOSDGFWk7xmGXqHS4xjgVaRdaAR10PTeWMaP4BrjB4ixswjihohq7Ir
-        BTDMy0JJQQntikyBKAFo12JJI6aDtXWRxQQ0S9MH6OlyAGPAHc8yn6VsGiJs
-        rXcy6qWPn72Uza/VG8YNxrxmRrbvfqEVZf43Ix78NeLos++jDxQFE2he5yz4
-        wI98yNiZLrxffEJ34gl9AbfREi4TfZ/Ak6If5Pld8lunQ8Lor4TFyaqa4kPC
-        TkhOigr/l/zz/Kz8ExbCXzPyIv9V/Beck3+RYUWkKgvehS8vOGWKSiKlIMBV
-        RS6z4uz8H2Q7kf8/xt192/0Eu1uSYlEFAAA=
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.1
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sun, 03 Mar 2013 16:09:25 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"meta\": {\"limit\": 3, \"next\": \"/api/v1/customer/?q%5Bname%5D=e&limit=3&offset=23\", \"offset\": 20, \"previous\": \"/api/v1/customer/?q%5Bname%5D=e&limit=3&offset=17\", \"total_count\": 1746}, \"objects\": [{\"absolute_url\": \"/customer/1671/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1647/\", \"created_at\": \"Tue, 26 Feb 2013 04:15:43 -0800\", \"id\": 1671, \"is_full_user_list\": false, \"name\": \"98f8ae40786dca212f63dea8ee2fb0c2\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/1671/\", \"updated_at\": \"Tue, 26 Feb 2013 04:15:43 -0800\"}, {\"absolute_url\": \"/customer/34/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/85/\", \"created_at\": \"Thu, 7 Jun 2012 15:25:54 -0700\", \"id\": 34, \"is_full_user_list\": false, \"name\": \"A&E Tax Service\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/1/\", \"resource_uri\": \"/api/v1/customer/34/\", \"updated_at\": \"Fri, 22 Feb 2013 15:29:20 -0800\"}, {\"absolute_url\": \"/customer/1690/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1757/\", \"created_at\": \"Tue, 26 Feb 2013 14:43:41 -0800\", \"id\": 1690, \"is_full_user_list\": false, \"name\": \"a30d1cd867ffff56724d2c1cca1e7d91\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/1690/\", \"updated_at\": \"Tue, 26 Feb 2013 14:43:41 -0800\"}]}"
+    http_version: 
   recorded_at: Sun, 03 Mar 2013 16:09:25 GMT
-recorded_with: VCR 2.4.0

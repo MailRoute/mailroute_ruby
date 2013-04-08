@@ -103,7 +103,7 @@ module Mailroute
         @_associations[model] ||= foreign_class.filter(relation.inverse.to_sym => id).to_a
       end
 
-      self.send(:define_method, "create_#{ActiveSupport::Inflector.singularize(model)}") do |options|
+      self.send(:define_method, "create_#{ActiveSupport::Inflector.singularize(model.to_s)}") do |options|
         foreign_class = relation.foreign_class
 
         @_associations[model] = nil
@@ -124,7 +124,8 @@ module Mailroute
         @_associations[:admins] ||= foreign_class.all(:params => {:scope => { :name => relation.inverse.to_s, :id => id}}).to_a
       end
 
-      self.send(:define_method, :create_admin) do |email, send_welcome = false|
+      self.send(:define_method, :create_admin) do |email, send_welcome|
+        send_welcome = !!send_welcome
         foreign_class = relation.foreign_class
 
         @_associations[:admin] = nil

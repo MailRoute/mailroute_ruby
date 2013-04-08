@@ -1,70 +1,41 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/customer/?reseller=4
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjY=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U2F0LCAxNiBNYXIgMjAxMyAxNjoyMzo0MiBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA8WXXc+aMBTHv0rDtQstxTfulmU3S/bs4jHZxbKQCnWyFGoK
-        VRPjd9+pBccmSWs0eAd98/x/Pf7P4RSUvGFBgk6BKMqigacIT1BQ8aN5rrQQ
-        8CY3m5qbdzO1U3xfSF3/nW5kw0SaSV2ZNQSfzZb1b541ZtGPU8DWtRS64alW
-        AkaCMNN1I0uuwojGJAxgPRNCHtK1YlVeVL9g0YaJmsNEN5QW1UZeNrNdEe5J
-        2E2Y8TAidHo5J1OcNTxPmQkleGfNBJEZ+soU6CIU4UVCFgnF6AOeY2w2FDks
-        NGGY5zrdgOJU11yloqjNGV0cFSu5OfIjeuMH9KkVYE5QfCeV+c3Ltg5Di07x
-        mgvBVT/ybiyMLyHDq9QqM3SK/rJbSHqX3yEOrsGBfvEc9HHkiZ7OEriDG/QL
-        T/R5S/7Y1Lksc35QVI11ARaV+wKMxLiV6LiA2TPokxjTAfqrrZ6gOfqiK5P3
-        kcn7KE7o/D/4M0/yb5/Rt20h0Xe+Ru9c7YuM16OQt4z+xb7S4Aug6fqnjnAS
-        EdDnhx3+65bY45YzHyA/ZDmAngxYDvWl3xoOBscchfoVkTvf+9Ic+Q6nWo9+
-        HPzSEzwlyXQA/PRO8OA2o5qNxeSGb+QR76y31eZx+NYK3YUWosPRrdvHd8KX
-        5XgubxF5gb9Kc2c9fobRQ4djo3ODJzSJlrfgTfPm0+G8or+xiNzg+9Lc4J9S
-        YSMosb52Qwd93rvKWp8/NqN3N0NldqiQ0Z5AN35bHh82nPYLwZ33EB0dMJz5
-        fXn/iu7SknKnv1HYNdBu/rYtf5g/tdnh5k+WyXSAf+TJf7XlL/m2spjc8Pvy
-        zj/PfwBVs6fBOw8AAA==
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sat, 16 Mar 2013 16:23:42 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 10}, \"objects\": [{\"absolute_url\": \"/customer/2341/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2135/\", \"created_at\": \"Sat, 16 Mar 2013 08:18:30 -0700\", \"id\": 2341, \"is_full_user_list\": false, \"name\": \"A New Customer\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/2341/\", \"updated_at\": \"Sat, 16 Mar 2013 08:18:30 -0700\"}, {\"absolute_url\": \"/customer/2348/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2142/\", \"created_at\": \"Sat, 16 Mar 2013 08:36:13 -0700\", \"id\": 2348, \"is_full_user_list\": false, \"name\": \"dNew Cusxtsdomdewr3r\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/2348/\", \"updated_at\": \"Sat, 16 Mar 2013 08:36:14 -0700\"}, {\"absolute_url\": \"/customer/6/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1403/\", \"created_at\": \"Thu, 7 Jun 2012 08:24:37 -0700\", \"id\": 6, \"is_full_user_list\": false, \"name\": \"NE Ohio Web Services\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/6/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:24 -0700\"}, {\"absolute_url\": \"/customer/2343/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2137/\", \"created_at\": \"Sat, 16 Mar 2013 08:24:10 -0700\", \"id\": 2343, \"is_full_user_list\": false, \"name\": \"New Cust0mer\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/2343/\", \"updated_at\": \"Sat, 16 Mar 2013 08:24:10 -0700\"}, {\"absolute_url\": \"/customer/2345/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2139/\", \"created_at\": \"Sat, 16 Mar 2013 08:31:50 -0700\", \"id\": 2345, \"is_full_user_list\": false, \"name\": \"New Custdomewr3r\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/2345/\", \"updated_at\": \"Sat, 16 Mar 2013 08:31:51 -0700\"}, {\"absolute_url\": \"/customer/2344/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2138/\", \"created_at\": \"Sat, 16 Mar 2013 08:31:02 -0700\", \"id\": 2344, \"is_full_user_list\": false, \"name\": \"New Custom3r\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/2344/\", \"updated_at\": \"Sat, 16 Mar 2013 08:31:02 -0700\"}, {\"absolute_url\": \"/customer/2340/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2134/\", \"created_at\": \"Sat, 16 Mar 2013 08:13:29 -0700\", \"id\": 2340, \"is_full_user_list\": false, \"name\": \"New Customer\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/2340/\", \"updated_at\": \"Sat, 16 Mar 2013 08:13:29 -0700\"}, {\"absolute_url\": \"/customer/2346/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2140/\", \"created_at\": \"Sat, 16 Mar 2013 08:33:10 -0700\", \"id\": 2346, \"is_full_user_list\": false, \"name\": \"New Cusxtdomdewr3r\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/2346/\", \"updated_at\": \"Sat, 16 Mar 2013 08:33:10 -0700\"}, {\"absolute_url\": \"/customer/2347/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2141/\", \"created_at\": \"Sat, 16 Mar 2013 08:33:32 -0700\", \"id\": 2347, \"is_full_user_list\": false, \"name\": \"New Cusxtsdomdewr3r\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/2347/\", \"updated_at\": \"Sat, 16 Mar 2013 08:33:33 -0700\"}, {\"absolute_url\": \"/customer/2342/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2136/\", \"created_at\": \"Sat, 16 Mar 2013 08:19:52 -0700\", \"id\": 2342, \"is_full_user_list\": false, \"name\": \"The New Customer\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/2342/\", \"updated_at\": \"Sat, 16 Mar 2013 08:19:52 -0700\"}]}"
+    http_version: 
   recorded_at: Sat, 16 Mar 2013 16:23:43 GMT
-recorded_with: VCR 2.4.0

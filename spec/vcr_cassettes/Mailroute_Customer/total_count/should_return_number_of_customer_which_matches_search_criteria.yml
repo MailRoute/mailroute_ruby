@@ -1,82 +1,41 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/customer/?q=e
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjY=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U2F0LCAzMCBNYXIgMjAxMyAxNTo1MTo0MyBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA72ZX2/bNhTFvwrnhzylMUlJtiWgGDQ3zVK4W9EELYZhMGia
-        TrTIokdJSYeg332XopTairJwI5s3Sdafy5+ODs+l70dbUbFRgu5HebbNKtii
-        +BiNCvFFb4/GbJeNb8mY12Ult0KNf/zrtThqTn1N8ZHcbEqht0ZwjdmBq/QN
-        dkrcZrIuYbeo8xyOVLJi+ZLLutB3JlFMv+qLVn8KXunTfr8fsVUp87oSy1rl
-        zdMfHksCjMf6ISzP5d1ypVixzoorOGnD8lLAD92hZVZs5H7p3Q/6+HgWNnfh
-        SrBKrJesGeRblR0jOkG/8gpGTyjCYUJmSUjRKzzFzdiyta4ZitDb5XIDQ1rW
-        pVDLPCv1PboqCrYV+paEkEqU1bzFBruc6/sosZNKP7m5uIPRElKiFHku1H71
-        3bFxRJrKYV/WimtE2f55j0nVu/WjMcboPVN6jAEiJAmDBAZrxgjv4l/5U+qH
-        /2SA/+V1fQxw0YXYtfyDJIgSGvX5QxGW/Cl9c7p4f0rdmNsi7+AcIr+sQZcA
-        +AE5xQklCQktkYehEaur5KcDyD+LNdQWozeCt8hxEoDkZ1DbbF/yUIQt8iAA
-        V+DXIOETLrcvQ75j5JU8xXHsw2xi+hT5yTdR4EkSTowo9sHrGizBp+gnJdla
-        KPQpE3du3Gfm+3zWZR4Q+QUfhOaTc5Q8JUE0gP6CVSD6ffYz7fMB7vkMhTKs
-        2f8i7lBn827szdf+PPoOUg+9NlFK9gyeJiRI6NTObQIvXhMHA9gbe5+id3XR
-        Ws0MrD2JOhvsZtfA1mjSo1N0yb7AdKFuMy7coFtafIvHq9rJZGpU6qj2eCjT
-        NJMPZJq3YmXme4wTEieRlsOBwUMRllpnr0gp7oS64e7+3uawZ8X+wMgveSNT
-        V+5DE+uQ2EOD/TBKWkJPmZIFmrObl9E5MWT80vaj8pm1teCgHxxtJZ6uGJfo
-        vChraDBeyFqIweMXuZGmo8BJ23MddktDCo8SmFZ7zdLUUuFsJVQh5Y27qVh6
-        OTFw/AKfTbyonGDbzAi9hEZ+4OVQhCX0lHNRluhnptZ3TDl6i21oJB0kv+ij
-        qZfWlOCh8NI0SpAQ37EmvQQIRwmOoVfqs4cq7NnrRRBWVCU6XV8JdCE3lX4L
-        sAGrH5ksSrdMQ20/hI6c1/fhZ6GA4MFUMxglIfUeeo/1MkE6P0MLWaK0uBK5
-        cMVut0DT8vHKnND2nTs7/tN9U7S3PjNNKCzR9PsmXYXtNzA/W6RoLouNUMJ5
-        pjWe+XyY7Ch5ZU/N053JP7ky9qh1ov3WiVJL7IxfS/kDSheL049nv6EjlJ5/
-        RB+UXNewBnsMwYefuFmPpfO0zPy+By+hnmDbVB/BGmXfdwLL95DOz03KdJx5
-        bXF/j1Q/bad9Z+EPBftm2j1cJYPlySDuz7pQhC1yvhWw3HkrcrnbiqJCi8Xc
-        TevWsacj5VXuEKaMYzjzN2udhyF/gH8IifPR6gEU8V/4XwgO/1tUf78Q+A6R
-        V/DUT9AnJrTa9FZhf6KltjEfullVrL+JvjzhzI29reN8h6bWT09LzAie5x4m
-        YT9X2ra06fwCfc6UjpSOmdIS9//qaP/4+g/7R2BR/h0AAA==
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sat, 30 Mar 2013 15:51:43 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"meta\": {\"limit\": 20, \"next\": \"/api/v1/customer/?q=e&limit=20&offset=20\", \"offset\": 0, \"previous\": null, \"total_count\": 1592}, \"objects\": [{\"absolute_url\": \"/customer/1300/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/84/\", \"created_at\": \"Fri, 26 Oct 2012 04:18:42 -0700\", \"id\": 1300, \"is_full_user_list\": false, \"name\": \"111testCustomer111cc\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/51/\", \"resource_uri\": \"/api/v1/customer/1300/\", \"updated_at\": \"Fri, 29 Mar 2013 11:43:12 -0700\"}, {\"absolute_url\": \"/customer/1220/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/86/\", \"created_at\": \"Thu, 13 Sep 2012 03:35:25 -0700\", \"id\": 1220, \"is_full_user_list\": false, \"name\": \"22DELME2\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/1/\", \"resource_uri\": \"/api/v1/customer/1220/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/1444/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/87/\", \"created_at\": \"Wed, 19 Dec 2012 00:38:48 -0800\", \"id\": 1444, \"is_full_user_list\": false, \"name\": \"233mitchell.com\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/1/\", \"resource_uri\": \"/api/v1/customer/1444/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/2099/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/92/\", \"created_at\": \"Wed, 6 Mar 2013 06:46:14 -0800\", \"id\": 2099, \"is_full_user_list\": false, \"name\": \"A Broader View\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/86/\", \"resource_uri\": \"/api/v1/customer/2099/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/2341/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2135/\", \"created_at\": \"Sat, 16 Mar 2013 08:18:30 -0700\", \"id\": 2341, \"is_full_user_list\": false, \"name\": \"A New Customer\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/4/\", \"resource_uri\": \"/api/v1/customer/2341/\", \"updated_at\": \"Thu, 21 Mar 2013 12:13:27 -0700\"}, {\"absolute_url\": \"/customer/34/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/93/\", \"created_at\": \"Thu, 7 Jun 2012 08:25:54 -0700\", \"id\": 34, \"is_full_user_list\": false, \"name\": \"A&E Tax Service\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/1/\", \"resource_uri\": \"/api/v1/customer/34/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/1675/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/94/\", \"created_at\": \"Tue, 26 Feb 2013 00:19:57 -0800\", \"id\": 1675, \"is_full_user_list\": false, \"name\": \"a-1sewerkc.com\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/84/\", \"resource_uri\": \"/api/v1/customer/1675/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/13/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/97/\", \"created_at\": \"Thu, 7 Jun 2012 08:24:57 -0700\", \"id\": 13, \"is_full_user_list\": false, \"name\": \"Aaron Cake\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/1/\", \"resource_uri\": \"/api/v1/customer/13/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/15/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/98/\", \"created_at\": \"Thu, 7 Jun 2012 08:25:03 -0700\", \"id\": 15, \"is_full_user_list\": false, \"name\": \"Abaco Insurance\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/1/\", \"resource_uri\": \"/api/v1/customer/15/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/17/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/100/\", \"created_at\": \"Thu, 7 Jun 2012 08:25:16 -0700\", \"id\": 17, \"is_full_user_list\": false, \"name\": \"abernook.com\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/1/\", \"resource_uri\": \"/api/v1/customer/17/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/1865/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/102/\", \"created_at\": \"Wed, 6 Mar 2013 06:40:26 -0800\", \"id\": 1865, \"is_full_user_list\": false, \"name\": \"Access Hardware\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/86/\", \"resource_uri\": \"/api/v1/customer/1865/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/1570/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/103/\", \"created_at\": \"Wed, 30 Jan 2013 05:09:38 -0800\", \"id\": 1570, \"is_full_user_list\": false, \"name\": \"Accountants Edge Software Solutions\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/21/\", \"resource_uri\": \"/api/v1/customer/1570/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/20/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/104/\", \"created_at\": \"Thu, 7 Jun 2012 08:25:21 -0700\", \"id\": 20, \"is_full_user_list\": false, \"name\": \"ACG Los Angeles\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/2/\", \"resource_uri\": \"/api/v1/customer/20/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/1221/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/105/\", \"created_at\": \"Sat, 15 Sep 2012 07:23:30 -0700\", \"id\": 1221, \"is_full_user_list\": false, \"name\": \"ACGLA Conference\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/2/\", \"resource_uri\": \"/api/v1/customer/1221/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/22/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/106/\", \"created_at\": \"Thu, 7 Jun 2012 08:25:24 -0700\", \"id\": 22, \"is_full_user_list\": false, \"name\": \"achoo! ALLERGY & AIR Products, Inc.\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/1/\", \"resource_uri\": \"/api/v1/customer/22/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/23/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/107/\", \"created_at\": \"Thu, 7 Jun 2012 08:25:35 -0700\", \"id\": 23, \"is_full_user_list\": false, \"name\": \"ACI Insure\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/1/\", \"resource_uri\": \"/api/v1/customer/23/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/1786/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/108/\", \"created_at\": \"Wed, 6 Mar 2013 06:38:39 -0800\", \"id\": 1786, \"is_full_user_list\": false, \"name\": \"Acme Development LLC\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/86/\", \"resource_uri\": \"/api/v1/customer/1786/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/1866/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/109/\", \"created_at\": \"Wed, 6 Mar 2013 06:40:27 -0800\", \"id\": 1866, \"is_full_user_list\": false, \"name\": \"Acme Security\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/86/\", \"resource_uri\": \"/api/v1/customer/1866/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/25/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/110/\", \"created_at\": \"Thu, 7 Jun 2012 08:25:40 -0700\", \"id\": 25, \"is_full_user_list\": false, \"name\": \"acorndevelopments.ca\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/1/\", \"resource_uri\": \"/api/v1/customer/25/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}, {\"absolute_url\": \"/customer/7/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/111/\", \"created_at\": \"Thu, 7 Jun 2012 08:24:41 -0700\", \"id\": 7, \"is_full_user_list\": false, \"name\": \"ACS Wireless\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/1/\", \"resource_uri\": \"/api/v1/customer/7/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}]}"
+    http_version: 
   recorded_at: Sat, 30 Mar 2013 15:51:43 GMT
-recorded_with: VCR 2.4.0

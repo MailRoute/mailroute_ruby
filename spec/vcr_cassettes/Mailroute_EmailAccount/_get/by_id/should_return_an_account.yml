@@ -1,62 +1,41 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/email_account/25396/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjY=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U2F0LCAyMyBNYXIgMjAxMyAxOToxOTo1NSBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA2VRy04EIRD8FcJ5V2DGWWHOnvwBj6SXQSWyQHhojPHfBWZj
-        2Hjs6urUo78xnJO3JWtZosUrwqQkHcm0zOJE8AFhsAaSTm3lfDYvRkE23qXj
-        dDbWNoZ6A/eqZfjcKskVaxvmXQaVByBqqCI+/MM2CQ3Dz3o7ICbQo1ZoomxC
-        lK1sXu8FOlJOaVPa/AWM6y4hGPLByI4QxgTvbvdZOrjoRqt0G31Nd+d0bnvT
-        PPZwdbBegQ0Qu/xfnDGlzJDeR72bJSjli8udRCYulofuIXhr1Nd4tSNyb5YL
-        IXZeND6a3Ji8nkWdfImqPcKMx7qFkFet4TElbLXR2/ZO6Alca29GVKyUr/Ny
-        be/nF3Kq3/nqAQAA
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sat, 23 Mar 2013 19:19:55 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"absolute_url\": \"/user/25396/\", \"aliases\": \"notifications-2bill\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Wed, 19 Dec 2012 01:13:49 -0800\", \"domain\": \"/api/v1/domain/1198/\", \"domain_name\": \"mailroute.net\", \"id\": 25396, \"localpart\": \"2bill\", \"notification_task\": \"/api/v1/notification_account_task/28957/\", \"policy\": \"/api/v1/policy_user/28999/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/25396/\", \"updated_at\": \"Wed, 16 Jan 2013 09:08:35 -0800\"}"
+    http_version: 
   recorded_at: Sat, 23 Mar 2013 19:19:55 GMT
-recorded_with: VCR 2.4.0

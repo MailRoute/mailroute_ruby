@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Mailroute::Domain, :vcr => true do
+  before { configure_mailroute }
+
   describe '#create' do
     let(:customer) { Mailroute::Customer.get(1300) }
     let(:attributes) do

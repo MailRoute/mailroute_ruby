@@ -3,6 +3,7 @@ require 'active_resource'
 require 'json/pure'
 
 require 'mailroute/version'
+require 'mailroute/extensions/object'
 require 'mailroute/configuration'
 require 'mailroute/check_connection'
 require 'mailroute/extensions/relation'

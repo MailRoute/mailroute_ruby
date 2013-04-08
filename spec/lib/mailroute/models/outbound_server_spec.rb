@@ -6,7 +6,7 @@ describe Mailroute::OutboundServer, :vcr => true do
   describe 'CRUD' do
     it 'should create, read, update and delete outbound servers' do
       domain = Mailroute::Domain.get(4555)
-      server = Mailroute::OutboundServer.create(:server => '127.0.0.2', domain: domain)
+      server = Mailroute::OutboundServer.create(:server => '127.0.0.2', :domain => domain)
 
       server.id.should be
 

@@ -1,7 +1,13 @@
+unless RUBY_VERSION =~ /^1\.8/
+  require 'simplecov'
+  SimpleCov.start
+end
+
 require 'rubygems'
 require 'rspec'
 require 'vcr'
 require 'awesome_print'
+
 require 'mailroute'
 
 require 'support/mailroute_configuration_helper'

@@ -1,64 +1,41 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/reseller/?q=Data
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjE=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        RnJpLCAwMSBNYXIgMjAxMyAxMToxMzowNiBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA72TX0vDMBTFv0rI80bTtLWub+LYw9CnDXwQKWl7q5E0Kfkz
-        lbHvblI7HWPIBNlbkntuc84vt1vcgWW4QFsseMetX1EyQVjCe1hLJ4TfqbY1
-        EPah1GvYcOXMT9kqy0RZKyeDJtmFjuoVahs0j1vMKqOEs1A6LfwJjjQYEAJ0
-        lJEIezUTQr2VlWay4fLZS1omDHwXames6kCfUuybSi5bNXyc9TzaxNG+EM6j
-        mA731BqYhaZkwSd+gGaC4hlaQe9DxxSRWZGkRUbRlOSEhAbeeGE2AGEdhKZb
-        kNZpriSaM8vQ6sNY6EzQ+lDK6Tqk5IdGjsO6vjkwsdB8gihFC6iCiQTFWUFn
-        hbc1JdfehIf5G8A8uQxAGp8AeK+kB5iiJZOj96RIrwuSjt73APPkAOCA7aau
-        wZxHbUz4r9TohcaOnhq79YuboBwt3QCNhgdProosPpq6r99wnLoAzdSaV4Du
-        1vOzpm3M+EduT7tPHxjoIRIEAAA=
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.1
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Fri, 01 Mar 2013 11:13:06 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 3}, \"objects\": [{\"absolute_url\": \"/reseller/50/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/12/\", \"created_at\": \"Wed, 19 Sep 2012 09:34:52 -0700\", \"id\": 50, \"name\": \"Centurion Data Systems\", \"resource_uri\": \"/api/v1/reseller/50/\", \"updated_at\": \"Fri, 22 Feb 2013 15:29:19 -0800\"}, {\"absolute_url\": \"/reseller/73/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/21/\", \"created_at\": \"Mon, 14 Jan 2013 13:48:04 -0800\", \"id\": 73, \"name\": \"Data Access\", \"resource_uri\": \"/api/v1/reseller/73/\", \"updated_at\": \"Fri, 22 Feb 2013 15:29:19 -0800\"}, {\"absolute_url\": \"/reseller/20/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/22/\", \"created_at\": \"Thu, 7 Jun 2012 15:36:51 -0700\", \"id\": 20, \"name\": \"Datascribe LTD\", \"resource_uri\": \"/api/v1/reseller/20/\", \"updated_at\": \"Fri, 22 Feb 2013 15:29:19 -0800\"}]}"
     http_version: 
   recorded_at: Fri, 01 Mar 2013 11:13:07 GMT
-recorded_with: VCR 2.4.0

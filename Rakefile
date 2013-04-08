@@ -103,3 +103,44 @@ end"
     end
   end
 end
+
+desc 'Ungzips response bodies in VCR cassettes'
+task 'vcr:ungzip' do
+  require 'awesome_print'
+  require 'vcr'
+  require 'yaml'
+  require 'multi_json'
+
+  VCR.configure do |c|
+    c.cassette_library_dir = 'spec/vcr_cassettes'
+    c.hook_into :webmock
+    # TODO: add header matching
+    c.default_cassette_options = { :match_requests_on => [:method, :uri] }
+  end
+
+  def process(input_file)
+    puts input_file
+    cassette = VCR.insert_cassette(input_file.sub(/\.yml$/, '').sub('spec/vcr_cassettes/', ''), :record => :all)
+    new_interactions = cassette.send(:new_recorded_interactions)
+    def new_interactions.none?
+      false
+    end
+    #debugger
+    cassette.send(:previously_recorded_interactions).each do |interaction|
+      interaction.request.headers['Accept-Encoding'] = ['identity']
+      if interaction.response.headers['Content-Encoding'] == ['gzip']
+        interaction.response.headers.delete('Content-Encoding')
+        interaction.response.body = Zlib::GzipReader.new(StringIO.new(interaction.response.body)).read
+      end
+    end
+    #json_serializer = VCR.cassette_serializers[:json]
+    #cassette.instance_variable_set(:@serializer, json_serializer)
+    cassette.eject
+  end
+
+
+  Dir['spec/vcr_cassettes/**/{*.yml,.yml}'].each do |input_file|
+    process input_file
+  end
+end
+

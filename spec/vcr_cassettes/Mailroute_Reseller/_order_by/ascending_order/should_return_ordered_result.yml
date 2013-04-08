@@ -1,81 +1,41 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/reseller/?order_by=name
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
+    body: 
+      string: ""
+    headers: 
+      Accept: 
       - application/json
-      Authorization:
+      Accept-Encoding: 
+      - identity
+      Authorization: 
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
+      User-Agent: 
       - Ruby
-  response:
-    status:
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        bmdpbngvMS4yLjY=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        U2F0LCAxNiBNYXIgMjAxMyAxNDoxMzo1NCBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        a2VlcC1hbGl2ZQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBDb29raWU=
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA72YUW+bSBDHv8rKD33yxewCBq9UnRLqVqnS9lQs3cPpZK1h
-        newVFgsWt2nU736zQOyF0IhIhJcI48XL/DKz///Mwyzlis0oepglIhUKrog1
-        RzPJf+jr2YIdxOKIFzkveJLwfPFntewtsd5keczz7e7+rWQpf5Pt9wXX92fw
-        dP0Bntc/dcj5UWRlAR9lmSRwR2WKJdsoK6Xew3d+6Ud2//FI6UX/PMzYrsiS
-        UvFtmSfVW5y2d/FCb8CSJPu+3eVMxkLewpI9Swp++iIqC5Wl+u2erni8tRVy
-        n5khPn6h7y/qbaKcM8XjLatYfMrkHBGCvkQKIGGCLIe6LrV99IflWVXgIoaF
-        LtYAAYp+CGO8WYeb7dd1uL65WX/VqyCarMwjHZ4w36AbZXmIje03JQQIu35i
-        ud7ehj+UYAoX9fZA8Vly7jTkSLVNm9zmrpwjH33Ojg04m7o2xS68uW+Ccw1w
-        l1GVIEyqAq3jWz4MXB3kqODIRCln/w6chz6WsgHnU9ujltXJOGJm3OU6DK8H
-        0WoiG5UWnoiWM4wW8anjdGjhFq0v6HqDgkwWZaL0WTKkPpsgRwXn+NPUZ10h
-        7fp8n4s58lDID3WaYQty7GmaOb5ZnwclIjZHNzfBIGZNfKMyWy6nYVZv02YW
-        MlWpwTsendQAL6m97Bxqy6UJLU/h5Eefufqe5d8K9Je6RzcqHgSwCXZUgL41
-        DUCvp1qrpMPoPd/VcmYtKSGUdPn5lR1p1PTyp+LRHb+IsnQQsya+UZkta4V7
-        dQtSnwc9QgqKf046izouxbibdMSAdhV8QAGTLGboWkYXg8A1QY4KblUr3KuD
-        W/UkW+VAvLN3AuuGXWpp72Q6kJVtckt4qYkNAtYENy6wibQU16dAO9X+5vEc
-        LQ1ihOIVtZ8QM8X0Kik5Cu7EAQQ1PYCBz0FT8qOIeIGugiAcRrKOelSSzkRC
-        0RiDHpJgdi/L20YpXOo61Om6OMdUiqucCRlCF3OYD6/aJsxR0eGJqhb/tnFo
-        +1+yosTrOrpW2ZaFkLwo0AakQmZJdnuPQt1OCjB5w1k2cY/K0ql18NVPwObd
-        e9LQPZs8y6YONGFPstAzjsCAQ88PsqFOdTyohJs4R2W3mkh28TOdxan1BvkA
-        u+LqPGzJhym7AZeK/0DhfaF4Wgzi1sQ4Kjd3IouH+xqLSkTwykg6Qm2YmpBO
-        AbumydPgYDKSSfSOKfYigE2wowL0Jxqc4L4uo/ItxHTJULXQZeiqNTPPN0cn
-        Ac+V2AseGzL8eAAOysMm5FExunVdvf7Z19drVBixMYCCIcqKut2zz3XMsy9L
-        01KKDzCCe1kO1oGOCs+fSjh6mw49eIS+7NypYWjTqKXnnq0cbCkHOJeEA7rr
-        zbCUqyMcl9o0zS1+puEwJ3cEkq7rXMyJynkIBS4FvDOLlDjyBQrvxPHI82ES
-        Uv8DR8XoTVS5pK8NqYbu2EEfWTUCtZEF5tmtLaCZfF67dKtxXsrybxeSq0EJ
-        2ET5QnL//vof63uWH0IZAAA=
-    http_version:
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Cache-Control: 
+      - no-cache
+      Content-Type: 
+      - application/json; charset=utf-8
+      Date: 
+      - Sat, 16 Mar 2013 14:13:54 GMT
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"meta\": {\"limit\": 20, \"next\": \"/api/v1/reseller/?limit=20&order_by=name&offset=20\", \"offset\": 0, \"previous\": null, \"total_count\": 84}, \"objects\": [{\"absolute_url\": \"/reseller/51/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/1/\", \"created_at\": \"Mon, 22 Oct 2012 04:55:38 -0700\", \"id\": 51, \"name\": \"111TEST_RESELLER\", \"resource_uri\": \"/api/v1/reseller/51/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/55/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/2/\", \"created_at\": \"Thu, 8 Nov 2012 03:53:15 -0800\", \"id\": 55, \"name\": \"Accountants Edge\", \"resource_uri\": \"/api/v1/reseller/55/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/21/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/3/\", \"created_at\": \"Thu, 7 Jun 2012 08:37:00 -0700\", \"id\": 21, \"name\": \"AESSI\", \"resource_uri\": \"/api/v1/reseller/21/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/11/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/4/\", \"created_at\": \"Thu, 7 Jun 2012 08:28:44 -0700\", \"id\": 11, \"name\": \"AO IT Consulting\", \"resource_uri\": \"/api/v1/reseller/11/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/48/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/5/\", \"created_at\": \"Fri, 7 Sep 2012 10:00:00 -0700\", \"id\": 48, \"name\": \"Aptica, LLC\", \"resource_uri\": \"/api/v1/reseller/48/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/66/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/6/\", \"created_at\": \"Sat, 22 Dec 2012 04:16:36 -0800\", \"id\": 66, \"name\": \"Armour Networks Pty Ltd\", \"resource_uri\": \"/api/v1/reseller/66/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/80/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/7/\", \"created_at\": \"Fri, 1 Feb 2013 06:22:26 -0800\", \"id\": 80, \"name\": \"Azteche.com\", \"resource_uri\": \"/api/v1/reseller/80/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/62/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/8/\", \"created_at\": \"Thu, 13 Dec 2012 00:45:11 -0800\", \"id\": 62, \"name\": \"BCG Canada Inc.\", \"resource_uri\": \"/api/v1/reseller/62/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/93/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/9/\", \"created_at\": \"Thu, 7 Mar 2013 04:15:03 -0800\", \"id\": 93, \"name\": \"Bleu Inc\", \"resource_uri\": \"/api/v1/reseller/93/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/91/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/10/\", \"created_at\": \"Wed, 6 Mar 2013 02:19:33 -0800\", \"id\": 91, \"name\": \"Blue Chip Computer Services BCCS\", \"resource_uri\": \"/api/v1/reseller/91/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/46/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/11/\", \"created_at\": \"Wed, 15 Aug 2012 05:54:40 -0700\", \"id\": 46, \"name\": \"BrainStomp, Inc.\", \"resource_uri\": \"/api/v1/reseller/46/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/13/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/12/\", \"created_at\": \"Thu, 7 Jun 2012 08:29:27 -0700\", \"id\": 13, \"name\": \"Business Technology Solutions Inc.\", \"resource_uri\": \"/api/v1/reseller/13/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/47/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/13/\", \"created_at\": \"Wed, 5 Sep 2012 03:43:10 -0700\", \"id\": 47, \"name\": \"Celera It Services\", \"resource_uri\": \"/api/v1/reseller/47/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/92/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/14/\", \"created_at\": \"Thu, 7 Mar 2013 04:06:57 -0800\", \"id\": 92, \"name\": \"Centex Systems\", \"resource_uri\": \"/api/v1/reseller/92/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/50/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/15/\", \"created_at\": \"Wed, 19 Sep 2012 02:34:52 -0700\", \"id\": 50, \"name\": \"Centurion Data Systems\", \"resource_uri\": \"/api/v1/reseller/50/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/85/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/16/\", \"created_at\": \"Thu, 21 Feb 2013 03:46:30 -0800\", \"id\": 85, \"name\": \"Certified Computer Solutions\", \"resource_uri\": \"/api/v1/reseller/85/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/54/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/17/\", \"created_at\": \"Thu, 1 Nov 2012 07:09:50 -0700\", \"id\": 54, \"name\": \"CommuniGate Systems\", \"resource_uri\": \"/api/v1/reseller/54/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/87/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/18/\", \"created_at\": \"Tue, 26 Feb 2013 01:26:08 -0800\", \"id\": 87, \"name\": \"Complete IT\", \"resource_uri\": \"/api/v1/reseller/87/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/8/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/19/\", \"created_at\": \"Thu, 7 Jun 2012 08:27:07 -0700\", \"id\": 8, \"name\": \"Consulting Interactive/ Shivvers\", \"resource_uri\": \"/api/v1/reseller/8/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}, {\"absolute_url\": \"/reseller/74/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/20/\", \"created_at\": \"Mon, 14 Jan 2013 05:55:27 -0800\", \"id\": 74, \"name\": \"Consultmark.net\", \"resource_uri\": \"/api/v1/reseller/74/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:13 -0700\"}]}"
+    http_version: 
   recorded_at: Sat, 16 Mar 2013 14:13:54 GMT
-recorded_with: VCR 2.4.0
