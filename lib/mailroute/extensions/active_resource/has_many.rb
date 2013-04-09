@@ -1,5 +1,4 @@
 class HasMany < Struct.new(:klass, :model, :options)
-  # TODO: caching
   def inverse
     ActiveSupport::Inflector.underscore(klass.to_s.split('::').last)
   end

@@ -36,9 +36,7 @@ task 'vcr:ungzip' do
     cassette.eject
   end
 
-
   Dir['spec/vcr_cassettes/**/{*.yml,.yml}'].each do |input_file|
     process input_file
   end
 end
-

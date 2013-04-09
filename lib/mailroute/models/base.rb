@@ -23,7 +23,6 @@ module Mailroute
         Relation.new(self)
       end
 
-      # TODO: double-check the purpose of this method
       def bulk_create(*attribute_array)
         attribute_array.map do |attributes|
           create(attributes)
