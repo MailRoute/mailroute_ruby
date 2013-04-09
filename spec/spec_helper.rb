@@ -1,4 +1,4 @@
-unless RUBY_VERSION =~ /^1\.8/
+if ENV['COVERAGE'] && RUBY_VERSION !~ /^1\.8/
   require 'simplecov'
   SimpleCov.start
 end
