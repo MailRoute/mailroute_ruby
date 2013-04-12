@@ -51,7 +51,7 @@ Or install it yourself as:
 8. better validation exceptions
 9. refactor base.rb
 10. domain.bulk_create_email_accounts 501
-11. mailroute.Policy.get_default_policy()
+<del>11. mailroute.Policy.get_default_policy()</del>
 12. domain.get_quarantine()
 13. double-check get by name
 
