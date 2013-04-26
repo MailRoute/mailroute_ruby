@@ -1,6 +1,10 @@
 # Mailroute [![Build Status](https://secure.travis-ci.org/MailRoute/mailroute_ruby.png)](http://travis-ci.org/MailRoute/mailroute_ruby)
 
-TODO: Write a gem description
+Mailroute is a Ruby client for [mailroute.net](http://mailroute.net).
+
+## Requirements
+
+Ruby 1.8.7, 1.9.3 or 2.0.0.
 
 ## Installation
 
@@ -12,23 +16,82 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it by yourself as:
 
     $ gem install mailroute
 
 ## Usage
+
+# Configuration
 
     Mailroute.configure(
       :username => '<username here>',
       :apikey => '0d1a...a33'
     )
 
-    # Make sure that Mailroute configured properly
-    Mailroute.check_connection #=> true
 
-    Mailroute::Reseller.all #=> [...]
+# Reseller
 
-    Mailroute::Reseller.get(249) #=> Reseller<...>
+    # A list of resellers
+    Mailroute::Reseller.list #=> [...]
+
+    # You can specify limit and offset
+    Mailroute::Reseller.list.offset(20).limit(30) #=> [...]
+
+    reseller = Mailroute::Reseller.get(12) #=> Reseller<...>
+    reseller.name #=> "John Doe"
+    reseller.name = 'Jane Doe'
+    reseller.save
+
+    Mailroute::Reseller.get(12).name #=> 'Jane Doe'
+
+    reseller.delete
+
+    Mailroute::Reseller.get(12) #=> ActiveResource::ResourceNotFound
+
+    reseller = Mailroute::Reseller.get(name: 'John Smith') #=> Reseller<...>
+
+    resellers = Mailroute::Reseller.search('Smith') #=> [Reseller<...>, ...]
+    resellers.include?(reseller) #=> true
+
+    Mailroute::Reseller.filter(name: 'Smith') #=> [...]
+    Mailroute::Reseller.filter(name__exact: 'John Smith') #=> [...]
+    Mailroute::Reseller.filter(name__starts_with: 'Jo') #=> [...]
+
+    Mailroute::Reseller.list.order_by('-name')
+    Mailroute::Reseller.list.order_by('name')
+    Mailroute::Reseller.list.order_by('created_at')
+
+    new_reseller = Mailroute::Reseller.create(name: 'New Guy') #=> Reseller<...>
+    new_reseller.id #=> 11111
+
+    new_resellers = Mailroute::Reseller.bulk_create(
+        { name: 'R2D2' },
+        { name: '3PO' },
+        { name: 'Luke Skywalker' }
+    )
+    new_resellers.count #=> 3
+
+    # mass deletion
+    #   by ids:
+    Mailroute::Reseller.delete([10, 12, 13])
+    #   by instances:
+    Mailroute::Reseller.delete(new_resellers)
+
+    # Associations:
+    reseller.customers #=> [Customer<...>, ...]
+    reseller.admins #=> [Admin<...>, ...]
+    reseller.contacts #=> [ResellerContact<...>, ...]
+    reseller.branding_info #=> BrandingInfo<...>
+
+    send_welcome = true
+    reseller.create_admin('admin@example.com', send_welcome) #=> Admin<...>
+    reseller.delete_admin('admin@example.com')
+    reseller.create_contact(params) #=> ResellerContact<...>
+    reseller.create_customer(params) #=> Customer<...>
+
+    # All list operations allow chaining
+    Mailroute::Reseller.limit(10).offset(30).filter(name: 'Fox').order('created_at') #=> [Reseller<...>, ...]
 
 ## Contributing
 
@@ -37,7 +100,6 @@ Or install it yourself as:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
 
 ## TODO
 
