@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["Viktar.Basharymau@gmail.com"]
   spec.description   = %q{MailRoute API}
   spec.summary       = %q{An API for http://mailroute.net}
-  spec.homepage      = "http://github.com/DNNX/mailroute"
+  spec.homepage      = "http://github.com/MailRoute/mailroute"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
