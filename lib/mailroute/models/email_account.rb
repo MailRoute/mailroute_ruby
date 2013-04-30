@@ -48,6 +48,18 @@ module Mailroute
           end
         end
       end
+
+      alias_method :create_by_attributes, :create
+      def create(*args)
+        if args.size == 1 && args.first.is_a?(String)
+          localpart, domain_name = *args.first.split('@')
+          domain = Domain.get(domain_name)
+          raise ActiveResource::ResourceNotFound, "Domain with name #{domain_name} not found" unless domain
+          create_by_attributes(:localpart => localpart, :domain => domain, :create_opt => 'generate_pwd')
+        else
+          create_by_attributes(*args)
+        end
+      end
     end
   end
 end

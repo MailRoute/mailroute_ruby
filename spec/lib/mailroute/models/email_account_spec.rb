@@ -36,6 +36,33 @@ describe Mailroute::EmailAccount, :vcr => true do
     end
   end
 
+  describe '#create' do
+    context 'when domain exists' do
+      let(:existing_domain) { Mailroute::Domain.get('example.com') }
+      
+      context 'creating an email account by email address' do
+        subject(:email_account) { Mailroute::EmailAccount.create('admin@example.com') }
+
+        it 'should be created successfully' do
+          email_account.id.should_not be_nil
+        end
+
+        its(:domain) { should == existing_domain }
+        its(:localpart) { should == 'admin' }
+      end
+    end
+
+    context "when domain doesn't exist" do
+      context 'creating an email account by email address' do
+        let(:email_account) { Mailroute::EmailAccount.create('admin@do.not.exist.example.net') }
+
+        it 'should raise ResourceNotFound error' do
+          expect { email_account }.to raise_error ActiveResource::ResourceNotFound
+        end
+      end
+    end
+  end
+
   it 'should be possible to create, read, update and delete email accounts' do
     domain = Mailroute::Domain.get(4555)
     new_account = nil
