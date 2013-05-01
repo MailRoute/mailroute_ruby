@@ -1,0 +1,70 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/email_account/7718/
+    body: 
+      string: ""
+    headers: 
+      Authorization: 
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      Accept: 
+      - application/json
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Connection: 
+      - keep-alive
+      Transfer-Encoding: 
+      - chunked
+      Date: 
+      - Wed, 01 May 2013 19:40:05 GMT
+      Cache-Control: 
+      - no-cache
+      Server: 
+      - nginx/1.2.6
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Content-Type: 
+      - application/json; charset=utf-8
+    body: 
+      string: "{\"absolute_url\": \"/user/7718/\", \"aliases\": \"\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Wed, 1 May 2013 12:03:04 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"domain_name\": \"example.com\", \"id\": 7718, \"localpart\": \"admin\", \"notification_tasks\": [\"/api/v1/notification_account_task/16924/\"], \"policy\": \"/api/v1/policy_user/16395/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/7718/\", \"updated_at\": \"Wed, 1 May 2013 12:03:04 -0700\", \"use_domain_notifications\": true}"
+    http_version: 
+  recorded_at: Wed, 01 May 2013 19:40:05 GMT
+- request: 
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/email_account/7718/regenerate_api_key/
+    body: 
+      string: ""
+    headers: 
+      Authorization: 
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      Accept: 
+      - "*/*"
+      Content-Type: 
+      - application/json
+  response: 
+    status: 
+      code: 202
+      message: ACCEPTED
+    headers: 
+      Connection: 
+      - keep-alive
+      Transfer-Encoding: 
+      - chunked
+      Date: 
+      - Wed, 01 May 2013 19:40:06 GMT
+      Server: 
+      - nginx/1.2.6
+      Vary: 
+      - Accept, Cookie
+      Content-Type: 
+      - application/json
+    body: 
+      string: "{\"api_key\": \"8e5c26f459ffaccd2acb18adb5b3c3030cbe55d7\"}"
+    http_version: 
+  recorded_at: Wed, 01 May 2013 19:40:06 GMT
+recorded_with: VCR 2.4.0

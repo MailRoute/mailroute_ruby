@@ -63,6 +63,24 @@ describe Mailroute::EmailAccount, :vcr => true do
     end
   end
 
+  describe '#regenerate_api_key' do
+    context 'an email account' do
+      let(:email_account) { Mailroute::EmailAccount.get(7718) }
+
+      context 'regenerating api key' do
+        subject(:new_key) { email_account.regenerate_api_key }
+
+        it { should match /\A[0-9a-f]{40}\Z/ }
+
+        context 'regenerating api key once again' do
+          let(:another_key) { email_account.regenerate_api_key }
+
+          it { should_not == another_key }
+        end
+      end
+    end
+  end
+
   it 'should be possible to create, read, update and delete email accounts' do
     domain = Mailroute::Domain.get(4555)
     new_account = nil

@@ -29,6 +29,11 @@ module Mailroute
       self
     end
 
+    def regenerate_api_key
+      response = connection.post(element_path(prefix_options) + 'regenerate_api_key/', nil, self.class.headers)
+      self.class.format.decode(response.body)['api_key']
+    end
+
     class << self
       alias_method :get_by_id, :get
       def get(*args)
