@@ -1,0 +1,37 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/admins/customer/11372/admin/9252/
+    body: 
+      string: ""
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Content-Type: 
+      - application/json; charset=utf-8
+      Server: 
+      - nginx/1.2.6
+      Cache-Control: 
+      - no-cache
+      Transfer-Encoding: 
+      - chunked
+      Date: 
+      - Thu, 02 May 2013 20:55:51 GMT
+      Connection: 
+      - keep-alive
+    body: 
+      string: "{\"customer\": null, \"date_joined\": \"Wed, 1 May 2013 12:03:04 -0700\", \"email\": \"admin@example.com\", \"id\": 9252, \"is_active\": true, \"last_login\": \"Wed, 1 May 2013 12:03:04 -0700\", \"reseller\": null, \"resource_uri\": \"/api/v1/admins/customer/11372/admin/9252/\", \"send_welcome\": null, \"username\": \"admin@example.com\"}"
+    http_version: 
+  recorded_at: Thu, 02 May 2013 20:55:53 GMT
+recorded_with: VCR 2.4.0

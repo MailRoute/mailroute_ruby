@@ -1,0 +1,103 @@
+--- 
+recorded_with: VCR 2.4.0
+http_interactions: 
+- request: 
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/admins/customer/11372/admin/9252/
+    body: 
+      string: ""
+    headers: 
+      Authorization: 
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      Accept: 
+      - application/json
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Cache-Control: 
+      - no-cache
+      Date: 
+      - Thu, 02 May 2013 21:01:59 GMT
+      Transfer-Encoding: 
+      - chunked
+      Content-Type: 
+      - application/json; charset=utf-8
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+    body: 
+      string: "{\"customer\": null, \"date_joined\": \"Wed, 1 May 2013 12:03:04 -0700\", \"email\": \"admin@example.com\", \"id\": 9252, \"is_active\": true, \"last_login\": \"Wed, 1 May 2013 12:03:04 -0700\", \"reseller\": null, \"resource_uri\": \"/api/v1/admins/customer/11372/admin/9252/\", \"send_welcome\": null, \"username\": \"admin@example.com\"}"
+    http_version: 
+  recorded_at: Thu, 02 May 2013 21:02:01 GMT
+- request: 
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/admins/customer/11372/admin/9252/regenerate_api_key/
+    body: 
+      string: ""
+    headers: 
+      Authorization: 
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      Content-Type: 
+      - application/json
+      Accept: 
+      - "*/*"
+  response: 
+    status: 
+      code: 202
+      message: ACCEPTED
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Date: 
+      - Thu, 02 May 2013 21:02:00 GMT
+      Transfer-Encoding: 
+      - chunked
+      Content-Type: 
+      - application/json
+      Vary: 
+      - Accept, Cookie
+    body: 
+      string: "{\"api_key\": \"4b265ac06932bebc224a38df84c076b3cf388a55\"}"
+    http_version: 
+  recorded_at: Thu, 02 May 2013 21:02:02 GMT
+- request: 
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/admins/customer/11372/admin/9252/regenerate_api_key/
+    body: 
+      string: ""
+    headers: 
+      Authorization: 
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      Content-Type: 
+      - application/json
+      Accept: 
+      - "*/*"
+  response: 
+    status: 
+      code: 202
+      message: ACCEPTED
+    headers: 
+      Server: 
+      - nginx/1.2.6
+      Connection: 
+      - keep-alive
+      Date: 
+      - Thu, 02 May 2013 21:02:01 GMT
+      Transfer-Encoding: 
+      - chunked
+      Content-Type: 
+      - application/json
+      Vary: 
+      - Accept, Cookie
+    body: 
+      string: "{\"api_key\": \"cb5ea4d686d749804f29583a204c0ff1736c24cd\"}"
+    http_version: 
+  recorded_at: Thu, 02 May 2013 21:02:03 GMT

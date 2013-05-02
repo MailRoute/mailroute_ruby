@@ -1,0 +1,71 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/admins/customer/11372/admin/9252/
+    body: 
+      string: ""
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Content-Type: 
+      - application/json; charset=utf-8
+      Server: 
+      - nginx/1.2.6
+      Cache-Control: 
+      - no-cache
+      Transfer-Encoding: 
+      - chunked
+      Date: 
+      - Thu, 02 May 2013 20:55:53 GMT
+      Connection: 
+      - keep-alive
+    body: 
+      string: "{\"customer\": null, \"date_joined\": \"Wed, 1 May 2013 12:03:04 -0700\", \"email\": \"admin@example.com\", \"id\": 9252, \"is_active\": true, \"last_login\": \"Wed, 1 May 2013 12:03:04 -0700\", \"reseller\": null, \"resource_uri\": \"/api/v1/admins/customer/11372/admin/9252/\", \"send_welcome\": null, \"username\": \"admin@example.com\"}"
+    http_version: 
+  recorded_at: Thu, 02 May 2013 20:55:55 GMT
+- request: 
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/customer/11372/
+    body: 
+      string: ""
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Vary: 
+      - Accept, Cookie
+      - Accept-Encoding
+      Content-Type: 
+      - application/json; charset=utf-8
+      Server: 
+      - nginx/1.2.6
+      Cache-Control: 
+      - no-cache
+      Transfer-Encoding: 
+      - chunked
+      Date: 
+      - Thu, 02 May 2013 20:55:55 GMT
+      Connection: 
+      - keep-alive
+    body: 
+      string: "{\"absolute_url\": \"/customer/11372/\", \"allow_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/30483/\", \"created_at\": \"Mon, 29 Apr 2013 05:19:28 -0700\", \"id\": 11372, \"is_full_user_list\": false, \"name\": \"foreign_customerreseller2969b7d5072d33933060979ef14fb4b3\", \"reported_user_count\": null, \"reseller\": \"/api/v1/reseller/19552/\", \"resource_uri\": \"/api/v1/customer/11372/\", \"updated_at\": \"Mon, 29 Apr 2013 05:19:29 -0700\"}"
+    http_version: 
+  recorded_at: Thu, 02 May 2013 20:55:57 GMT
+recorded_with: VCR 2.4.0
