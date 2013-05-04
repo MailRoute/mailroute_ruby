@@ -33,66 +33,72 @@ Mailroute.configure(
 
 # Reseller
 
-    # A list of resellers
-    Mailroute::Reseller.list #=> [...]
+```ruby
+# A list of resellers
+Mailroute::Reseller.list #=> [...]
 
-    # You can specify limit and offset
-    Mailroute::Reseller.list.offset(20).limit(30) #=> [...]
+# You can specify limit and offset
+Mailroute::Reseller.list.offset(20).limit(30) #=> [...]
 
-    reseller = Mailroute::Reseller.get(12) #=> Reseller<...>
-    reseller.name #=> "John Doe"
-    reseller.name = 'Jane Doe'
-    reseller.save
+reseller = Mailroute::Reseller.get(12) #=> Reseller<...>
+reseller.name #=> "John Doe"
+reseller.name = 'Jane Doe'
+reseller.save
 
-    Mailroute::Reseller.get(12).name #=> 'Jane Doe'
+Mailroute::Reseller.get(12).name #=> 'Jane Doe'
 
-    reseller.delete
+reseller.delete
 
-    Mailroute::Reseller.get(12) #=> ActiveResource::ResourceNotFound
+Mailroute::Reseller.get(12) #=> ActiveResource::ResourceNotFound
 
-    reseller = Mailroute::Reseller.get(name: 'John Smith') #=> Reseller<...>
+reseller = Mailroute::Reseller.get(name: 'John Smith') #=> Reseller<...>
 
-    resellers = Mailroute::Reseller.search('Smith') #=> [Reseller<...>, ...]
-    resellers.include?(reseller) #=> true
+resellers = Mailroute::Reseller.search('Smith') #=> [Reseller<...>, ...]
+resellers.include?(reseller) #=> true
 
-    Mailroute::Reseller.filter(name: 'Smith') #=> [...]
-    Mailroute::Reseller.filter(name__exact: 'John Smith') #=> [...]
-    Mailroute::Reseller.filter(name__starts_with: 'Jo') #=> [...]
+Mailroute::Reseller.filter(name: 'Smith') #=> [...]
+Mailroute::Reseller.filter(name__exact: 'John Smith') #=> [...]
+Mailroute::Reseller.filter(name__starts_with: 'Jo') #=> [...]
 
-    Mailroute::Reseller.list.order_by('-name')
-    Mailroute::Reseller.list.order_by('name')
-    Mailroute::Reseller.list.order_by('created_at')
+Mailroute::Reseller.list.order_by('-name')
+Mailroute::Reseller.list.order_by('name')
+Mailroute::Reseller.list.order_by('created_at')
 
-    new_reseller = Mailroute::Reseller.create(name: 'New Guy') #=> Reseller<...>
-    new_reseller.id #=> 11111
+new_reseller = Mailroute::Reseller.create(name: 'New Guy') #=> Reseller<...>
+new_reseller.id #=> 11111
 
-    new_resellers = Mailroute::Reseller.bulk_create(
-        { name: 'R2D2' },
-        { name: '3PO' },
-        { name: 'Luke Skywalker' }
-    )
-    new_resellers.count #=> 3
+new_resellers = Mailroute::Reseller.bulk_create(
+    { name: 'R2D2' },
+    { name: '3PO' },
+    { name: 'Luke Skywalker' }
+)
+new_resellers.count #=> 3
 
-    # mass deletion
-    #   by ids:
-    Mailroute::Reseller.delete([10, 12, 13])
-    #   by instances:
-    Mailroute::Reseller.delete(new_resellers)
+# mass deletion
+#   by ids:
+Mailroute::Reseller.delete([10, 12, 13])
+#   by instances:
+Mailroute::Reseller.delete(new_resellers)
 
-    # Associations:
-    reseller.customers #=> [Customer<...>, ...]
-    reseller.admins #=> [Admin<...>, ...]
-    reseller.contacts #=> [ResellerContact<...>, ...]
-    reseller.branding_info #=> BrandingInfo<...>
+# Associations:
+reseller.customers #=> [Customer<...>, ...]
+reseller.admins #=> [Admin<...>, ...]
+reseller.contacts #=> [ResellerContact<...>, ...]
+reseller.branding_info #=> BrandingInfo<...>
 
-    send_welcome = true
-    reseller.create_admin('admin@example.com', send_welcome) #=> Admin<...>
-    reseller.delete_admin('admin@example.com')
-    reseller.create_contact(params) #=> ResellerContact<...>
-    reseller.create_customer(params) #=> Customer<...>
+send_welcome = true
+reseller.create_admin('admin@example.com', send_welcome) #=> Admin<...>
+reseller.delete_admin('admin@example.com')
+reseller.create_contact(params) #=> ResellerContact<...>
+reseller.create_customer(params) #=> Customer<...>
 
-    # All list operations allow chaining
-    Mailroute::Reseller.limit(10).offset(30).filter(name: 'Fox').order('created_at') #=> [Reseller<...>, ...]
+# All list operations allow chaining
+Mailroute::Reseller.
+  limit(10).
+  offset(30).
+  filter(name: 'Fox').
+  order('created_at') #=> [Reseller<...>, ...]
+```
 
 ## Contributing
 
