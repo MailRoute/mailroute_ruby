@@ -24,11 +24,12 @@ Or install it by yourself as:
 
 # Configuration
 
-    Mailroute.configure(
-      :username => '<username here>',
-      :apikey => '0d1a...a33'
-    )
-
+```ruby
+Mailroute.configure(
+  :username => '<username here>',
+  :apikey => '0d1a...a33'
+)
+```
 
 # Reseller
 
