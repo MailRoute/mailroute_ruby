@@ -1,0 +1,223 @@
+                                                                     
+                                                                     
+                                                                     
+                                             
+import mailroute
+
+mailroute.configure(username="blabla", apikey="blabla")
+
+Reseller resource and common actions/interface.
+
+reseller_list = mailroute.Reseller.list()                               # list
+reseller_list = mailroute.Reseller.list().limit(20)                     # list
+reseller_list = mailroute.Reseller.list().offset(20)                    # list
+reseller = mailroute.Reseller.get(id=12)                                # 1 instance
+reseller.name = "newname"
+reseller.save()
+reseller = mailroute.Reseller.get(name="test")                          # 1 instance
+reseller.name      # test
+reseller.delete()
+reseller_list = mailroute.Reseller.search("searchstr")                  # list
+reseller_list = mailroute.Reseller.filter(name__startswith="begin")     # list
+reseller_list = mailroute.Reseller.filter(name__exact="begin")          # list
+reseller_list = mailroute.Reseller.filter(name="begin")                 # list
+
+# all list field allow ordering
+
+reseller_list = mailroute.Reseller.filter(name="begin").order_by("-name")         # list
+reseller_list = mailroute.Reseller.filter(name="begin").order_by("name")          # list
+reseller_list = mailroute.Reseller.filter(name="begin").order_by("created_at")    # list
+
+new_reseller  =  mailroute.Reseller.create(name="newresl")
+mailroute.Reseller.bulk_create([{'name':"r1"},{"name":"r2"}])                     # mass create
+mailroute.Reseller.delete([reseller1,reseller2])                                  # mass delete of resellers  by instance of list of pk
+
+reseller.customers                                       # list of customers - additional api call , cached
+reseller.admins                                          # list of admins - additional api call , cached
+reseller.contacts                                        # list of contacts - additional api call , cached
+reseller.branding_info                                   # branding info instance for this reseller, api call, cached
+
+reseller.create_admin(email, send_welcome)
+reseller.delete_admin(email)
+reseller.create_contact(params)
+reseller.create_customer(params)
+
+
+
+CUSTOMER RESORUCE
+# crud same as reseller.
+
+customer =  mailroute.Customer.get(id=12)
+
+# create
+customer_new  =  mailroute.Customer.create({'name':"newresl", "customer":mailroute.Customer.get(id=12)})
+customer_new  =  mailroute.Customer.create({'name':"newresl", "customer":"customername"})                 # reference via name
+customer_new  =  mailroute.Customer.create({'name':"newresl", "customer":3})                              # reference via id
+
+# When create references can be object or their key fields
+
+get fields = id, name
+create fields required =  name, reseller
+filter = name , reseller
+ordering = ['name', 'created_at']
+relation fields list = reseller, domains, contacts, admins
+relation fields one = branding_info
+
+
+customer.create_domain(params)
+customer.create_contact(params)
+customer.create_admin(email, send_welcome)
+customer.delete_admin(email)
+
+
+DOMAIN RESORUCE
+
+get fields = id, name
+filter = name , customer
+create fields required =  name, customer
+create fields optional =  hold_email, active, deliveryport, userlist_complete, outbound_enabled
+ordering = ['name', 'created_at', 'active', 'hold_email' ]
+relation fields list = customer (R), domain_aliases , email_accounts, mail_servers, outbound_servers, contacts, blacklist, whitelist , outbound_servers
+relation fields one =  policy (RU), notification_task (RU)
+
+domain.get_quarantine()                       # return quarantine list
+domain.move_to_customer(customer_instance)    # move domain
+domain.create_contact(params)
+domain.create_mailserver(params)
+domain.create_outbound_server(params)
+domain.create_email_account(params)
+domain.bulk_create_email_account([{},{}])
+domain.create_alias(params)
+domain.create_outbound_server("1.2.1.1")
+domain.add_to_blacklist("spam@spam.com")
+domain.add_to_whitelist("nospam@nospam.com")
+
+
+
+DOMAINALIASRESOURCE
+get fields = id,name
+filter = domain
+ordering = ['name', 'created_at']
+create fields required =  name, domain
+create fields optional = active
+relation fields one =  domain
+
+
+MAILSERVERRESOURCE
+get fields = id
+filter = domain
+ordering = ['server', 'priority', ]
+create fields required =  server, domain
+create fields optional = active
+relation fields one =  domain
+
+
+POLICYDOMAINRESOURCE - ONLY RU
+get fields = id
+
+mailroute.Policy.get_default_policy()           # return global default policy
+
+relation fields one =  domain
+
+POLICYUSERRESOURCE - ONLY RU
+get fields = id
+relation fields one =  email_account
+
+notification_account_task.use_domain_policy()
+notification_account_task.use_self_policy()
+notification_account_task.is_active()
+
+
+
+EMAILACCOUNTRESOURCE
+
+get fields = id, localpart+domain
+filter = domain, localpart
+ordering = ['localpart', 'priority', 'domain', 'created_at']
+create fields required =  name, domain, localpart, create_opt ( choice of "generate_pwd","set_pwd")
+create fields opt = password, send_welcome
+relation fields one =  domain , policy, notification_task  , contact
+relation fields list = aliases, blacklist, whitelist, quarantine
+
+
+email_account.set_password("newpsswwd")
+email_account.create_user(password=None, send_welcome=True)
+mailroute.EmailAccount.create("localpart@domain.com")
+email_account.create_user(password=None, send_welcome=True)
+mailroute.EmailAccount.create("localpart@domain.com")
+email_account.convert_to_alias()
+email_account.bulk_add_alias(["alias1","alias2"])
+email_account.add_alias("alias")
+email_account.add_to_blacklist("spam@spam.com")
+email_account.add_to_whitelist("nospam@nospam.com")
+
+
+LOCALPARTALIASRESOURCE
+get fields = id
+filter = email_account
+ordering = ['localpart', 'created_at', 'updated_at', ]
+create fields required =  email_account,  localpart
+relation fields one =  email_account, domain
+
+
+RESELLERCONTACTRESOURCE,CUSTOMERCONTACTRESOURCE,DOMAINCONTACTRESOURCE
+get fields = id
+filter = email, ( customer,reseller,domain)
+ordering = ['first_name', 'last_name', 'email', 'is_technical', 'is_billing', 'is_emergency']
+create fields required =  email
+create fields opt =  first_name ,last_name,email, city,state, zipcode ,country, phone, address , address2 , is_technical, is_billing , is_emergency
+relation fields one = ( customer,reseller,domain)
+
+EMAILACCOUNTCONTACTRESOURCE
+get fields = id
+filter = email_account, email
+ordering = ['first_name', 'last_name', 'email', 'is_technical', 'is_billing', 'is_emergency']
+create fields required =  email
+create fields opt =  first_name ,last_name,email, city,state, zipcode ,country, phone, address , address2 , is_technical ,   is_billing , is_emergency
+relation fields one = email_account
+
+OUTBOUNDSERVERRESOURCE
+get fields = id
+filter = domain
+create fields required =  server
+relation fields one = domain
+
+NOTIFICATIONDOMAINTASKRESOURCE
+get fields = id
+filter = domain
+relation fields one = domain
+
+NOTIFICATIONACCOUNTTASKRESOURCE
+get fields = id
+filter = email_account
+relation fields one = email_account
+
+notification_account_task.use_domain_notification()
+notification_account_task.use_self_notification()
+notification_account_task.is_active()
+
+
+WBLISTRESOURCE
+get fields = id
+filter = domain, email_account, wb
+create fields required =  email, (email_account or domain), wb ( b for blacklist, w for whitelist)
+relation fields one = domain, email_account
+
+
+ADMINRESOURCE
+get fields = id
+filter = domain, email_account, wb
+create fields required =  email, (email_account or domain), wb ( b for blacklist, w for whitelist)
+relation fields one = domain, email_account
+
+
+QUARANTINERESOURCE
+filter = domain, email_account , content ,rs,rid,email
+ordering_dict = recipient,from_addr,spam_level,time_num,size,subject
+
+message.whitelist_sender()
+message.recover()
+qlist = mailroute.Quarantine.filter(email_account=email_account_inst)
+qlist.delete()
+qlist.recover()
+qlist.whitelist_sender(what='email',for='domain')                             # values for what email, domain for - domain,emailaccount.
