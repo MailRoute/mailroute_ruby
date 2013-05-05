@@ -53,17 +53,17 @@ describe Mailroute::PolicyFilter, :vcr => true do
     end
   end
 
-  describe Mailroute::PolicyUser, :vcr => { :record => :all } do
+  describe Mailroute::PolicyUser do
     let(:policy) { Mailroute::PolicyUser.get(16395) }
 
     include_examples 'enabling and disabling different filters'
     include_examples 'changing anti spam mode'
   end
 
-  # describe Mailroute::PolicyDomain do
-  #   let(:policy) { Mailroute::PolicyDomain.get(16379) }
+  describe Mailroute::PolicyDomain do
+    let(:policy) { Mailroute::PolicyDomain.get(16379) }
 
-  #   include_examples 'enabling and disabling different filters'
-  #   include_examples 'changing anti spam mode'
-  # end
+    include_examples 'enabling and disabling different filters'
+    include_examples 'changing anti spam mode'
+  end
 end
