@@ -39,7 +39,7 @@ describe Mailroute::EmailAccount, :vcr => true do
   describe '#create' do
     context 'when domain exists' do
       let(:existing_domain) { Mailroute::Domain.get('example.com') }
-      
+
       context 'creating an email account by email address' do
         subject(:email_account) { Mailroute::EmailAccount.create('admin@example.com') }
 
