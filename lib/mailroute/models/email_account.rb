@@ -35,6 +35,10 @@ module Mailroute
       self.class.format.decode(response.body)['api_key']
     end
 
+    def add_alias(localpart)
+      LocalpartAlias.create(:email_account => self, :localpart => localpart)
+    end
+
     class << self
       alias_method :get_by_id, :get
       def get(*args)

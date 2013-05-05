@@ -1,0 +1,208 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/email_account/7718/
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Sun, 05 May 2013 15:00:57 GMT
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+    body:
+      string: "{\"absolute_url\": \"/user/7718/\", \"aliases\": \"\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Wed, 1 May 2013 12:03:04 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"domain_name\": \"example.com\", \"id\": 7718, \"localpart\": \"admin\", \"notification_tasks\": [\"/api/v1/notification_account_task/16924/\"], \"policy\": \"/api/v1/policy_user/16395/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/7718/\", \"updated_at\": \"Sun, 5 May 2013 08:00:03 -0700\", \"use_domain_notifications\": true}"
+    http_version:
+  recorded_at: Sun, 05 May 2013 15:00:57 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/email_account/7718/
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Sun, 05 May 2013 15:00:59 GMT
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+    body:
+      string: "{\"absolute_url\": \"/user/7718/\", \"aliases\": \"\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Wed, 1 May 2013 12:03:04 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"domain_name\": \"example.com\", \"id\": 7718, \"localpart\": \"admin\", \"notification_tasks\": [\"/api/v1/notification_account_task/16924/\"], \"policy\": \"/api/v1/policy_user/16395/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/7718/\", \"updated_at\": \"Sun, 5 May 2013 08:00:03 -0700\", \"use_domain_notifications\": true}"
+    http_version:
+  recorded_at: Sun, 05 May 2013 15:00:59 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/localpart_alias/?email_account=7718
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Sun, 05 May 2013 15:01:00 GMT
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+    body:
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
+    http_version:
+  recorded_at: Sun, 05 May 2013 15:01:00 GMT
+- request:
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/localpart_alias/
+    body:
+      string: "{\"localpart\":\"noreply\",\"email_account\":\"/api/v1/email_account/7718/\"}"
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - "*/*"
+      Authorization:
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Sun, 05 May 2013 15:01:02 GMT
+      Location:
+      - https://admin-dev.mailroute.net/api/v1/localpart_alias/8801/
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+    body:
+      string: "{\"created_at\": \"Sun, 5 May 2013 08:01:02 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"email_account\": \"/api/v1/email_account/7718/\", \"id\": 8801, \"localpart\": \"noreply\", \"resource_uri\": \"/api/v1/localpart_alias/8801/\", \"type\": \"alias\", \"updated_at\": \"Sun, 5 May 2013 08:01:02 -0700\"}"
+    http_version:
+  recorded_at: Sun, 05 May 2013 15:01:02 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/email_account/7718/
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Sun, 05 May 2013 15:01:04 GMT
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+    body:
+      string: "{\"absolute_url\": \"/user/7718/\", \"aliases\": \"noreply\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Wed, 1 May 2013 12:03:04 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"domain_name\": \"example.com\", \"id\": 7718, \"localpart\": \"admin\", \"notification_tasks\": [\"/api/v1/notification_account_task/16924/\"], \"policy\": \"/api/v1/policy_user/16395/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/7718/\", \"updated_at\": \"Sun, 5 May 2013 08:01:02 -0700\", \"use_domain_notifications\": true}"
+    http_version:
+  recorded_at: Sun, 05 May 2013 15:01:04 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/localpart_alias/?email_account=7718
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Sun, 05 May 2013 15:01:05 GMT
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+    body:
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"created_at\": \"Sun, 5 May 2013 08:01:02 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"email_account\": \"/api/v1/email_account/7718/\", \"id\": 8801, \"localpart\": \"noreply\", \"resource_uri\": \"/api/v1/localpart_alias/8801/\", \"type\": \"alias\", \"updated_at\": \"Sun, 5 May 2013 08:01:02 -0700\"}]}"
+    http_version:
+  recorded_at: Sun, 05 May 2013 15:01:05 GMT
+recorded_with: VCR 2.4.0

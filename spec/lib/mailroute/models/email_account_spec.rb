@@ -165,4 +165,22 @@ describe Mailroute::EmailAccount, :vcr => true do
       }.not_to raise_error
     end
   end
+
+  describe '#add_alias' do
+    let(:email_account) { Mailroute::EmailAccount.get(7718) }
+
+    context 'adding an alias' do
+      it 'should add one more alias' do
+        expect {
+          email_account.add_alias('noreply')
+        }.to change { email_account.reload.aliases.count }.by(1)
+      end
+
+      it 'should add an alias with given name' do
+        email_account.add_alias('sales')
+
+        email_account.aliases.map(&:localpart).should include 'sales'
+      end
+    end
+  end
 end
