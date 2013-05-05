@@ -6,6 +6,7 @@ module Mailroute
     has_one :notification_task, :class => NotificationAccountTask
     has_one :contact, :class => EmailAccountContact
     has_many :wblist, :class => WBList
+    has_many :aliases, :class => LocalpartAlias
 
     def blacklist
       WBList.filter(:email_account => id, :wb => 'b').map(&:email)
