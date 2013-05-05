@@ -1,0 +1,37 @@
+---
+recorded_with: VCR 2.4.0
+http_interactions:
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/policy_domain/16379/
+    body:
+      string: ""
+    headers:
+      Authorization:
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.6
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 04 May 2013 13:42:05 GMT
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      string: "{\"addr_extension_bad_header\": null, \"addr_extension_banned\": null, \"addr_extension_spam\": null, \"addr_extension_virus\": null, \"archive_quarantine_to\": null, \"bad_header_lover\": \"N\", \"bad_header_quarantine_to\": \"sql:\", \"banned_files_lover\": \"N\", \"banned_quarantine_to\": \"sql:\", \"bypass_banned_checks\": \"N\", \"bypass_header_checks\": \"N\", \"bypass_spam_checks\": \"N\", \"bypass_virus_checks\": \"N\", \"domain\": \"/api/v1/domain/8367/\", \"id\": 16379, \"is_default\": false, \"message_size_limit\": 0, \"priority\": 5, \"resource_uri\": \"/api/v1/policy_domain/16379/\", \"spam_kill_level\": 7.0, \"spam_lover\": \"N\", \"spam_quarantine_cutoff_level\": null, \"spam_quarantine_to\": \"sql:\", \"spam_subject_tag\": null, \"spam_subject_tag2\": \"Possible Spam (_SCORE_):\", \"spam_subject_tag3\": null, \"spam_tag2_level\": 5.5, \"spam_tag3_level\": null, \"spam_tag_level\": -9999.0, \"unchecked_lover\": \"Y\", \"unchecked_quarantine_to\": null, \"virus_lover\": \"N\", \"virus_quarantine_to\": \"sql:\", \"warnbadhrecip\": \"N\", \"warnbannedrecip\": \"N\", \"warnvirusrecip\": \"N\"}"
+    http_version:
+  recorded_at: Sat, 04 May 2013 13:42:05 GMT
