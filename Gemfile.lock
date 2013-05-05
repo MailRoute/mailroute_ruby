@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mailroute (0.0.4)
+    mailroute (0.0.5)
       activeresource
       json_pure
       rest-client
