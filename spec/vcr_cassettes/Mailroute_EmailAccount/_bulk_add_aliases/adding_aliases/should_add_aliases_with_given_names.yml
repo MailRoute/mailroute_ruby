@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/email_account/7718/
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 May 2013 15:13:48 GMT
+      Server:
+      - nginx/1.2.6
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      string: "{\"absolute_url\": \"/user/7718/\", \"aliases\": \"a,b,c\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Wed, 1 May 2013 12:03:04 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"domain_name\": \"example.com\", \"id\": 7718, \"localpart\": \"admin\", \"notification_tasks\": [\"/api/v1/notification_account_task/16924/\"], \"policy\": \"/api/v1/policy_user/16395/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/7718/\", \"updated_at\": \"Sun, 5 May 2013 08:01:07 -0700\", \"use_domain_notifications\": true}"
+    http_version:
+  recorded_at: Sun, 05 May 2013 15:13:48 GMT
+- request:
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/email_account/7718/mass_add_aliases/
+    body:
+      string: "{\"aliases\":[\"d\",\"e\"]}"
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - "*/*"
+      Authorization:
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+  response:
+    status:
+      code: 202
+      message: ACCEPTED
+    headers:
+      Date:
+      - Sun, 05 May 2013 15:13:50 GMT
+      Server:
+      - nginx/1.2.6
+      Content-Type:
+      - text/html; charset=utf-8
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      Transfer-Encoding:
+      - chunked
+    body:
+      string: ""
+    http_version:
+  recorded_at: Sun, 05 May 2013 15:13:50 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/localpart_alias/?email_account=7718
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 May 2013 15:13:51 GMT
+      Server:
+      - nginx/1.2.6
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 5}, \"objects\": [{\"created_at\": \"Sun, 5 May 2013 08:13:44 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"email_account\": \"/api/v1/email_account/7718/\", \"id\": 8805, \"localpart\": \"a\", \"resource_uri\": \"/api/v1/localpart_alias/8805/\", \"type\": \"alias\", \"updated_at\": \"Sun, 5 May 2013 08:13:44 -0700\"}, {\"created_at\": \"Sun, 5 May 2013 08:13:44 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"email_account\": \"/api/v1/email_account/7718/\", \"id\": 8806, \"localpart\": \"b\", \"resource_uri\": \"/api/v1/localpart_alias/8806/\", \"type\": \"alias\", \"updated_at\": \"Sun, 5 May 2013 08:13:44 -0700\"}, {\"created_at\": \"Sun, 5 May 2013 08:13:44 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"email_account\": \"/api/v1/email_account/7718/\", \"id\": 8807, \"localpart\": \"c\", \"resource_uri\": \"/api/v1/localpart_alias/8807/\", \"type\": \"alias\", \"updated_at\": \"Sun, 5 May 2013 08:13:44 -0700\"}, {\"created_at\": \"Sun, 5 May 2013 08:13:50 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"email_account\": \"/api/v1/email_account/7718/\", \"id\": 8808, \"localpart\": \"d\", \"resource_uri\": \"/api/v1/localpart_alias/8808/\", \"type\": \"alias\", \"updated_at\": \"Sun, 5 May 2013 08:13:50 -0700\"}, {\"created_at\": \"Sun, 5 May 2013 08:13:50 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"email_account\": \"/api/v1/email_account/7718/\", \"id\": 8809, \"localpart\": \"e\", \"resource_uri\": \"/api/v1/localpart_alias/8809/\", \"type\": \"alias\", \"updated_at\": \"Sun, 5 May 2013 08:13:50 -0700\"}]}"
+    http_version:
+  recorded_at: Sun, 05 May 2013 15:13:51 GMT
+recorded_with: VCR 2.4.0

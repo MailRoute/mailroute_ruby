@@ -183,4 +183,24 @@ describe Mailroute::EmailAccount, :vcr => true do
       end
     end
   end
+
+  describe '#bulk_add_aliases' do
+    let(:email_account) { Mailroute::EmailAccount.get(7718) }
+
+    context 'adding aliases' do
+      it 'should add one more alias' do
+        expect {
+          email_account.bulk_add_aliases(['a', 'b', 'c'])
+        }.to change { email_account.reload.aliases.count }.by(3)
+      end
+
+      it 'should add aliases with given names' do
+        email_account.bulk_add_aliases(['d', 'e'])
+
+        localparts = email_account.aliases.map(&:localpart)
+        localparts.should include 'd'
+        localparts.should include 'e'
+      end
+    end
+  end
 end

@@ -39,6 +39,11 @@ module Mailroute
       LocalpartAlias.create(:email_account => self, :localpart => localpart)
     end
 
+    def bulk_add_aliases(localparts)
+      request_body = self.class.format.encode(:aliases => localparts)
+      connection.post(element_path(prefix_options) + 'mass_add_aliases/', request_body, self.class.headers)
+    end
+
     class << self
       alias_method :get_by_id, :get
       def get(*args)
