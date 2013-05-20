@@ -157,9 +157,9 @@ describe Mailroute::EmailAccount, :vcr => true do
   end
 
   describe '#set_password' do
+    let(:account) {Mailroute::EmailAccount.get(7718) }
+
     it 'should set the password' do
-      pending 'API responds with "Passwords don`t match"'
-      account = Mailroute::EmailAccount.get(53282)
       expect {
         account.set_password("new_password")
       }.not_to raise_error

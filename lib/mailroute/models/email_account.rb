@@ -25,9 +25,8 @@ module Mailroute
     end
 
     def set_password(new_password)
-      self.password = new_password
+      self.password = self.confirm_password = new_password
       save!
-      self
     end
 
     def regenerate_api_key
