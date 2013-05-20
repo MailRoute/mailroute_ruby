@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/policy_user/16395/
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+      Date:
+      - Mon, 20 May 2013 17:50:44 GMT
+      Cache-Control:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - nginx/1.2.8
+    body:
+      string: "{\"addr_extension_bad_header\": null, \"addr_extension_banned\": null, \"addr_extension_spam\": null, \"addr_extension_virus\": null, \"archive_quarantine_to\": null, \"bad_header_lover\": \"N\", \"bad_header_quarantine_to\": \"sql:\", \"banned_files_lover\": \"N\", \"banned_quarantine_to\": \"sql:\", \"bypass_banned_checks\": \"N\", \"bypass_header_checks\": \"N\", \"bypass_spam_checks\": \"N\", \"bypass_virus_checks\": \"N\", \"email_account\": \"/api/v1/email_account/7718/\", \"id\": 16395, \"message_size_limit\": 0, \"priority\": 1, \"resource_uri\": \"/api/v1/policy_user/16395/\", \"spam_kill_level\": 7.0, \"spam_lover\": \"N\", \"spam_quarantine_cutoff_level\": null, \"spam_quarantine_to\": \"sql:\", \"spam_subject_tag\": null, \"spam_subject_tag2\": \"\", \"spam_subject_tag3\": null, \"spam_tag2_level\": null, \"spam_tag3_level\": null, \"spam_tag_level\": -9999.0, \"unchecked_lover\": \"Y\", \"unchecked_quarantine_to\": null, \"use_domain_policy\": true, \"virus_lover\": \"N\", \"virus_quarantine_to\": \"sql:\", \"warnbadhrecip\": \"N\", \"warnbannedrecip\": \"N\", \"warnvirusrecip\": \"N\"}"
+    http_version:
+  recorded_at: Mon, 20 May 2013 17:50:44 GMT
+- request:
+    method: put
+    uri: https://admin-dev.mailroute.net/api/v1/policy_user/16395/
+    body:
+      string: "{\"warnbannedrecip\":\"N\",\"spam_subject_tag3\":null,\"spam_subject_tag2\":\"\",\"bad_header_quarantine_to\":\"sql:\",\"addr_extension_virus\":null,\"warnbadhrecip\":\"N\",\"virus_quarantine_to\":\"sql:\",\"use_domain_policy\":true,\"unchecked_quarantine_to\":null,\"spam_quarantine_cutoff_level\":null,\"addr_extension_banned\":null,\"virus_lover\":\"N\",\"spam_tag_level\":-9999.0,\"banned_quarantine_to\":\"sql:\",\"bypass_header_checks\":\"N\",\"banned_files_lover\":\"N\",\"addr_extension_spam\":null,\"spam_lover\":\"N\",\"resource_uri\":\"/api/v1/policy_user/16395/\",\"spam_subject_tag\":null,\"spam_quarantine_to\":\"sql:\",\"message_size_limit\":0,\"addr_extension_bad_header\":null,\"unchecked_lover\":\"Y\",\"spam_tag2_level\":null,\"priority\":1,\"email_account\":\"/api/v1/email_account/7718/\",\"bad_header_lover\":\"N\",\"archive_quarantine_to\":null,\"anti_spam_preset\":\"standard\",\"warnvirusrecip\":\"N\",\"spam_kill_level\":7.0,\"id\":16395,\"bypass_spam_checks\":\"N\",\"bypass_banned_checks\":\"N\",\"spam_tag3_level\":null,\"bypass_virus_checks\":\"N\"}"
+    headers:
+      Accept:
+      - "*/*"
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 202
+      message: ACCEPTED
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      Date:
+      - Mon, 20 May 2013 17:50:50 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - nginx/1.2.6
+    body:
+      string: "{\"addr_extension_bad_header\": null, \"addr_extension_banned\": null, \"addr_extension_spam\": null, \"addr_extension_virus\": null, \"anti_spam_preset\": \"standard\", \"archive_quarantine_to\": null, \"bad_header_lover\": \"N\", \"bad_header_quarantine_to\": \"sql:\", \"banned_files_lover\": \"N\", \"banned_quarantine_to\": \"sql:\", \"bypass_banned_checks\": \"N\", \"bypass_header_checks\": \"N\", \"bypass_spam_checks\": \"N\", \"bypass_virus_checks\": \"N\", \"email_account\": \"/api/v1/email_account/7718/\", \"id\": 16395, \"message_size_limit\": 0, \"pk\": \"16395\", \"priority\": 1, \"resource_uri\": \"/api/v1/policy_user/16395/\", \"spam_kill_level\": 7.0, \"spam_lover\": \"N\", \"spam_quarantine_cutoff_level\": null, \"spam_quarantine_to\": \"sql:\", \"spam_subject_tag\": null, \"spam_subject_tag2\": \"\", \"spam_subject_tag3\": null, \"spam_tag2_level\": null, \"spam_tag3_level\": null, \"spam_tag_level\": -9999.0, \"unchecked_lover\": \"Y\", \"unchecked_quarantine_to\": null, \"use_domain_policy\": true, \"virus_lover\": \"N\", \"virus_quarantine_to\": \"sql:\", \"warnbadhrecip\": \"N\", \"warnbannedrecip\": \"N\", \"warnvirusrecip\": \"N\"}"
+    http_version:
+  recorded_at: Mon, 20 May 2013 17:50:50 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/policy_user/16395/
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+      Date:
+      - Mon, 20 May 2013 17:50:51 GMT
+      Cache-Control:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - nginx/1.2.6
+    body:
+      string: "{\"addr_extension_bad_header\": null, \"addr_extension_banned\": null, \"addr_extension_spam\": null, \"addr_extension_virus\": null, \"archive_quarantine_to\": null, \"bad_header_lover\": \"N\", \"bad_header_quarantine_to\": \"sql:\", \"banned_files_lover\": \"N\", \"banned_quarantine_to\": \"sql:\", \"bypass_banned_checks\": \"N\", \"bypass_header_checks\": \"N\", \"bypass_spam_checks\": \"N\", \"bypass_virus_checks\": \"N\", \"email_account\": \"/api/v1/email_account/7718/\", \"id\": 16395, \"message_size_limit\": 0, \"priority\": 1, \"resource_uri\": \"/api/v1/policy_user/16395/\", \"spam_kill_level\": 7.0, \"spam_lover\": \"N\", \"spam_quarantine_cutoff_level\": null, \"spam_quarantine_to\": \"sql:\", \"spam_subject_tag\": null, \"spam_subject_tag2\": \"\", \"spam_subject_tag3\": null, \"spam_tag2_level\": null, \"spam_tag3_level\": null, \"spam_tag_level\": -9999.0, \"unchecked_lover\": \"Y\", \"unchecked_quarantine_to\": null, \"use_domain_policy\": true, \"virus_lover\": \"N\", \"virus_quarantine_to\": \"sql:\", \"warnbadhrecip\": \"N\", \"warnbannedrecip\": \"N\", \"warnvirusrecip\": \"N\"}"
+    http_version:
+  recorded_at: Mon, 20 May 2013 17:50:52 GMT
+recorded_with: VCR 2.5.0

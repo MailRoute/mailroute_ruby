@@ -30,10 +30,7 @@ describe Mailroute::PolicyFilter, :vcr => true do
     end
 
     context 'standard mode' do
-      before {
-        pending 'API returns 500 (cant convert string to float)'
-        policy.set_anti_spam_mode(Mailroute::AntiSpamModes::STANDARD)
-      }
+      before { policy.set_anti_spam_mode(Mailroute::AntiSpamModes::STANDARD) }
       subject { policy.reload }
 
       its(:anti_spam_preset) { should == 'standard' }
