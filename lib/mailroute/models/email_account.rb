@@ -43,6 +43,22 @@ module Mailroute
       connection.post(element_path(prefix_options) + 'mass_add_aliases/', request_body, self.class.headers)
     end
 
+    def active_notification_tasks
+      if use_domain_notifications
+        domain.notification_tasks
+      else
+        notification_tasks
+      end
+    end
+
+    def use_domain_notifications!
+      update_attribute(:use_domain_notifications, true)
+    end
+
+    def use_self_notifications!
+      update_attribute(:use_domain_notifications, false)
+    end
+
     class << self
       alias_method :get_by_id, :get
       def get(*args)

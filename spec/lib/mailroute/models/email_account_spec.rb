@@ -141,6 +141,35 @@ describe Mailroute::EmailAccount, :vcr => true do
 
       email_account.reload.notification_tasks.should =~ tasks + [new_task]
     end
+
+    context 'changing active notification tasks' do
+      it 'should use tasks either from domain or from the email account itself' do
+        email_account = Mailroute::EmailAccount.get(7721)
+
+        email_account.use_domain_notifications.should == true
+
+        email_account.active_notification_tasks.should_not == email_account.notification_tasks
+
+        email_account.active_notification_tasks.should == email_account.domain.notification_tasks
+
+        email_account.use_self_notifications!
+
+        email_account.reload.use_domain_notifications.should == false
+
+        email_account.active_notification_tasks.should == email_account.notification_tasks
+
+        email_account.active_notification_tasks.should_not == email_account.domain.notification_tasks
+
+        email_account.use_domain_notifications!
+
+        email_account.use_domain_notifications.should == true
+
+        email_account.active_notification_tasks.should_not == email_account.notification_tasks
+
+        email_account.active_notification_tasks.should == email_account.domain.notification_tasks
+      end
+    end
+
   end
 
   describe 'has contact' do
