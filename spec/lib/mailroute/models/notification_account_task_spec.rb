@@ -16,21 +16,4 @@ describe Mailroute::NotificationAccountTask, :vcr => true do
       task.reload.minute.should == 31
     end
   end
-
-  describe 'priorities' do
-    it 'should change the priority of a task' do
-      pending "for some reason PUT request doesn't change the priority of a task"
-      account_task = Mailroute::NotificationAccountTask.get(29)
-
-      account_task.is_active.should == false
-
-      account_task.use_self_notification
-
-      account_task.reload.is_active.should == true
-
-      account_task.use_domain_notification
-
-      account.task.reload.is_active.should == false
-    end
-  end
 end
