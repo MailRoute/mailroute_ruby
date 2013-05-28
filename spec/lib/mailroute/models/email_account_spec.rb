@@ -121,10 +121,25 @@ describe Mailroute::EmailAccount, :vcr => true do
     end
   end
 
-  describe 'has notification task' do
-    it 'should have notification task' do
-      account = Mailroute::EmailAccount.get(53282)
-      account.notification_task.id.should == 57820
+  describe 'has many notification tasks' do
+    let(:email_account) { Mailroute::EmailAccount.get(7721) }
+
+    it 'should have many notification task' do
+      email_account.notification_tasks.should_not be_empty
+      email_account.notification_tasks.should all_be Mailroute::NotificationAccountTask
+
+      email_account.notification_tasks.first.mon.should == true
+      email_account.notification_tasks.first.mon = false
+      email_account.notification_tasks.first.save!
+
+      email_account.reload.notification_tasks.first.mon.should == false
+    end
+
+    it 'should be able to create a new task' do
+      tasks = email_account.notification_tasks
+      new_task = email_account.create_notification_task(:hour => 10, :minute => 15)
+
+      email_account.reload.notification_tasks.should =~ tasks + [new_task]
     end
   end
 

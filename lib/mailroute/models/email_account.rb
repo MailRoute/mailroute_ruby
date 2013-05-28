@@ -3,7 +3,7 @@ module Mailroute
     self.collection_name = 'email_account'
     has_one :domain
     has_one :policy, :class => PolicyUser
-    has_one :notification_task, :class => NotificationAccountTask
+    has_many :notification_tasks, :class => NotificationAccountTask
     has_one :contact, :class => EmailAccountContact
     has_many :wblist, :class => WBList
     has_many :aliases, :class => LocalpartAlias

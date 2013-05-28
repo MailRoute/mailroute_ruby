@@ -1,0 +1,174 @@
+---
+recorded_with: VCR 2.5.0
+http_interactions:
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/email_account/7721/
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.6
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 28 May 2013 17:54:50 GMT
+    body:
+      string: "{\"absolute_url\": \"/user/admin@example.com/\", \"aliases\": \"\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Tue, 28 May 2013 10:51:18 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"domain_name\": \"example.com\", \"id\": 7721, \"localpart\": \"admin\", \"notification_tasks\": [\"/api/v1/notification_account_task/16931/\"], \"policy\": \"/api/v1/policy_user/16398/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/7721/\", \"updated_at\": \"Tue, 28 May 2013 10:51:18 -0700\", \"use_domain_notifications\": true}"
+    http_version:
+  recorded_at: Tue, 28 May 2013 17:54:50 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/notification_account_task/?email_account=7721
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.6
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 28 May 2013 17:54:51 GMT
+    body:
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"email_account\": \"/api/v1/email_account/7721/\", \"enabled\": false, \"fri\": true, \"hour\": 7, \"id\": 16931, \"minute\": 0, \"mon\": false, \"resource_uri\": \"/api/v1/notification_account_task/16931/\", \"sat\": false, \"sun\": false, \"thu\": true, \"timezone\": null, \"tue\": true, \"wed\": true}]}"
+    http_version:
+  recorded_at: Tue, 28 May 2013 17:54:51 GMT
+- request:
+    method: post
+    uri: https://admin-dev.mailroute.net/api/v1/notification_account_task/
+    body:
+      string: "{\"minute\":15,\"email_account\":\"/api/v1/email_account/7721/\",\"hour\":10}"
+    headers:
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Server:
+      - nginx/1.2.6
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Cookie
+      Connection:
+      - keep-alive
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 28 May 2013 17:54:52 GMT
+      Location:
+      - https://admin-dev.mailroute.net/api/v1/notification_account_task/16932/
+    body:
+      string: "{\"email_account\": \"/api/v1/email_account/7721/\", \"enabled\": false, \"fri\": false, \"hour\": 10, \"id\": 16932, \"minute\": 15, \"mon\": false, \"resource_uri\": \"/api/v1/notification_account_task/16932/\", \"sat\": false, \"sun\": false, \"thu\": false, \"timezone\": null, \"tue\": false, \"wed\": false}"
+    http_version:
+  recorded_at: Tue, 28 May 2013 17:54:52 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/email_account/7721/
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.6
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 28 May 2013 17:54:53 GMT
+    body:
+      string: "{\"absolute_url\": \"/user/admin@example.com/\", \"aliases\": \"\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Tue, 28 May 2013 10:51:18 -0700\", \"domain\": \"/api/v1/domain/8372/\", \"domain_name\": \"example.com\", \"id\": 7721, \"localpart\": \"admin\", \"notification_tasks\": [\"/api/v1/notification_account_task/16931/\", \"/api/v1/notification_account_task/16932/\"], \"policy\": \"/api/v1/policy_user/16398/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/7721/\", \"updated_at\": \"Tue, 28 May 2013 10:51:18 -0700\", \"use_domain_notifications\": true}"
+    http_version:
+  recorded_at: Tue, 28 May 2013 17:54:53 GMT
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/notification_account_task/?email_account=7721
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.6
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 28 May 2013 17:54:54 GMT
+    body:
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 2}, \"objects\": [{\"email_account\": \"/api/v1/email_account/7721/\", \"enabled\": false, \"fri\": true, \"hour\": 7, \"id\": 16931, \"minute\": 0, \"mon\": false, \"resource_uri\": \"/api/v1/notification_account_task/16931/\", \"sat\": false, \"sun\": false, \"thu\": true, \"timezone\": null, \"tue\": true, \"wed\": true}, {\"email_account\": \"/api/v1/email_account/7721/\", \"enabled\": false, \"fri\": false, \"hour\": 10, \"id\": 16932, \"minute\": 15, \"mon\": false, \"resource_uri\": \"/api/v1/notification_account_task/16932/\", \"sat\": false, \"sun\": false, \"thu\": false, \"timezone\": null, \"tue\": false, \"wed\": false}]}"
+    http_version:
+  recorded_at: Tue, 28 May 2013 17:54:54 GMT
