@@ -1,155 +1,79 @@
---- 
+---
 recorded_with: VCR 2.4.0
-http_interactions: 
-- request: 
-    method: get
-    uri: https://admin-dev.mailroute.net/api/v1/domain/4533/
-    body: 
-      string: ""
-    headers: 
-      Accept: 
-      - application/json
-      Accept-Encoding: 
-      - identity
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 200
-      message: OK
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Accept, Cookie
-      - Accept-Encoding
-      Cache-Control: 
-      - no-cache
-      Content-Type: 
-      - application/json; charset=utf-8
-      Date: 
-      - Sun, 17 Mar 2013 15:28:44 GMT
-      Transfer-Encoding: 
-      - chunked
-    body: 
-      string: "{\"absolute_url\": \"/domain/4533/\", \"active\": true, \"created_at\": \"Sun, 10 Mar 2013 11:32:45 -0700\", \"customer\": \"/api/v1/customer/2324/\", \"deliveryport\": 2525, \"hold_email\": false, \"id\": 4533, \"name\": \"kirschners.net\", \"notification_task\": \"/api/v1/notification_domain_task/57463/\", \"outbound_enabled\": false, \"policy\": \"/api/v1/policy_domain/57530/\", \"resource_uri\": \"/api/v1/domain/4533/\", \"updated_at\": \"Mon, 11 Mar 2013 04:25:30 -0700\", \"userlist_complete\": true}"
-    http_version: 
-  recorded_at: Sun, 17 Mar 2013 15:28:44 GMT
-- request: 
-    method: get
-    uri: https://admin-dev.mailroute.net/api/v1/domain_alias/?domain=4533
-    body: 
-      string: ""
-    headers: 
-      Accept: 
-      - application/json
-      Accept-Encoding: 
-      - identity
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 200
-      message: OK
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Accept, Cookie
-      - Accept-Encoding
-      Cache-Control: 
-      - no-cache
-      Content-Type: 
-      - application/json; charset=utf-8
-      Date: 
-      - Sun, 17 Mar 2013 15:28:45 GMT
-      Transfer-Encoding: 
-      - chunked
-    body: 
-      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
-    http_version: 
-  recorded_at: Sun, 17 Mar 2013 15:28:45 GMT
-- request: 
+http_interactions:
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/domain/3388/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sun, 17 Mar 2013 15:30:48 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"absolute_url\": \"/domain/3388/\", \"active\": true, \"created_at\": \"Fri, 26 Oct 2012 04:19:48 -0700\", \"customer\": \"/api/v1/customer/1300/\", \"deliveryport\": 25, \"hold_email\": false, \"id\": 3388, \"name\": \"1111test.com\", \"notification_task\": \"/api/v1/notification_domain_task/23158/\", \"outbound_enabled\": true, \"policy\": \"/api/v1/policy_domain/23166/\", \"resource_uri\": \"/api/v1/domain/3388/\", \"updated_at\": \"Thu, 13 Dec 2012 05:48:43 -0800\", \"userlist_complete\": true}"
-    http_version: 
+    http_version:
   recorded_at: Sun, 17 Mar 2013 15:30:48 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/domain_alias/?domain=3388
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sun, 17 Mar 2013 15:30:49 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 2}, \"objects\": [{\"active\": true, \"created_at\": \"Mon, 12 Nov 2012 03:47:14 -0800\", \"domain\": \"/api/v1/domain/3388/\", \"id\": 3574, \"name\": \"1111test2.com\", \"resource_uri\": \"/api/v1/domain_alias/3574/\", \"updated_at\": \"Mon, 12 Nov 2012 03:47:14 -0800\"}, {\"active\": true, \"created_at\": \"Thu, 13 Dec 2012 05:35:28 -0800\", \"domain\": \"/api/v1/domain/3388/\", \"id\": 3711, \"name\": \"2222test2.com\", \"resource_uri\": \"/api/v1/domain_alias/3711/\", \"updated_at\": \"Thu, 13 Dec 2012 05:35:28 -0800\"}]}"
-    http_version: 
+    http_version:
   recorded_at: Sun, 17 Mar 2013 15:30:49 GMT

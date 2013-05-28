@@ -75,7 +75,7 @@ describe Mailroute::Domain, :vcr => true do
       domain.reload.email_accounts.should == [account2]
     end
 
-    it 'should be possible to bulk create email accounts' do
+    it 'should be possible to bulk create email accounts', :pending => true do
       pending 'POST https://admin-dev.mailroute.net/api/v1/domain/4554/email_accounts/mass_add/ responds with 501 NOT IMPLEMENTED'
       domain = Mailroute::Domain.get(4554)
       domain.email_accounts.each(&:destroy)

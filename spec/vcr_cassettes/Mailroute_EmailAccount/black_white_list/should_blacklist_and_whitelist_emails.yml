@@ -1,194 +1,194 @@
---- 
+---
 recorded_with: VCR 2.4.0
-http_interactions: 
-- request: 
+http_interactions:
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/email_account/53282/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 23 Mar 2013 20:47:18 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"absolute_url\": \"/user/53282/\", \"aliases\": \"\", \"change_pwd\": null, \"contact\": \"/api/v1/contact_email_account/1654/\", \"create_opt\": null, \"created_at\": \"Sat, 23 Mar 2013 13:07:09 -0700\", \"domain\": \"/api/v1/domain/4555/\", \"domain_name\": \"apapap.example.com\", \"id\": 53282, \"localpart\": \"sales\", \"notification_task\": \"/api/v1/notification_account_task/57820/\", \"policy\": \"/api/v1/policy_user/57887/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/53282/\", \"updated_at\": \"Sat, 23 Mar 2013 13:37:03 -0700\"}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 23 Mar 2013 20:47:18 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/wblist/?email_account=53282
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 23 Mar 2013 20:47:19 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 23 Mar 2013 20:47:19 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/wblist/?email_account=53282&wb=b
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 23 Mar 2013 20:47:20 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 23 Mar 2013 20:47:20 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/wblist/?email_account=53282&wb=w
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 23 Mar 2013 20:47:21 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 23 Mar 2013 20:47:21 GMT
-- request: 
+- request:
     method: post
     uri: https://admin-dev.mailroute.net/api/v1/wblist/
-    body: 
+    body:
       string: "{\"email\":\"spam@example.org\",\"email_account\":53282,\"wb\":\"b\"}"
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - "*/*"
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Content-Type: 
+      Content-Type:
       - application/json
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 500
       message: INTERNAL SERVER ERROR
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Cookie
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 23 Mar 2013 20:47:23 GMT
-      X-Sentry-Id: 
+      X-Sentry-Id:
       - 60a2b9c5813e4d99bf22ebf42e3ea93c$fba6f7d46ad32acdfb60bd7f8e4afb08
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"error_message\": \"Sorry, this request could not be processed. Please try again later.\"}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 23 Mar 2013 20:47:23 GMT

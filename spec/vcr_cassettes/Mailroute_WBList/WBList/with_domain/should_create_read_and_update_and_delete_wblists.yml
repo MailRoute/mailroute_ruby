@@ -1,415 +1,267 @@
---- 
+---
 recorded_with: VCR 2.4.0
-http_interactions: 
-- request: 
-    method: get
-    uri: https://admin-dev.mailroute.net/api/v1/domain/4555/
-    body: 
-      string: ""
-    headers: 
-      Accept: 
-      - application/json
-      Accept-Encoding: 
-      - identity
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 404
-      message: NOT FOUND
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Accept, Cookie
-      - Accept-Encoding
-      Content-Type: 
-      - text/html; charset=utf-8
-      Date: 
-      - Sat, 30 Mar 2013 10:21:33 GMT
-      Transfer-Encoding: 
-      - chunked
-    body: 
-      string: ""
-    http_version: 
-  recorded_at: Sat, 30 Mar 2013 10:21:33 GMT
-- request: 
-    method: put
-    uri: https://admin-dev.mailroute.net/api/v1/wblist/1882131/
-    body: 
-      string: "{\"domain\":\"/api/v1/domain/7/\",\"email\":\"x@example.com\",\"email_account\":null,\"id\":1882131,\"mail_addr\":\"/api/v1/mailaddr/273718/\",\"resource_uri\":\"/api/v1/wblist/1882131/\",\"wb\":\"w\"}"
-    headers: 
-      Accept: 
-      - "*/*"
-      Accept-Encoding: 
-      - identity
-      Content-Type: 
-      - application/json
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 405
-      message: METHOD NOT ALLOWED
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Cookie
-      Allow: 
-      - GET,POST,DELETE
-      Content-Type: 
-      - text/html; charset=utf-8
-      Date: 
-      - Sat, 30 Mar 2013 10:23:38 GMT
-      Transfer-Encoding: 
-      - chunked
-    body: 
-      string: GET,POST,DELETE
-    http_version: 
-  recorded_at: Sat, 30 Mar 2013 10:23:38 GMT
-- request: 
-    method: get
-    uri: https://admin-dev.mailroute.net/api/v1/wblist/1882132/
-    body: 
-      string: ""
-    headers: 
-      Accept: 
-      - application/json
-      Accept-Encoding: 
-      - identity
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 200
-      message: OK
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Accept, Cookie
-      - Accept-Encoding
-      Cache-Control: 
-      - no-cache
-      Content-Type: 
-      - application/json; charset=utf-8
-      Date: 
-      - Sat, 30 Mar 2013 10:27:02 GMT
-      Transfer-Encoding: 
-      - chunked
-    body: 
-      string: "{\"domain\": \"/api/v1/domain/7/\", \"email\": \"noreply@example.com\", \"email_account\": null, \"id\": 1882132, \"mail_addr\": \"/api/v1/mailaddr/273719/\", \"resource_uri\": \"/api/v1/wblist/1882132/\", \"wb\": \"b\"}"
-    http_version: 
-  recorded_at: Sat, 30 Mar 2013 10:27:02 GMT
-- request: 
-    method: delete
-    uri: https://admin-dev.mailroute.net/api/v1/wblist/1882132/
-    body: 
-      string: ""
-    headers: 
-      Accept: 
-      - application/json
-      Accept-Encoding: 
-      - identity
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 204
-      message: NO CONTENT
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Accept, Cookie
-      Content-Length: 
-      - "0"
-      Content-Type: 
-      - text/html; charset=utf-8
-      Date: 
-      - Sat, 30 Mar 2013 10:27:48 GMT
-    body: 
-      string: ""
-    http_version: 
-  recorded_at: Sat, 30 Mar 2013 10:27:48 GMT
-- request: 
+http_interactions:
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/domain/7/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 30 Mar 2013 10:27:55 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"absolute_url\": \"/domain/7/\", \"active\": true, \"created_at\": \"Thu, 7 Jun 2012 08:24:37 -0700\", \"customer\": \"/api/v1/customer/6/\", \"deliveryport\": 25, \"hold_email\": false, \"id\": 7, \"name\": \"3utech.com\", \"notification_task\": \"/api/v1/notification_domain_task/26/\", \"outbound_enabled\": false, \"policy\": \"/api/v1/policy_domain/27/\", \"resource_uri\": \"/api/v1/domain/7/\", \"updated_at\": \"Sat, 8 Sep 2012 03:10:56 -0700\", \"userlist_complete\": true}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 30 Mar 2013 10:27:56 GMT
-- request: 
+- request:
     method: post
     uri: https://admin-dev.mailroute.net/api/v1/wblist/
-    body: 
+    body:
       string: "{\"domain\":\"/api/v1/domain/7/\",\"email\":\"noreply@example.com\",\"wb\":\"b\"}"
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - "*/*"
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Content-Type: 
+      Content-Type:
       - application/json
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 201
       message: CREATED
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 30 Mar 2013 10:28:02 GMT
-      Location: 
+      Location:
       - https://admin-dev.mailroute.net/api/v1/wblist/1882134/
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"domain\": \"/api/v1/domain/7/\", \"email\": \"noreply@example.com\", \"email_account\": null, \"id\": 1882134, \"mail_addr\": \"/api/v1/mailaddr/273719/\", \"resource_uri\": \"/api/v1/wblist/1882134/\", \"wb\": \"b\"}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 30 Mar 2013 10:28:02 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/wblist/?domain=7&wb=b
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 30 Mar 2013 10:28:03 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 3}, \"objects\": [{\"domain\": \"/api/v1/domain/7/\", \"email\": \"dontreply@example.com\", \"email_account\": null, \"id\": 1882130, \"mail_addr\": \"/api/v1/mailaddr/273717/\", \"resource_uri\": \"/api/v1/wblist/1882130/\", \"wb\": \"b\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"dont0reply@example.com\", \"email_account\": null, \"id\": 1882131, \"mail_addr\": \"/api/v1/mailaddr/273718/\", \"resource_uri\": \"/api/v1/wblist/1882131/\", \"wb\": \"b\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"noreply@example.com\", \"email_account\": null, \"id\": 1882134, \"mail_addr\": \"/api/v1/mailaddr/273719/\", \"resource_uri\": \"/api/v1/wblist/1882134/\", \"wb\": \"b\"}]}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 30 Mar 2013 10:28:03 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/wblist/1882134/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 30 Mar 2013 10:28:09 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"domain\": \"/api/v1/domain/7/\", \"email\": \"noreply@example.com\", \"email_account\": null, \"id\": 1882134, \"mail_addr\": \"/api/v1/mailaddr/273719/\", \"resource_uri\": \"/api/v1/wblist/1882134/\", \"wb\": \"b\"}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 30 Mar 2013 10:28:09 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/domain/7/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 30 Mar 2013 10:28:15 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"absolute_url\": \"/domain/7/\", \"active\": true, \"created_at\": \"Thu, 7 Jun 2012 08:24:37 -0700\", \"customer\": \"/api/v1/customer/6/\", \"deliveryport\": 25, \"hold_email\": false, \"id\": 7, \"name\": \"3utech.com\", \"notification_task\": \"/api/v1/notification_domain_task/26/\", \"outbound_enabled\": false, \"policy\": \"/api/v1/policy_domain/27/\", \"resource_uri\": \"/api/v1/domain/7/\", \"updated_at\": \"Sat, 8 Sep 2012 03:10:56 -0700\", \"userlist_complete\": true}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 30 Mar 2013 10:28:15 GMT
-- request: 
+- request:
     method: delete
     uri: https://admin-dev.mailroute.net/api/v1/wblist/1882134/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 204
       message: NO CONTENT
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
-      Content-Length: 
+      Content-Length:
       - "0"
-      Content-Type: 
+      Content-Type:
       - text/html; charset=utf-8
-      Date: 
+      Date:
       - Sat, 30 Mar 2013 10:28:16 GMT
-    body: 
+    body:
       string: ""
-    http_version: 
+    http_version:
   recorded_at: Sat, 30 Mar 2013 10:28:16 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/wblist/?domain=7
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 30 Mar 2013 10:28:22 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": \"/api/v1/wblist/?domain=7&limit=20&offset=20\", \"offset\": 0, \"previous\": null, \"total_count\": 229}, \"objects\": [{\"domain\": \"/api/v1/domain/7/\", \"email\": \"cmail3.com\", \"email_account\": null, \"id\": 68, \"mail_addr\": \"/api/v1/mailaddr/2/\", \"resource_uri\": \"/api/v1/wblist/68/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"1105info.com\", \"email_account\": null, \"id\": 54, \"mail_addr\": \"/api/v1/mailaddr/54/\", \"resource_uri\": \"/api/v1/wblist/54/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"1105newsletters.com\", \"email_account\": null, \"id\": 55, \"mail_addr\": \"/api/v1/mailaddr/55/\", \"resource_uri\": \"/api/v1/wblist/55/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"b.cts.vresp.com\", \"email_account\": null, \"id\": 56, \"mail_addr\": \"/api/v1/mailaddr/56/\", \"resource_uri\": \"/api/v1/wblist/56/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"b.lt01.net\", \"email_account\": null, \"id\": 57, \"mail_addr\": \"/api/v1/mailaddr/57/\", \"resource_uri\": \"/api/v1/wblist/57/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"bounce.bluestatedigital.com\", \"email_account\": null, \"id\": 58, \"mail_addr\": \"/api/v1/mailaddr/58/\", \"resource_uri\": \"/api/v1/wblist/58/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"bounce.e.techwebresources.com\", \"email_account\": null, \"id\": 59, \"mail_addr\": \"/api/v1/mailaddr/59/\", \"resource_uri\": \"/api/v1/wblist/59/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"bounce.linkedin.com\", \"email_account\": null, \"id\": 60, \"mail_addr\": \"/api/v1/mailaddr/60/\", \"resource_uri\": \"/api/v1/wblist/60/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"bounce.mkt052.com\", \"email_account\": null, \"id\": 61, \"mail_addr\": \"/api/v1/mailaddr/61/\", \"resource_uri\": \"/api/v1/wblist/61/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"bounce.mkt791.com\", \"email_account\": null, \"id\": 62, \"mail_addr\": \"/api/v1/mailaddr/62/\", \"resource_uri\": \"/api/v1/wblist/62/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"bounce.msg1svc.net\", \"email_account\": null, \"id\": 63, \"mail_addr\": \"/api/v1/mailaddr/63/\", \"resource_uri\": \"/api/v1/wblist/63/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"bounce.saftgard.com\", \"email_account\": null, \"id\": 64, \"mail_addr\": \"/api/v1/mailaddr/64/\", \"resource_uri\": \"/api/v1/wblist/64/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"bounce.techwebnewsletters.com\", \"email_account\": null, \"id\": 65, \"mail_addr\": \"/api/v1/mailaddr/65/\", \"resource_uri\": \"/api/v1/wblist/65/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"cmail1.com\", \"email_account\": null, \"id\": 66, \"mail_addr\": \"/api/v1/mailaddr/66/\", \"resource_uri\": \"/api/v1/wblist/66/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"cmail2.com\", \"email_account\": null, \"id\": 67, \"mail_addr\": \"/api/v1/mailaddr/67/\", \"resource_uri\": \"/api/v1/wblist/67/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"cmail4.com\", \"email_account\": null, \"id\": 69, \"mail_addr\": \"/api/v1/mailaddr/68/\", \"resource_uri\": \"/api/v1/wblist/69/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"cmail5.com\", \"email_account\": null, \"id\": 70, \"mail_addr\": \"/api/v1/mailaddr/69/\", \"resource_uri\": \"/api/v1/wblist/70/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"comodogroup.com\", \"email_account\": null, \"id\": 71, \"mail_addr\": \"/api/v1/mailaddr/70/\", \"resource_uri\": \"/api/v1/wblist/71/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"compusaonline.com\", \"email_account\": null, \"id\": 72, \"mail_addr\": \"/api/v1/mailaddr/71/\", \"resource_uri\": \"/api/v1/wblist/72/\", \"wb\": \"w\"}, {\"domain\": \"/api/v1/domain/7/\", \"email\": \"dollar.com\", \"email_account\": null, \"id\": 73, \"mail_addr\": \"/api/v1/mailaddr/72/\", \"resource_uri\": \"/api/v1/wblist/73/\", \"wb\": \"w\"}]}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 30 Mar 2013 10:28:22 GMT

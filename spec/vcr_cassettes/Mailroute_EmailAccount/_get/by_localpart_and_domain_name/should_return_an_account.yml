@@ -1,171 +1,79 @@
---- 
+---
 recorded_with: VCR 2.4.0
-http_interactions: 
-- request: 
-    method: get
-    uri: https://admin-dev.mailroute.net/api/v1/email_account/?domain=mailroute.net&localpart=2bill
-    body: 
-      string: ""
-    headers: 
-      Accept: 
-      - application/json
-      Accept-Encoding: 
-      - identity
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 400
-      message: BAD REQUEST
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Cookie
-      Content-Type: 
-      - text/html; charset=utf-8
-      Date: 
-      - Sat, 23 Mar 2013 19:36:35 GMT
-      Transfer-Encoding: 
-      - chunked
-    body: 
-      string: Invalid resource lookup data provided (mismatched type).
-    http_version: 
-  recorded_at: Sat, 23 Mar 2013 19:36:35 GMT
-- request: 
-    method: get
-    uri: https://admin-dev.mailroute.net/api/v1/domain/mailroute.net/
-    body: 
-      string: ""
-    headers: 
-      Accept: 
-      - application/json
-      Accept-Encoding: 
-      - identity
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 404
-      message: NOT FOUND
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Accept-Encoding
-      - Cookie
-      Content-Type: 
-      - text/html; charset=utf-8
-      Date: 
-      - Sat, 23 Mar 2013 19:37:48 GMT
-      Transfer-Encoding: 
-      - chunked
-    body: 
-      string: |-
-        <!doctype html>
-        <title>not found</title>
-        
-        <style>
-        body { text-align: center;}
-        h1 { font-size: 50px; }
-        body { font: 20px Constantia, 'Hoefler Text',  "Adobe Caslon Pro", Baskerville, Georgia, Times, serif; color: #999; text-shadow: 2px 2px 2px rgba(200, 200, 200, 0.5); }
-        ::-moz-selection{ background:#FF5E99; color:#fff; }
-        ::selection { background:#FF5E99; color:#fff; } 
-        details { display:block; }
-        a { color: rgb(36, 109, 56); text-decoration:none; }
-        a:hover { color: rgb(96, 73, 141) ; text-shadow: 2px 2px 2px rgba(36, 109, 56, 0.5); }
-        span[frown] { transform: rotate(90deg); display:inline-block; color: #bbb; }
-        </style>
-        
-        
-        
-        <details>
-          <summary><h1>Not found</h1></summary>
-          <p><span frown>:(</span></p>
-        </details>
-    http_version: 
-  recorded_at: Sat, 23 Mar 2013 19:37:48 GMT
-- request: 
+http_interactions:
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/domain/?name=mailroute.net
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 23 Mar 2013 19:48:32 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"absolute_url\": \"/domain/1198/\", \"active\": true, \"created_at\": \"Thu, 7 Jun 2012 09:25:51 -0700\", \"customer\": \"/api/v1/customer/642/\", \"deliveryport\": 25, \"hold_email\": false, \"id\": 1198, \"name\": \"mailroute.net\", \"notification_task\": \"/api/v1/notification_domain_task/9931/\", \"outbound_enabled\": true, \"policy\": \"/api/v1/policy_domain/9932/\", \"resource_uri\": \"/api/v1/domain/1198/\", \"updated_at\": \"Tue, 23 Oct 2012 04:24:55 -0700\", \"userlist_complete\": true}]}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 23 Mar 2013 19:48:32 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/email_account/?domain=1198&localpart=2bill
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 23 Mar 2013 19:48:33 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"absolute_url\": \"/user/25396/\", \"aliases\": \"notifications-2bill\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Wed, 19 Dec 2012 01:13:49 -0800\", \"domain\": \"/api/v1/domain/1198/\", \"domain_name\": \"mailroute.net\", \"id\": 25396, \"localpart\": \"2bill\", \"notification_task\": \"/api/v1/notification_account_task/28957/\", \"policy\": \"/api/v1/policy_user/28999/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/25396/\", \"updated_at\": \"Wed, 16 Jan 2013 09:08:35 -0800\"}]}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 23 Mar 2013 19:48:33 GMT

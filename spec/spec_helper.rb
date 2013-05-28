@@ -17,10 +17,11 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/vcr_cassettes'
   c.hook_into :webmock
   # TODO: add header matching
-  c.default_cassette_options = { :match_requests_on => [:method, :uri] }
+  c.default_cassette_options = { :match_requests_on => [:method, :uri], :allow_unused_http_interactions => false }
   c.configure_rspec_metadata!
 end
 
 RSpec.configure do |c|
   c.include MailrouteConfigurationHelper
+  c.filter_run_excluding :pending => true
 end

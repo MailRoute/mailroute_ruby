@@ -13,7 +13,7 @@ describe Mailroute::Reseller, :vcr => true do
   end
 
   describe '#limit' do
-    it 'should limit the number of resellers returned' do #, :vcr => { :record => :all } do
+    it 'should limit the number of resellers returned' do
       Mailroute::Reseller.list.limit(30).should have(30).items
     end
   end

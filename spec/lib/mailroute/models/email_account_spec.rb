@@ -180,7 +180,7 @@ describe Mailroute::EmailAccount, :vcr => true do
   end
 
   describe 'black white list' do
-    it 'should blacklist and whitelist emails' do
+    it 'should blacklist and whitelist emails', :pending => true do
       pending 'POST returns 500 error'
       account = Mailroute::EmailAccount.get(53282)
 

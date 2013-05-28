@@ -1,411 +1,306 @@
---- 
+---
 recorded_with: VCR 2.4.0
-http_interactions: 
-- request: 
-    method: delete
-    uri: https://admin-dev.mailroute.net/api/v1/email_account/53266/
-    body: 
-      string: ""
-    headers: 
-      Accept: 
-      - application/json
-      Accept-Encoding: 
-      - identity
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 204
-      message: NO CONTENT
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Accept, Cookie
-      Content-Length: 
-      - "0"
-      Content-Type: 
-      - text/html; charset=utf-8
-      Date: 
-      - Sun, 17 Mar 2013 19:23:05 GMT
-    body: 
-      string: ""
-    http_version: 
-  recorded_at: Sun, 17 Mar 2013 19:23:06 GMT
-- request: 
-    method: delete
-    uri: https://admin-dev.mailroute.net/api/v1/email_account/53268/
-    body: 
-      string: ""
-    headers: 
-      Accept: 
-      - application/json
-      Accept-Encoding: 
-      - identity
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 204
-      message: NO CONTENT
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Accept, Cookie
-      Content-Length: 
-      - "0"
-      Content-Type: 
-      - text/html; charset=utf-8
-      Date: 
-      - Sun, 17 Mar 2013 19:24:40 GMT
-    body: 
-      string: ""
-    http_version: 
-  recorded_at: Sun, 17 Mar 2013 19:24:40 GMT
-- request: 
-    method: delete
-    uri: https://admin-dev.mailroute.net/api/v1/email_account/53270/
-    body: 
-      string: ""
-    headers: 
-      Accept: 
-      - application/json
-      Accept-Encoding: 
-      - identity
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 204
-      message: NO CONTENT
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Accept, Cookie
-      Content-Length: 
-      - "0"
-      Content-Type: 
-      - text/html; charset=utf-8
-      Date: 
-      - Sun, 17 Mar 2013 19:26:05 GMT
-    body: 
-      string: ""
-    http_version: 
-  recorded_at: Sun, 17 Mar 2013 19:26:05 GMT
-- request: 
+http_interactions:
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/domain/4554/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sun, 17 Mar 2013 19:27:34 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"absolute_url\": \"/domain/4554/\", \"active\": false, \"created_at\": \"Sun, 17 Mar 2013 08:14:41 -0700\", \"customer\": \"/api/v1/customer/1300/\", \"deliveryport\": 240, \"hold_email\": false, \"id\": 4554, \"name\": \"uberapp.example.com\", \"notification_task\": \"/api/v1/notification_domain_task/57796/\", \"outbound_enabled\": false, \"policy\": \"/api/v1/policy_domain/57863/\", \"resource_uri\": \"/api/v1/domain/4554/\", \"updated_at\": \"Sun, 17 Mar 2013 12:04:58 -0700\", \"userlist_complete\": true}"
-    http_version: 
+    http_version:
   recorded_at: Sun, 17 Mar 2013 19:27:34 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/email_account/?domain=4554
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sun, 17 Mar 2013 19:27:35 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
-    http_version: 
+    http_version:
   recorded_at: Sun, 17 Mar 2013 19:27:35 GMT
-- request: 
+- request:
     method: post
     uri: https://admin-dev.mailroute.net/api/v1/email_account/
-    body: 
+    body:
       string: "{\"create_opt\":\"generate_pwd\",\"domain\":\"/api/v1/domain/4554/\",\"localpart\":\"101\"}"
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - "*/*"
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Content-Type: 
+      Content-Type:
       - application/json
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 201
       message: CREATED
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sun, 17 Mar 2013 19:27:37 GMT
-      Location: 
+      Location:
       - https://admin-dev.mailroute.net/api/v1/email_account/53272/
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"absolute_url\": \"/user/53272/\", \"aliases\": \"\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Sun, 17 Mar 2013 12:27:36 -0700\", \"domain\": \"/api/v1/domain/4554/\", \"domain_name\": \"uberapp.example.com\", \"id\": 53272, \"localpart\": \"101\", \"notification_task\": \"/api/v1/notification_account_task/57809/\", \"policy\": \"/api/v1/policy_user/57876/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/53272/\", \"updated_at\": \"Sun, 17 Mar 2013 12:27:36 -0700\"}"
-    http_version: 
+    http_version:
   recorded_at: Sun, 17 Mar 2013 19:27:37 GMT
-- request: 
+- request:
     method: post
     uri: https://admin-dev.mailroute.net/api/v1/email_account/
-    body: 
+    body:
       string: "{\"create_opt\":\"generate_pwd\",\"domain\":\"/api/v1/domain/4554/\",\"localpart\":\"102\"}"
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - "*/*"
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Content-Type: 
+      Content-Type:
       - application/json
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 201
       message: CREATED
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sun, 17 Mar 2013 19:27:38 GMT
-      Location: 
+      Location:
       - https://admin-dev.mailroute.net/api/v1/email_account/53273/
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"absolute_url\": \"/user/53273/\", \"aliases\": \"\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Sun, 17 Mar 2013 12:27:38 -0700\", \"domain\": \"/api/v1/domain/4554/\", \"domain_name\": \"uberapp.example.com\", \"id\": 53273, \"localpart\": \"102\", \"notification_task\": \"/api/v1/notification_account_task/57810/\", \"policy\": \"/api/v1/policy_user/57877/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/53273/\", \"updated_at\": \"Sun, 17 Mar 2013 12:27:38 -0700\"}"
-    http_version: 
+    http_version:
   recorded_at: Sun, 17 Mar 2013 19:27:38 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/email_account/?domain=4554
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sun, 17 Mar 2013 19:27:44 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 2}, \"objects\": [{\"absolute_url\": \"/user/53272/\", \"aliases\": \"\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Sun, 17 Mar 2013 12:27:36 -0700\", \"domain\": \"/api/v1/domain/4554/\", \"domain_name\": \"uberapp.example.com\", \"id\": 53272, \"localpart\": \"101\", \"notification_task\": \"/api/v1/notification_account_task/57809/\", \"policy\": \"/api/v1/policy_user/57876/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/53272/\", \"updated_at\": \"Sun, 17 Mar 2013 12:27:36 -0700\"}, {\"absolute_url\": \"/user/53273/\", \"aliases\": \"\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Sun, 17 Mar 2013 12:27:38 -0700\", \"domain\": \"/api/v1/domain/4554/\", \"domain_name\": \"uberapp.example.com\", \"id\": 53273, \"localpart\": \"102\", \"notification_task\": \"/api/v1/notification_account_task/57810/\", \"policy\": \"/api/v1/policy_user/57877/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/53273/\", \"updated_at\": \"Sun, 17 Mar 2013 12:27:38 -0700\"}]}"
-    http_version: 
+    http_version:
   recorded_at: Sun, 17 Mar 2013 19:27:44 GMT
-- request: 
+- request:
     method: delete
     uri: https://admin-dev.mailroute.net/api/v1/email_account/53272/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 204
       message: NO CONTENT
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
-      Content-Length: 
+      Content-Length:
       - "0"
-      Content-Type: 
+      Content-Type:
       - text/html; charset=utf-8
-      Date: 
+      Date:
       - Sun, 17 Mar 2013 19:27:45 GMT
-    body: 
+    body:
       string: ""
-    http_version: 
+    http_version:
   recorded_at: Sun, 17 Mar 2013 19:27:45 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/domain/4554/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sun, 17 Mar 2013 19:27:46 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"absolute_url\": \"/domain/4554/\", \"active\": false, \"created_at\": \"Sun, 17 Mar 2013 08:14:41 -0700\", \"customer\": \"/api/v1/customer/1300/\", \"deliveryport\": 240, \"hold_email\": false, \"id\": 4554, \"name\": \"uberapp.example.com\", \"notification_task\": \"/api/v1/notification_domain_task/57796/\", \"outbound_enabled\": false, \"policy\": \"/api/v1/policy_domain/57863/\", \"resource_uri\": \"/api/v1/domain/4554/\", \"updated_at\": \"Sun, 17 Mar 2013 12:04:58 -0700\", \"userlist_complete\": true}"
-    http_version: 
+    http_version:
   recorded_at: Sun, 17 Mar 2013 19:27:46 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/email_account/?domain=4554
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sun, 17 Mar 2013 19:27:47 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"absolute_url\": \"/user/53273/\", \"aliases\": \"\", \"change_pwd\": null, \"contact\": null, \"create_opt\": null, \"created_at\": \"Sun, 17 Mar 2013 12:27:38 -0700\", \"domain\": \"/api/v1/domain/4554/\", \"domain_name\": \"uberapp.example.com\", \"id\": 53273, \"localpart\": \"102\", \"notification_task\": \"/api/v1/notification_account_task/57810/\", \"policy\": \"/api/v1/policy_user/57877/\", \"priority\": 8, \"resource_uri\": \"/api/v1/email_account/53273/\", \"updated_at\": \"Sun, 17 Mar 2013 12:27:38 -0700\"}]}"
-    http_version: 
+    http_version:
   recorded_at: Sun, 17 Mar 2013 19:27:47 GMT

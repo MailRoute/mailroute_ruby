@@ -1,225 +1,152 @@
---- 
+---
 recorded_with: VCR 2.4.0
-http_interactions: 
-- request: 
-    method: get
-    uri: https://admin-dev.mailroute.net/api/v1/admins/reseller/4/admin/43692/
-    body: 
-      string: ""
-    headers: 
-      Accept: 
-      - application/json
-      Accept-Encoding: 
-      - identity
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 200
-      message: OK
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Accept, Cookie
-      - Accept-Encoding
-      Cache-Control: 
-      - no-cache
-      Content-Type: 
-      - application/json; charset=utf-8
-      Date: 
-      - Sat, 16 Mar 2013 13:54:47 GMT
-      Transfer-Encoding: 
-      - chunked
-    body: 
-      string: "{\"customer\": null, \"date_joined\": \"Wed, 13 Mar 2013 10:47:23 -0700\", \"email\": \"admin@example.com\", \"id\": 43692, \"is_active\": true, \"last_login\": \"Wed, 13 Mar 2013 10:47:23 -0700\", \"reseller\": null, \"resource_uri\": \"/api/v1/admins/reseller/4/admin/43692/\", \"send_welcome\": null, \"username\": \"admin@example.com\"}"
-    http_version: 
-  recorded_at: Sat, 16 Mar 2013 13:54:47 GMT
-- request: 
-    method: delete
-    uri: https://admin-dev.mailroute.net/api/v1/admins/reseller/4/admin/43692/
-    body: 
-      string: ""
-    headers: 
-      Accept: 
-      - application/json
-      Accept-Encoding: 
-      - identity
-      Authorization: 
-      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
-      - Ruby
-  response: 
-    status: 
-      code: 204
-      message: NO CONTENT
-    headers: 
-      Server: 
-      - nginx/1.2.6
-      Connection: 
-      - keep-alive
-      Vary: 
-      - Accept, Cookie
-      Content-Length: 
-      - "0"
-      Content-Type: 
-      - text/html; charset=utf-8
-      Date: 
-      - Sat, 16 Mar 2013 13:56:32 GMT
-    body: 
-      string: ""
-    http_version: 
-  recorded_at: Sat, 16 Mar 2013 13:56:32 GMT
-- request: 
+http_interactions:
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/reseller/4/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 16 Mar 2013 13:59:30 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"absolute_url\": \"/reseller/4/\", \"allow_branding\": false, \"allow_customer_branding\": false, \"branding_info\": \"/api/v1/brandinginfo/52/\", \"created_at\": \"Thu, 7 Jun 2012 08:24:36 -0700\", \"id\": 4, \"name\": \"NE Ohio Web Services\", \"resource_uri\": \"/api/v1/reseller/4/\", \"updated_at\": \"Tue, 12 Mar 2013 20:21:14 -0700\"}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 16 Mar 2013 13:59:30 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/admins/reseller/4/?email=admin@example.com
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 16 Mar 2013 13:59:31 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"customer\": null, \"date_joined\": \"Sat, 16 Mar 2013 06:58:57 -0700\", \"email\": \"admin@example.com\", \"id\": 43695, \"is_active\": true, \"last_login\": \"Sat, 16 Mar 2013 06:58:57 -0700\", \"reseller\": null, \"resource_uri\": \"/api/v1/admins/reseller/4/admin/43695/\", \"send_welcome\": null, \"username\": \"admin@example.com\"}]}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 16 Mar 2013 13:59:31 GMT
-- request: 
+- request:
     method: delete
     uri: https://admin-dev.mailroute.net/api/v1/admins/reseller/4/admin/43695/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 204
       message: NO CONTENT
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
-      Content-Length: 
+      Content-Length:
       - "0"
-      Content-Type: 
+      Content-Type:
       - text/html; charset=utf-8
-      Date: 
+      Date:
       - Sat, 16 Mar 2013 13:59:32 GMT
-    body: 
+    body:
       string: ""
-    http_version: 
+    http_version:
   recorded_at: Sat, 16 Mar 2013 13:59:32 GMT
-- request: 
+- request:
     method: get
     uri: https://admin-dev.mailroute.net/api/v1/admins/reseller/4/
-    body: 
+    body:
       string: ""
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Accept-Encoding: 
+      Accept-Encoding:
       - identity
-      Authorization: 
+      Authorization:
       - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
-      User-Agent: 
+      User-Agent:
       - Ruby
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - nginx/1.2.6
-      Connection: 
+      Connection:
       - keep-alive
-      Vary: 
+      Vary:
       - Accept, Cookie
       - Accept-Encoding
-      Cache-Control: 
+      Cache-Control:
       - no-cache
-      Content-Type: 
+      Content-Type:
       - application/json; charset=utf-8
-      Date: 
+      Date:
       - Sat, 16 Mar 2013 13:59:33 GMT
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-    body: 
+    body:
       string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"customer\": null, \"date_joined\": \"Sat, 16 Mar 2013 06:59:10 -0700\", \"email\": \"admin2@example.com\", \"id\": 43696, \"is_active\": true, \"last_login\": \"Sat, 16 Mar 2013 06:59:10 -0700\", \"reseller\": null, \"resource_uri\": \"/api/v1/admins/reseller/4/admin/43696/\", \"send_welcome\": null, \"username\": \"admin2@example.com\"}]}"
-    http_version: 
+    http_version:
   recorded_at: Sat, 16 Mar 2013 13:59:33 GMT
