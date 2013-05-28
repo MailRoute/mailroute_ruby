@@ -184,18 +184,24 @@ describe Mailroute::Domain, :vcr => true do
     end
   end
 
-  describe 'has a notification task' do
-    it 'should have notification task' do
-      domain = Mailroute::Domain.get(4555)
+  describe 'has many notification tasks' do
+    let(:domain) { Mailroute::Domain.get(8372) }
+    it 'should have many notification task' do
+      domain.notification_tasks.should_not be_empty
+      domain.notification_tasks.should all_be Mailroute::NotificationDomainTask
 
-      domain.notification_task.should be_a Mailroute::NotificationDomainTask
+      domain.notification_tasks.first.mon.should == true
+      domain.notification_tasks.first.mon = false
+      domain.notification_tasks.first.save!
 
-      domain.notification_task.mon.should == true
-      domain.attributes['notification_task'].should == domain.notification_task.resource_uri
-      domain.notification_task.mon = false
-      domain.notification_task.save!
+      domain.reload.notification_tasks.first.mon.should == false
+    end
 
-      domain.reload.notification_task.mon.should == false
+    it 'should be able to create a new task' do
+      tasks = domain.notification_tasks
+      new_task = domain.create_notification_task(:hour => 10, :minute => 15)
+
+      domain.reload.notification_tasks.should =~ tasks + [new_task]
     end
   end
 

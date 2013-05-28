@@ -9,7 +9,7 @@ module Mailroute
     has_many :contacts, :class => DomainContact
     has_many :wblist, :class => WBList
     has_one :policy, :class => PolicyDomain
-    has_one :notification_task, :class => NotificationDomainTask
+    has_many :notification_tasks, :class => NotificationDomainTask
 
     def blacklist
       WBList.filter(:domain => id, :wb => 'b').map(&:email)
