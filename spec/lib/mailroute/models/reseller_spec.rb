@@ -68,11 +68,11 @@ describe Mailroute::Reseller, :vcr => true do
       }.to raise_error ActiveResource::ResourceNotFound
     end
 
-    it 'should return the reseller if it exists', :vcr => { :cassette_name => 'Valid Reseller ' } do
+    it 'should return the reseller if it exists', :vcr => { :cassette_name => 'Valid Reseller' } do
       Mailroute::Reseller.get(175).should be_a Mailroute::Reseller
     end
 
-    context 'it should get all available attributes', :vcr => { :cassette_name => 'Valid Reseller ' } do
+    context 'it should get all available attributes', :vcr => { :cassette_name => 'Valid Reseller' } do
       subject(:reseller) { Mailroute::Reseller.get(175) }
 
       its(:absolute_url)            { should == '/reseller/175/' }
@@ -86,7 +86,7 @@ describe Mailroute::Reseller, :vcr => true do
     end
   end
 
-  context 'it should retrieve branding info', :vcr => { :cassette_name => 'Valid Reseller with Branding Info'} do
+  context 'it should retrieve branding info', :vcr => { :cassette_name => 'Valid Reseller with Branding Info' } do
     subject(:reseller) { Mailroute::Reseller.get(205) }
 
     its(:branding_info) { should be_a Mailroute::BrandingInfo }
@@ -105,7 +105,7 @@ describe Mailroute::Reseller, :vcr => true do
     end
   end
 
-  describe '#to_json' do
+  describe '#to_json', :vcr => false do
     it 'should not include root to json' do
       Mailroute::Reseller.new(:name => 'a new reseller').to_json.should == {:name => 'a new reseller'}.to_json
     end
