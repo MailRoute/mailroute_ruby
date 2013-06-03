@@ -8,7 +8,7 @@ http_interactions:
       string: ""
     headers:
       Authorization:
-      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
       Accept:
       - application/json
   response:

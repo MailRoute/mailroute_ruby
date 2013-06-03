@@ -9,7 +9,7 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
   response:
     status:
       code: 200
@@ -43,7 +43,7 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
   response:
     status:
       code: 200
@@ -77,7 +77,7 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
   response:
     status:
       code: 200
@@ -113,7 +113,7 @@ http_interactions:
       Accept:
       - "*/*"
       Authorization:
-      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
   response:
     status:
       code: 202
@@ -144,7 +144,7 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
   response:
     status:
       code: 200
@@ -178,7 +178,7 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
   response:
     status:
       code: 200

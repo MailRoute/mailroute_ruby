@@ -8,7 +8,7 @@ http_interactions:
       string: ""
     headers:
       Authorization:
-      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
       Accept:
       - application/json
   response:
@@ -42,7 +42,7 @@ http_interactions:
       string: "{\"virus_lover\":\"N\",\"spam_tag_level\":-9999.0,\"banned_files_lover\":\"N\",\"virus_quarantine_to\":\"sql:\",\"spam_kill_level\":7.0,\"id\":16379,\"bad_header_lover\":\"N\",\"warnbannedrecip\":\"N\",\"spam_lover\":\"N\",\"bypass_banned_checks\":\"N\",\"archive_quarantine_to\":null,\"spam_tag3_level\":null,\"addr_extension_virus\":null,\"warnbadhrecip\":\"N\",\"unchecked_quarantine_to\":null,\"unchecked_lover\":\"Y\",\"domain\":\"/api/v1/domain/8367/\",\"bypass_header_checks\":\"N\",\"addr_extension_banned\":null,\"addr_extension_bad_header\":null,\"anti_spam_preset\":\"lenient\",\"spam_subject_tag\":null,\"priority\":5,\"message_size_limit\":0,\"spam_subject_tag3\":null,\"spam_subject_tag2\":\"Possible Spam (_SCORE_):\",\"is_default\":false,\"bypass_virus_checks\":\"N\",\"bypass_spam_checks\":\"N\",\"banned_quarantine_to\":\"sql:\",\"bad_header_quarantine_to\":\"sql:\",\"warnvirusrecip\":\"N\",\"spam_quarantine_to\":\"sql:\",\"spam_tag2_level\":5.5,\"spam_quarantine_cutoff_level\":null,\"resource_uri\":\"/api/v1/policy_domain/16379/\",\"addr_extension_spam\":null}"
     headers:
       Authorization:
-      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
       Accept:
       - "*/*"
       Content-Type:
@@ -75,7 +75,7 @@ http_interactions:
       string: ""
     headers:
       Authorization:
-      - ApiKey test_ruby:93ec480a01deb532ffb592ba711013e14422c4f1
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
       Accept:
       - application/json
   response:
