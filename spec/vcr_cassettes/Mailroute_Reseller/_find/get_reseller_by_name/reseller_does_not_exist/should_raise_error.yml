@@ -1,0 +1,37 @@
+---
+recorded_with: VCR 2.5.0
+http_interactions:
+- request:
+    method: get
+    uri: https://admin-dev.mailroute.net/api/v1/reseller/?name=Unknown%20Reseller
+    body:
+      string: ""
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - ApiKey blablablablabla@example.com:5f64xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8262
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Date:
+      - Mon, 03 Jun 2013 17:21:09 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Cookie
+      - Accept-Encoding
+      Server:
+      - nginx/1.2.6
+      Connection:
+      - keep-alive
+    body:
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
+    http_version:
+  recorded_at: Mon, 03 Jun 2013 17:21:09 GMT

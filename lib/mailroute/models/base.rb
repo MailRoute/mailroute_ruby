@@ -29,7 +29,18 @@ module Mailroute
         end
       end
 
-      alias_method :get, :find
+      def get(id_or_name_or_hash)
+        case id_or_name_or_hash
+        when Integer
+          find(id_or_name_or_hash)
+        when String
+          get(:name => id_or_name_or_hash)
+        when Hash
+          filter(id_or_name_or_hash).first or raise ActiveResource::ResourceNotFound, "Couldn't find #{self.class.name} matching #{id_or_name_or_hash}."
+        else
+          raise 'Unknown argument type'
+        end
+      end
 
       def delete(*array)
         array.map do |r|

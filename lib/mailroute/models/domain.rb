@@ -37,20 +37,5 @@ module Mailroute
         ap response
       end
     end
-
-    class << self
-      alias_method :get_by_id, :get
-
-      def get(id_or_name)
-        case id_or_name
-        when String
-          filter(:name => id_or_name).first
-        when Integer
-          get_by_id(id_or_name)
-        else
-          raise 'Unknown argument type'
-        end
-      end
-    end
   end
 end

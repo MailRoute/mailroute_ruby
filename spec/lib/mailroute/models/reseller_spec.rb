@@ -84,6 +84,22 @@ describe Mailroute::Reseller, :vcr => true do
       its(:updated_at)              { should == 'Sun, 24 Feb 2013 06:03:48 -0800' }
       its(:created_at)              { should == 'Sun, 24 Feb 2013 06:03:48 -0800' }
     end
+
+    context 'get reseller by name' do
+      context 'reseller exists' do
+        subject { Mailroute::Reseller.get(:name => 'New Guy') }
+
+        its(:id) { should == 20863 }
+      end
+
+      context 'reseller does not exist' do
+        it 'should raise error' do
+          expect {
+            Mailroute::Reseller.get(:name => 'Unknown Reseller')
+          }.to raise_error ActiveResource::ResourceNotFound
+        end
+      end
+    end
   end
 
   context 'it should retrieve branding info', :vcr => { :cassette_name => 'Valid Reseller with Branding Info' } do
