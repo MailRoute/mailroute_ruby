@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://admin-dev.mailroute.net/api/v1/domain/?name=example.com
+    uri: https://admin-dev.mailroute.net/api/v1/domain/?name__exact=example.com
     body:
       string: ""
     headers:
@@ -71,7 +71,7 @@ http_interactions:
   recorded_at: Tue, 30 Apr 2013 19:37:35 GMT
 - request:
     method: get
-    uri: https://admin-dev.mailroute.net/api/v1/domain/?name=example.com
+    uri: https://admin-dev.mailroute.net/api/v1/domain/?name__exact=example.com
     body:
       string: ""
     headers:
