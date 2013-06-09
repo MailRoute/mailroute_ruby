@@ -34,7 +34,7 @@ module Mailroute
         when Integer
           find(id_or_name_or_hash)
         when String
-          get(:name => id_or_name_or_hash)
+          get(:name__exact => id_or_name_or_hash)
         when Hash
           filter(id_or_name_or_hash).first or raise ActiveResource::ResourceNotFound, "Couldn't find #{self.class.name} matching #{id_or_name_or_hash}."
         else
